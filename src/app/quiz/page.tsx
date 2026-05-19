@@ -50,9 +50,7 @@ function shuffleOptions(q: Question): Question {
   return {
     ...q,
     options: paired.map(p => p.opt),
-    correctAnswer: q.correctAnswer !== null
-      ? paired.findIndex(p => p.i === q.correctAnswer)
-      : null,
+    correctAnswer: paired.findIndex(p => p.i === q.correctAnswer),
   };
 }
 
