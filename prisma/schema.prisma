@@ -105,8 +105,36 @@ model StudyPlanProgress {
   userId    String
   date      String
   count     Int
-  createdAt DateTime @default(now())
+  createdAt  DateTime @default(now())
 
   @@unique([userId, date])
   @@index([userId])
+}
+
+model Passage {
+  id         Int        @id @default(autoincrement())
+  topic      String
+  section    String
+  year       Int
+  examSession String
+  title      String
+  text       String
+  order      Int
+  questions  Question[]
+}
+
+model Question {
+  id            Int       @id
+  passageId     Int?
+  question      String
+  questionType  String    @default("mcq")
+  options       String    @default("[]")
+  correctAnswer Int?
+  explanation   String?
+  topic         String
+  section       String
+  year          Int
+  examSession   String
+  marks         Int?
+  passage       Passage?  @relation(fields: [passageId], references: [id])
 }

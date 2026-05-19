@@ -19,6 +19,7 @@ export default function HomePage() {
   const [dark, setDark] = useState(false);
   const [paper, setPaper] = useState("paper-1");
   const [section, setSection] = useState("");
+  const [year, setYear] = useState("");
   const [count, setCount] = useState(10);
 
   const qs = allQuestions as Question[];
@@ -46,6 +47,8 @@ export default function HomePage() {
   useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setSection("");
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setYear("");
   }, [paper]);
 
   const toggleDark = () => {
@@ -61,6 +64,7 @@ export default function HomePage() {
   const params = new URLSearchParams();
   params.set("topic", paper);
   if (section) params.set("section", section);
+  if (year) params.set("year", year);
   params.set("count", String(count));
   const quizUrl = `/quiz?${params.toString()}`;
   const maxForTopic = topicCounts[paper] || 0;
@@ -97,7 +101,7 @@ export default function HomePage() {
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 mb-6">
             <h2 className="text-base sm:text-lg font-semibold text-gray-900 mb-5">Start Quiz</h2>
 
-            <div className="grid grid-cols-3 gap-4 mb-6">
+            <div className="grid grid-cols-4 gap-4 mb-6">
               <div>
                 <label htmlFor="paper" className="block text-sm font-medium text-gray-600 mb-2">Paper</label>
                 <select
@@ -109,6 +113,20 @@ export default function HomePage() {
                   {PAPERS.map((p) => (
                     <option key={p.slug} value={p.slug}>{p.label}</option>
                   ))}
+                </select>
+              </div>
+              <div>
+                <label htmlFor="year" className="block text-sm font-medium text-gray-600 mb-2">Year</label>
+                <select
+                  id="year"
+                  value={year}
+                  onChange={(e) => setYear(e.target.value)}
+                  className="block w-full rounded-lg border border-gray-300 px-3 py-2 text-sm shadow-sm focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500"
+                >
+                  <option value="">All Years</option>
+                  <option value="2025">2025</option>
+                  <option value="2024">2024</option>
+                  <option value="2023">2023</option>
                 </select>
               </div>
               <div>

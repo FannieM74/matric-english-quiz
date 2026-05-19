@@ -10,11 +10,13 @@ import { optionLetter } from "@/lib/helpers";
 interface Props {
   question: Question;
   selected: number | null;
+  textAnswer?: string;
   onSelect: (index: number) => void;
+  onTextChange?: (text: string) => void;
   mode: "quiz" | "review";
 }
 
-export default function QuestionCard({ question, selected, onSelect, mode }: Props) {
+export default function QuestionCard({ question, selected, textAnswer = "", onSelect, onTextChange, mode }: Props) {
   const [bookmarked, setBookmarked] = useState(false);
   const [flagged, setFlagged] = useState(false);
 
@@ -35,6 +37,7 @@ export default function QuestionCard({ question, selected, onSelect, mode }: Pro
     setFlagged(now);
   }, [question.id]);
 
+  const isMcq = Array.isArray(question.options) && question.options.length > 0;
   const isCorrect = selected === question.correctAnswer;
 
   return (
@@ -42,9 +45,15 @@ export default function QuestionCard({ question, selected, onSelect, mode }: Pro
       <div className="flex items-start justify-between gap-4 mb-3">
         <div className="flex items-center gap-2">
           <span className="text-xs font-medium text-gray-400 uppercase tracking-wider">
-            Question {question.id}
+            Q{question.id}
           </span>
           <TopicBadge topic={question.topic} />
+          {isMcq && question.correctAnswer !== null && (
+            <span className="text-xs px-2 py-0.5 rounded-full bg-blue-100 text-blue-700 font-medium">MCQ</span>
+          )}
+          {!isMcq && (
+            <span className="text-xs px-2 py-0.5 rounded-full bg-amber-100 text-amber-700 font-medium">Open</span>
+          )}
         </div>
         <div className="flex items-center gap-2">
           {mode === "review" && (
@@ -70,54 +79,73 @@ export default function QuestionCard({ question, selected, onSelect, mode }: Pro
         {question.question}
       </h2>
 
-      <div className="space-y-3">
-        {question.options.map((option, idx) => {
-          let classes = "w-full text-left break-words p-4 rounded-lg border-2 transition-colors duration-200 text-sm font-medium ";
+      {isMcq ? (
+        <div className="space-y-3">
+          {question.options.map((option, idx) => {
+            let classes = "w-full text-left break-words p-4 rounded-lg border-2 transition-colors duration-200 text-sm font-medium ";
 
-          if (mode === "review") {
-            if (idx === question.correctAnswer) {
-              classes += "border-green-500 bg-green-50 text-green-800 ";
-            } else if (idx === selected && !isCorrect) {
-              classes += "border-red-500 bg-red-50 text-red-800 ";
+            if (mode === "review") {
+              if (idx === question.correctAnswer) {
+                classes += "border-green-500 bg-green-50 text-green-800 ";
+              } else if (idx === selected && !isCorrect) {
+                classes += "border-red-500 bg-red-50 text-red-800 ";
+              } else {
+                classes += "border-gray-200 bg-gray-50 text-gray-500 ";
+              }
             } else {
-              classes += "border-gray-200 bg-gray-50 text-gray-500 ";
+              if (idx === selected) {
+                classes += "border-blue-500 bg-blue-50 text-blue-800 ";
+              } else {
+                classes += "border-gray-200 bg-white text-gray-700 hover:border-gray-300 hover:bg-gray-50 ";
+              }
             }
-          } else {
-            if (idx === selected) {
-              classes += "border-blue-500 bg-blue-50 text-blue-800 ";
-            } else {
-              classes += "border-gray-200 bg-white text-gray-700 hover:border-gray-300 hover:bg-gray-50 ";
-            }
-          }
 
-          return (
-            <button
-              key={idx}
-              onClick={() => mode === "quiz" && onSelect(idx)}
-              disabled={mode === "review"}
-              className={classes}
-            >
-              <span className={`inline-flex items-center justify-center w-7 h-7 rounded-full border text-xs font-bold mr-3 shrink-0 ${
-                mode === "review" && idx === question.correctAnswer
-                  ? "border-green-500 bg-green-500 text-white"
-                  : mode === "review" && idx === selected && !isCorrect
-                  ? "border-red-500 bg-red-500 text-white"
-                  : mode === "quiz" && idx === selected
-                  ? "border-blue-500 bg-blue-500 text-white"
-                  : "border-gray-300 text-gray-500"
-              }`}>
-                {optionLetter(idx)}
-              </span>
-              <span className="break-words">{option}</span>
-            </button>
-          );
-        })}
-      </div>
+            return (
+              <button
+                key={idx}
+                onClick={() => mode === "quiz" && onSelect(idx)}
+                disabled={mode === "review"}
+                className={classes}
+              >
+                <span className={`inline-flex items-center justify-center w-7 h-7 rounded-full border text-xs font-bold mr-3 shrink-0 ${
+                  mode === "review" && idx === question.correctAnswer
+                    ? "border-green-500 bg-green-500 text-white"
+                    : mode === "review" && idx === selected && !isCorrect
+                    ? "border-red-500 bg-red-500 text-white"
+                    : mode === "quiz" && idx === selected
+                    ? "border-blue-500 bg-blue-500 text-white"
+                    : "border-gray-300 text-gray-500"
+                }`}>
+                  {optionLetter(idx)}
+                </span>
+                <span className="break-words">{option}</span>
+              </button>
+            );
+          })}
+        </div>
+      ) : (
+        <div className="mt-2">
+          <label className="sr-only" htmlFor={`text-${question.id}`}>
+            Your answer
+          </label>
+          <textarea
+            id={`text-${question.id}`}
+            value={textAnswer}
+            onChange={(e) => onTextChange?.(e.target.value)}
+            placeholder="Type your answer here..."
+            readOnly={mode === "review"}
+            rows={4}
+            className="w-full rounded-lg border-2 border-gray-200 bg-gray-50 p-4 text-sm text-gray-700 placeholder-gray-400 resize-none focus:border-blue-400 focus:outline-none focus:ring-1 focus:ring-blue-400"
+          />
+        </div>
+      )}
 
       {mode === "review" && (
         <div className="mt-6 p-4 rounded-lg bg-blue-50 border border-blue-200">
           <p className="text-sm font-medium text-blue-900 mb-1">
-            {isCorrect ? "✓ Correct" : "✗ Incorrect"}
+            {isMcq
+              ? isCorrect ? "✓ Correct" : "✗ Incorrect"
+              : "Open-ended — check against memo"}
           </p>
           <p className="text-sm text-blue-800 leading-relaxed">{linkify(question.explanation)}</p>
         </div>

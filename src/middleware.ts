@@ -14,6 +14,7 @@ export default async function middleware(req: NextRequest) {
 
   if (pathname === "/" || pathname === "/signin" || pathname === "/signup") return;
   if (pathname.startsWith("/api/auth/")) return;
+  if (pathname === "/api/questions") return;
 
   if (pathname.startsWith("/api/")) {
     return NextResponse.json({ error: "Unauthorized" }, { status: 401 });

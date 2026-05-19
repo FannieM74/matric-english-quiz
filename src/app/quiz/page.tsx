@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useMemo, Suspense } from "react";
+import { useEffect, useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import allQuestions from "@/lib/questions.json";
@@ -11,7 +11,37 @@ import { TOPIC_LABELS } from "@/lib/topics";
 import QuestionCard from "@/components/QuestionCard";
 import ProgressBar from "@/components/ProgressBar";
 
+interface DbQuestion {
+  id: number;
+  question: string;
+  questionType: string;
+  options: string[];
+  correctAnswer: number | null;
+  explanation: string;
+  topic: string;
+  section: string;
+  year: number;
+  examSession: string;
+  marks?: number | null;
+}
+
+interface Passage {
+  passageId: number;
+  passageTitle: string;
+  passageText: string;
+  section: string;
+  year: number;
+  examSession: string;
+  questions: DbQuestion[];
+}
+
+interface DbResponse {
+  passages: Passage[];
+  total: number;
+}
+
 function shuffleOptions(q: Question): Question {
+  if (!q.options || q.options.length === 0) return q;
   const paired = q.options.map((opt, i) => ({ opt, i }));
   for (let i = paired.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -20,54 +50,113 @@ function shuffleOptions(q: Question): Question {
   return {
     ...q,
     options: paired.map(p => p.opt),
-    correctAnswer: paired.findIndex(p => p.i === q.correctAnswer),
+    correctAnswer: q.correctAnswer !== null
+      ? paired.findIndex(p => p.i === q.correctAnswer)
+      : null,
   };
+}
+
+function isMcq(q: Question): boolean {
+  return Array.isArray(q.options) && q.options.length > 0 && q.correctAnswer !== null;
 }
 
 function QuizContent() {
   const searchParams = useSearchParams();
   const topic = searchParams.get("topic") || "";
   const section = searchParams.get("section") || "";
+  const year = searchParams.get("year") || "";
   const count = parseInt(searchParams.get("count") || "10");
   const returnTo = searchParams.get("returnTo") || "";
 
   const [seed, setSeed] = useState<number>(0);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<number, number>>({});
+  const [textAnswers, setTextAnswers] = useState<Record<number, string>>({});
   const [phase, setPhase] = useState<"quiz" | "review">("quiz");
+  const [questions, setQuestions] = useState<Question[]>([]);
+  const [loading, setLoading] = useState(true);
   const daily = searchParams.get("daily") === "true";
-
-  const qs = allQuestions as Question[];
-  const mounted = seed !== 0;
 
   useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setSeed(daily ? dateSeed() : Date.now());
   }, [daily]);
 
-  const questions = useMemo(() => {
-    let all = qs;
-    if (topic) all = all.filter((q) => q.topic === topic);
-    if (section) all = all.filter((q) => q.section === section);
-    const shuffled = shuffleArray(all, seed);
-    return shuffled.slice(0, Math.min(count, shuffled.length)).map(shuffleOptions);
+  useEffect(() => {
+    async function fetchQuestions() {
+      setLoading(true);
+      setAnswers({});
+      setTextAnswers({});
+      setCurrentIndex(0);
+      setPhase("quiz");
+      try {
+        const params = new URLSearchParams();
+        if (topic) params.set("topic", topic);
+        if (section) params.set("section", section);
+        if (year) params.set("year", year);
+
+        const res = await fetch(`/api/questions?${params.toString()}`);
+        if (!res.ok) throw new Error("Failed to load questions");
+        const data: DbResponse = await res.json();
+
+        if (data.total === 0) {
+          const qs = allQuestions as Question[];
+          let all = qs;
+          if (topic) all = all.filter((q) => q.topic === topic);
+          if (section) all = all.filter((q) => q.section === section);
+          const shuffled = shuffleArray(all, seed);
+          const fallback = shuffled.slice(0, Math.min(count, shuffled.length)).map(shuffleOptions);
+          setQuestions(fallback);
+        } else {
+          const flat = data.passages.flatMap((p) => p.questions);
+          const shuffled = shuffleArray(flat as unknown as Question[], seed);
+          const selected = shuffled.slice(0, Math.min(count, shuffled.length)).map(shuffleOptions);
+          setQuestions(selected);
+        }
+      } catch {
+        const qs = allQuestions as Question[];
+        let all = qs;
+        if (topic) all = all.filter((q) => q.topic === topic);
+        if (section) all = all.filter((q) => q.section === section);
+        const shuffled = shuffleArray(all, seed);
+        setQuestions(shuffled.slice(0, Math.min(count, shuffled.length)).map(shuffleOptions));
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    fetchQuestions();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [topic, section, count, seed]);
+  }, [topic, section, year, count]);
 
   const handleSelect = (optionIndex: number) => {
     if (!questions[currentIndex]) return;
-    setAnswers((prev) => ({ ...prev, [questions[currentIndex].id]: optionIndex }));
+    const q = questions[currentIndex];
+    if (!isMcq(q)) return;
+    setAnswers((prev) => ({ ...prev, [q.id]: optionIndex }));
+  };
+
+  const handleTextChange = (text: string) => {
+    if (!questions[currentIndex]) return;
+    const q = questions[currentIndex];
+    if (isMcq(q)) return;
+    setTextAnswers((prev) => ({ ...prev, [q.id]: text }));
   };
 
   const finishQuiz = () => {
-    const score = questions.filter((q) => answers[q.id] === q.correctAnswer).length;
-    const missed = questions.filter((q) => answers[q.id] !== q.correctAnswer).map((q) => q.id);
+    const mcqScore = questions.filter(q => isMcq(q) && answers[q.id] === q.correctAnswer).length;
+    const mcqTotal = questions.filter(q => isMcq(q)).length;
+    const missed = questions.filter(q => q.correctAnswer !== null && answers[q.id] !== q.correctAnswer).map((q) => q.id);
     addMissedQuestions(missed);
-    questions.forEach((q) => recordAttempt(q.id, answers[q.id] === q.correctAnswer));
+    questions.forEach((q) => {
+      if (q.correctAnswer !== null) {
+        recordAttempt(q.id, answers[q.id] === q.correctAnswer);
+      }
+    });
     saveQuizRecord({
       date: new Date().toLocaleDateString("en-CA"),
-      score,
-      total: questions.length,
+      score: mcqScore,
+      total: mcqTotal,
       topic: topic || undefined,
     });
     setPhase("review");
@@ -81,43 +170,25 @@ function QuizContent() {
     if (currentIndex > 0) setCurrentIndex((i) => i - 1);
   };
 
-  useEffect(() => {
-    if (phase !== "quiz") return;
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === "ArrowLeft") {
-        setCurrentIndex((i) => Math.max(0, i - 1));
-      } else if (e.key === "ArrowRight") {
-        setCurrentIndex((i) => Math.min(questions.length - 1, i + 1));
-      } else if (["1", "2", "3", "4"].includes(e.key)) {
-        const idx = parseInt(e.key) - 1;
-        setCurrentIndex((ci) => {
-          const cur = questions[ci];
-          if (cur && idx < cur.options.length) {
-            setAnswers((prev) => ({ ...prev, [cur.id]: idx }));
-          }
-          return ci;
-        });
-      }
-    };
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [phase, questions]);
-
   const current = questions[currentIndex];
   const answered = Object.keys(answers).length;
+  const textAnswered = Object.keys(textAnswers).length;
   const selected = current ? (answers[current.id] ?? null) : null;
-  const allAnswered = answered === questions.length && questions.length > 0;
+  const currentTextAnswer = current ? (textAnswers[current.id] ?? "") : "";
 
-  const score = useMemo(
-    () => questions.filter((q) => answers[q.id] === q.correctAnswer).length,
-    [questions, answers]
-  );
-  const pct = questions.length > 0 ? Math.round((score / questions.length) * 100) : 0;
+  const mcqAnswered = questions.filter(q => isMcq(q)).every(q => answers[q.id] !== undefined);
+  const allMcqAnswered = mcqAnswered && questions.filter(q => isMcq(q)).length > 0;
+  const canFinish = allMcqAnswered;
 
-  if (!mounted) {
+  const score = questions.filter(q => isMcq(q) && answers[q.id] === q.correctAnswer).length;
+  const mcqCount = questions.filter(q => isMcq(q)).length;
+  const pct = mcqCount > 0 ? Math.round((score / mcqCount) * 100) : 0;
+
+  if (loading) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-br from-slate-50 to-blue-50 gap-4 px-4">
         <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto" />
+        <p className="text-gray-500 text-sm">Loading questions...</p>
       </div>
     );
   }
@@ -140,17 +211,25 @@ function QuizContent() {
             <h1 className={`text-3xl font-bold mb-2 text-balance ${pct >= 80 ? "text-green-600" : pct >= 60 ? "text-blue-600" : "text-yellow-600"}`}>
               {pct >= 80 ? "Excellent!" : pct >= 60 ? "Good effort!" : "Keep practicing!"}
             </h1>
-            <p className="text-gray-400 text-sm mb-2">{TOPIC_LABELS[topic]} · {questions.length} questions</p>
+            <p className="text-gray-400 text-sm mb-2">
+              {year ? `${year} ` : ""}{TOPIC_LABELS[topic]} · {questions.length} questions
+              {questions.length !== mcqCount && ` (${mcqCount} graded)`}
+            </p>
             <div className="flex items-center justify-center gap-1 my-4">
               <span className="text-5xl font-bold text-gray-900 tabular-nums">{score}</span>
               <span className="text-2xl text-gray-400">/</span>
-              <span className="text-3xl text-gray-500 tabular-nums">{questions.length}</span>
+              <span className="text-3xl text-gray-500 tabular-nums">{mcqCount}</span>
             </div>
             <div className="w-full bg-gray-200 rounded-full h-3 mb-2 max-w-xs mx-auto overflow-hidden">
               <div className={`h-full rounded-full ${pct >= 80 ? "bg-green-500" : pct >= 60 ? "bg-blue-500" : "bg-yellow-500"}`}
                 style={{ width: `${pct}%` }} />
             </div>
-            <p className="text-2xl font-bold text-gray-800 mb-6">{pct}%</p>
+            <p className="text-2xl font-bold text-gray-800 mb-2">{pct}%</p>
+            {questions.length !== mcqCount && (
+              <p className="text-sm text-gray-400 mb-4">
+                + {questions.length - mcqCount} open-ended questions (self-mark)
+              </p>
+            )}
             <div className="flex gap-3 justify-center">
               <Link href={returnTo || "/"} className="px-6 py-2.5 rounded-lg bg-blue-600 text-white font-medium hover:bg-blue-700 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500">
                 {returnTo ? "Back to Study" : "New Quiz"}
@@ -168,7 +247,9 @@ function QuizContent() {
                 key={q.id}
                 question={q}
                 selected={answers[q.id] ?? null}
-                onSelect={() => {}}
+                textAnswer={textAnswers[q.id] ?? ""}
+                onSelect={handleSelect}
+                onTextChange={handleTextChange}
                 mode="review"
               />
             ))}
@@ -188,14 +269,21 @@ function QuizContent() {
             ← {returnTo ? "Back to Study" : "Quit"}
           </Link>
           <span className="text-sm text-gray-500 text-right truncate">
-            {topicLabel} · {answered}/{questions.length}
+            {year ? `${year} ` : ""}{topicLabel} · {answered + textAnswered}/{questions.length}
           </span>
         </div>
 
-        <ProgressBar current={currentIndex} total={questions.length} answered={answered} />
+        <ProgressBar current={currentIndex} total={questions.length} answered={answered + textAnswered} />
 
         <div className="mt-6">
-          <QuestionCard question={current} selected={selected} onSelect={handleSelect} mode="quiz" />
+          <QuestionCard
+            question={current}
+            selected={selected}
+            textAnswer={currentTextAnswer}
+            onSelect={handleSelect}
+            onTextChange={handleTextChange}
+            mode="quiz"
+          />
         </div>
 
         <div className="flex items-center justify-between mt-6">
@@ -209,9 +297,9 @@ function QuizContent() {
               Next →
             </button>
           ) : (
-            <button onClick={finishQuiz} disabled={!allAnswered}
+            <button onClick={finishQuiz} disabled={!canFinish}
               className="px-4 py-2 text-sm font-medium rounded-lg bg-green-600 text-white hover:bg-green-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500">
-              {allAnswered ? "Finish Quiz" : `Answer all (${questions.length - answered} left)`}
+              {canFinish ? "Finish Quiz" : `Answer all MCQ (${questions.filter(q => isMcq(q)).length} left)`}
             </button>
           )}
         </div>
@@ -222,7 +310,9 @@ function QuizContent() {
               aria-label={`Go to question ${i + 1}`}
               className={`w-3 h-3 rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 ${
                 i === currentIndex ? "bg-blue-600 ring-2 ring-blue-300"
-                : answers[q.id] !== undefined ? "bg-green-400" : "bg-gray-300"
+                : isMcq(q) && answers[q.id] !== undefined ? "bg-green-400"
+                : !isMcq(q) && textAnswers[q.id] ? "bg-amber-400"
+                : "bg-gray-300"
               }`} />
           ))}
         </div>
