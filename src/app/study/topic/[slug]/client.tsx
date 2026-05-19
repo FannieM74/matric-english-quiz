@@ -180,10 +180,9 @@ export default function StudyTopicClient({ slug }: { slug: string }) {
         {/* Header */}
         <div className="mb-6">
           <div className="flex items-center gap-3 mb-2">
-            <span className="text-3xl">{topic.icon}</span>
-            <h1 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white text-balance">{topic.title}</h1>
+            <h1 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white text-balance">{topic.label}</h1>
             <span className={`text-sm font-medium px-3 py-1 rounded-full ${TOPIC_COLORS[topic.slug] || "bg-gray-100 text-gray-800"}`}>
-              {topic.weight}
+              Paper {topic.number}
             </span>
           </div>
           <div className="flex items-center gap-4 mt-1">
@@ -252,7 +251,7 @@ export default function StudyTopicClient({ slug }: { slug: string }) {
                       {index + 1}
                     </span>
                     <span className="font-semibold text-gray-900 dark:text-white break-words">
-                      {section.title}
+                      {section.label}
                     </span>
                     <span className="text-xs text-gray-400 dark:text-gray-500 shrink-0">
                       {readingTime} min
@@ -332,13 +331,6 @@ export default function StudyTopicClient({ slug }: { slug: string }) {
                           );
                         })}
                       </div>
-
-                      {section.examTip && (
-                        <div className="mt-4 p-3 bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 rounded-lg">
-                          <p className="text-sm font-semibold text-yellow-800 dark:text-yellow-400 mb-1">💡 Exam Tip</p>
-                          <p className="text-sm text-yellow-700 dark:text-yellow-300 break-words">{section.examTip}</p>
-                        </div>
-                      )}
 
                       {/* Practice Questions, Complete, Navigation */}
                       <div className="mt-4 pt-4 border-t border-gray-100 dark:border-slate-700">

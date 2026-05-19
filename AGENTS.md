@@ -1,8 +1,8 @@
-# sc200
+# Matric English Quiz
 
-Server-rendered Next.js app — practice quiz for **Microsoft SC-200: Security Operations Analyst Associate** (exam updated April 16, 2026).
+Server-rendered Next.js app — practice quiz for **South African Grade 12 English Home Language** final exams.
 
-Backend: Prisma + Vercel Postgres. Auth: Auth.js (NextAuth v5) with email/password credentials.
+Backend: Prisma + Postgres. Auth: Auth.js (NextAuth v5) with email/password credentials.
 
 ## Project structure
 
@@ -12,12 +12,12 @@ src/
     layout.tsx      # root layout — Geist fonts, dark-mode, AuthProvider, UserMenu
     page.tsx        # home / quiz launcher
     quiz/           # quiz-taking page
-    study/          # browse all questions
+    study/          # browse all sections (exam tips)
     review/         # review missed questions
     bookmarks/      # starred questions
     flagged/        # flagged questions
     search/         # keyword search
-    analysis/       # per-question accuracy & score trends
+    analysis/       # per-section accuracy & score trends
     results/        # past quiz results
     signin/         # sign-in page (email + password)
     signup/         # sign-up page (email + password + confirm)
@@ -38,12 +38,12 @@ src/
     auth.ts           # Auth.js config (Credentials provider, JWT)
     db.ts             # PrismaClient singleton
     storage.ts        # localStorage CRUD + fire-and-forget API sync
-    questions.json    # 150 questions across 3 exam functional groups
-    study-notes.json  # 3 topics, 9 sections covering the official study guide
+    questions.json    # 153 questions across 3 exam papers
+    study-notes.json  # 3 papers, exam tips and study guides
     types.ts          # Question, QuizRecord interfaces
     random.ts         # seeded PRNG + Fisher-Yates shuffle
     linkify.tsx       # URL linkifier component
-    topics.ts         # Topic labels and colors
+    topics.ts         # Paper labels, sections, and colors
 prisma/
   schema.prisma       # 10 models: User + 9 data models
 ```
@@ -55,9 +55,8 @@ prisma/
 - **Auth**: Auth.js v5 with Credentials provider — email/password stored in DB (bcryptjs)
 - **API**: Single `/api/sync` endpoint handles all user state (bookmarks, flags, quiz history, attempts, study progress)
 - **Client**: localStorage for instant sync + fire-and-forget POST to `/api/sync`; `SyncProvider` hydrates from DB on mount
-- **Data model**: All records keyed by `userId` — anonymous users use a generated deviceId UUID; authenticated users use their real userId; migration happens automatically on first API call after login
-- **Dark mode** via `localStorage("sc200-dark")` + `.dark` class; CSS overrides in `globals.css`
-- **Daily quiz** uses `dateSeed()` for deterministic per-day question shuffle
+- **Data model**: All records keyed by `userId`; authenticated users use their real userId
+- **Dark mode** via `localStorage("meq-dark")` + `.dark` class; CSS overrides in `globals.css`
 - **Quiz history** capped at 50 records per user
 
 ## Commands (run from app root)
@@ -70,21 +69,20 @@ prisma/
 | `npx prisma db push` | Sync schema to Postgres |
 | `npx prisma generate` | Regenerate Prisma client |
 
-## Topics
+## Topics (Papers)
 
-| Slug | Label | Weight | Sections |
-|------|-------|--------|---------|
-| `manage-soc` | Manage a Security Operations Environment | 40-45% | 4 sections |
-| `respond-incidents` | Respond to Security Incidents | 35-40% | 3 sections |
-| `threat-hunting` | Perform Threat Hunting | 20-25% | 2 sections |
+| Slug | Label | Sections |
+|------|-------|----------|
+| `paper-1` | Paper 1: Language in Context | 5 sections |
+| `paper-2` | Paper 2: Literature | 18 sections |
+| `paper-3` | Paper 3: Writing | 3 sections |
 
 ## Conventions
 
 - Import `@/lib/...` and `@/components/...` (not relative paths)
-- Topics are slug keys: `manage-soc`, `respond-incidents`, `threat-hunting`
-- All localStorage keys prefixed `sc200-`
+- Topics are slug keys: `paper-1`, `paper-2`, `paper-3`
+- All localStorage keys prefixed `meq-`
 - Question IDs are numeric, 1-indexed
-- COUNT_OPTIONS: `[5, 10, 15, 20, 25, 30, 50, 150]` (150 = all)
+- COUNT_OPTIONS: `[5, 10, 15, 20, 25, 30, 50]`
 - Custom dark overrides in `globals.css` supplement Tailwind `dark:` variant
 - Auth sessions via JWT (no DB sessions); `AUTH_SECRET` env var required
-- User data automatically migrates from anonymous deviceId on first sign-in

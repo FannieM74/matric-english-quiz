@@ -1,6 +1,6 @@
 "use client";
 
-const DARK_KEY = "sc200-dark";
+const DARK_KEY = "matric-english-dark";
 
 export function getDarkMode(): boolean {
   if (typeof window === "undefined") return false;

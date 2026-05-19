@@ -1,11 +1,9 @@
 import StudyTopicClient from "./client";
 
+import studyNotes from "@/lib/study-notes.json";
+
 export function generateStaticParams() {
-  return [
-    { slug: "manage-soc" },
-    { slug: "respond-incidents" },
-    { slug: "threat-hunting" },
-  ];
+  return studyNotes.map((t) => ({ slug: t.slug }));
 }
 
 export default async function StudyTopicPage({ params }: { params: Promise<{ slug: string }> }) {

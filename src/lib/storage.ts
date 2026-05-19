@@ -4,15 +4,16 @@ import type { QuizRecord } from "@/lib/types";
 import allQuestions from "@/lib/questions.json";
 import type { Question } from "@/lib/types";
 
-const BOOKMARKS_KEY = "sc200-bookmarks";
-const HISTORY_KEY = "sc200-history";
-const MISSED_KEY = "sc200-missed";
-const FLAGGED_KEY = "sc200-flagged";
-const ATTEMPTS_KEY = "sc200-attempts";
-const DEVICE_ID_KEY = "sc200-device-id";
-const SYNCED_KEY = "sc200-synced";
-const STORAGE_VERSION = 2;
-const VERSION_KEY = "sc200-version";
+const STORAGE_PREFIX = "meq-";
+const BOOKMARKS_KEY = STORAGE_PREFIX + "bookmarks";
+const HISTORY_KEY = STORAGE_PREFIX + "history";
+const MISSED_KEY = STORAGE_PREFIX + "missed";
+const FLAGGED_KEY = STORAGE_PREFIX + "flagged";
+const ATTEMPTS_KEY = STORAGE_PREFIX + "attempts";
+const DEVICE_ID_KEY = STORAGE_PREFIX + "device-id";
+const SYNCED_KEY = STORAGE_PREFIX + "synced";
+const STORAGE_VERSION = 1;
+const VERSION_KEY = STORAGE_PREFIX + "storage-version";
 
 let _deviceId: string | null = null;
 
@@ -38,7 +39,7 @@ function ensureStorageVersion(): void {
     const v = localStorage.getItem(VERSION_KEY);
     if (v !== String(STORAGE_VERSION)) {
       for (const key of Object.keys(localStorage)) {
-        if (key.startsWith("sc200-") && key !== VERSION_KEY && key !== DEVICE_ID_KEY) {
+        if (key.startsWith(STORAGE_PREFIX) && key !== VERSION_KEY && key !== DEVICE_ID_KEY) {
           localStorage.removeItem(key);
         }
       }
@@ -68,12 +69,12 @@ export async function syncFromApi(): Promise<void> {
     localStorage.setItem(HISTORY_KEY, JSON.stringify(data.quizHistory));
     localStorage.setItem(ATTEMPTS_KEY, JSON.stringify(data.attempts));
     localStorage.setItem(MISSED_KEY, JSON.stringify(data.missedQuestions));
-    localStorage.setItem("sc200-study-progress", JSON.stringify(data.studyProgress));
-    localStorage.setItem("sc200-study-bookmarks", JSON.stringify(data.studyBookmarks));
+    localStorage.setItem(STORAGE_PREFIX + "study-progress", JSON.stringify(data.studyProgress));
+    localStorage.setItem(STORAGE_PREFIX + "study-bookmarks", JSON.stringify(data.studyBookmarks));
     if (data.studyPlan) {
-      localStorage.setItem("sc200-study-plan", JSON.stringify(data.studyPlan));
+      localStorage.setItem(STORAGE_PREFIX + "study-plan", JSON.stringify(data.studyPlan));
     }
-    localStorage.setItem("sc200-study-plan-progress", JSON.stringify(data.studyPlanProgress));
+    localStorage.setItem(STORAGE_PREFIX + "study-plan-progress", JSON.stringify(data.studyPlanProgress));
     localStorage.setItem(SYNCED_KEY, "true");
   } catch {}
 }
@@ -202,7 +203,7 @@ export function clearAttempts(): void {
 }
 
 // -- Study Progress --
-const STUDY_PROGRESS_KEY = "sc200-study-progress";
+const STUDY_PROGRESS_KEY = STORAGE_PREFIX + "study-progress";
 
 export function getStudyProgress(): Record<string, string[]> {
   if (typeof window === "undefined") return {};
@@ -240,7 +241,7 @@ export function clearStudyProgress(): void {
 }
 
 // -- Study Bookmarks --
-const STUDY_BOOKMARKS_KEY = "sc200-study-bookmarks";
+const STUDY_BOOKMARKS_KEY = STORAGE_PREFIX + "study-bookmarks";
 
 export function getStudyBookmarks(): string[] {
   if (typeof window === "undefined") return [];
@@ -270,7 +271,7 @@ export function isStudyBookmarked(sectionId: string): boolean {
 }
 
 // -- Study Plan --
-const STUDY_PLAN_KEY = "sc200-study-plan";
+const STUDY_PLAN_KEY = STORAGE_PREFIX + "study-plan";
 
 export function getStudyPlan(): { startDate: string; targetDate: string; days: number } | null {
   if (typeof window === "undefined") return null;
@@ -298,14 +299,14 @@ export function getStudyPlanProgress(): Record<string, number> {
   if (typeof window === "undefined") return {};
   ensureStorageVersion();
   try {
-    return JSON.parse(localStorage.getItem("sc200-study-plan-progress") || "{}");
+    return JSON.parse(localStorage.getItem(STORAGE_PREFIX + "study-plan-progress") || "{}");
   } catch { return {}; }
 }
 
 export function recordStudyDayProgress(date: string, count: number): void {
   const progress = getStudyPlanProgress();
   progress[date] = count;
-  localStorage.setItem("sc200-study-plan-progress", JSON.stringify(progress));
+  localStorage.setItem(STORAGE_PREFIX + "study-plan-progress", JSON.stringify(progress));
   apiCall("recordStudyDayProgress", { date, count });
 }
 

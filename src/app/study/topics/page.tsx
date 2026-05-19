@@ -100,7 +100,7 @@ export default function StudyTopicsPage() {
 
         <div className="mb-8">
           <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-2">📚 Study Topics</h1>
-          <p className="text-gray-600 dark:text-gray-400">Study the complete SC-200 curriculum by domain. Track your progress as you go through each section.</p>
+          <p className="text-gray-600 dark:text-gray-400">Study guides and exam strategies for Grade 12 English Home Language. Track your progress through each section.</p>
         </div>
 
         {/* Study Plan */}
@@ -207,13 +207,13 @@ export default function StudyTopicsPage() {
                 className="block px-5 py-4 hover:bg-gray-50 dark:hover:bg-slate-700/50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
               >
                 <div className="flex items-start gap-3">
-                  <span className="text-2xl shrink-0 mt-0.5">{topic.icon}</span>
+                  <span className="text-2xl shrink-0 mt-0.5">{topic.slug === "paper-1" ? "📖" : topic.slug === "paper-2" ? "📚" : "✍️"}</span>
                   <div className="min-w-0 flex-1">
-                    <h3 className="font-semibold text-gray-900 dark:text-white break-words">{topic.title}</h3>
+                    <h3 className="font-semibold text-gray-900 dark:text-white break-words">{topic.label}</h3>
                     <div className="flex items-center gap-3 mt-1">
                       <span className="text-sm text-gray-500 dark:text-gray-400">{topic.totalSections} sections</span>
                       <span className={`text-xs font-medium px-2.5 py-0.5 rounded-full ${TOPIC_COLORS[topic.slug] || "bg-gray-100 text-gray-800"}`}>
-                        {topic.weight}
+                        Paper {topic.number}
                       </span>
                       {topic.accuracy && (
                         <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${
@@ -253,10 +253,10 @@ export default function StudyTopicsPage() {
             {filteredTopics.map((topic) => (
               <div key={topic.slug} className="px-5 py-4">
                 <div className="flex items-center gap-2 mb-3">
-                  <span>{topic.icon}</span>
-                  <h3 className="font-semibold text-gray-900 dark:text-white">{topic.title}</h3>
+                  <span>{topic.slug === "paper-1" ? "📖" : topic.slug === "paper-2" ? "📚" : "✍️"}</span>
+                  <h3 className="font-semibold text-gray-900 dark:text-white">{topic.label}</h3>
                   <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${TOPIC_COLORS[topic.slug] || "bg-gray-100 text-gray-800"}`}>
-                    {topic.weight}
+                    Paper {topic.number}
                   </span>
                 </div>
                 <div className="flex flex-wrap gap-2">
@@ -276,7 +276,7 @@ export default function StudyTopicsPage() {
                         {topic.viewed.includes(section.id) && (
                           <span className="text-green-600 text-xs">✓</span>
                         )}
-                        <span className="text-gray-700 dark:text-gray-300">{section.title}</span>
+                        <span className="text-gray-700 dark:text-gray-300">{section.label}</span>
                       </Link>
                     );
                   })}

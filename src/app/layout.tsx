@@ -17,21 +17,23 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const APP_NAME = "Matric English Quiz";
+
 export const metadata: Metadata = {
-  title: "SC-200 Practice Quiz",
-  description: "Practice quiz for Microsoft SC-200 Security Operations Analyst Associate exam",
+  title: APP_NAME,
+  description: "Practice quiz for South African Grade 12 English Home Language final exams",
   manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",
-    title: "SC-200 Quiz",
+    title: APP_NAME,
   },
 };
 
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#2563eb",
+  themeColor: "#059669",
 };
 
 export default function RootLayout({
@@ -53,7 +55,7 @@ export default function RootLayout({
           id="dark-mode-init"
           strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
-            __html: `try{if(localStorage.getItem("sc200-dark")==="true")document.documentElement.classList.add("dark")}catch(e){}`
+            __html: `try{if(localStorage.getItem("matric-english-dark")==="true")document.documentElement.classList.add("dark")}catch(e){}`
           }}
         />
         <AuthProvider>

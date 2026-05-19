@@ -1,2103 +1,2144 @@
 [
   {
     "id": 1,
-    "question": "Which Defender XDR notification type informs security teams about new threat campaigns and vulnerabilities?",
+    "question": "What is the main idea of a passage that describes the hardships of farm workers in detail, then concludes by calling for better working conditions?",
     "options": [
-      "Incident notifications",
-      "Action notifications",
-      "Threat analytics notifications",
-      "Alert suppression notifications"
+      "Farm workers are lazy and need discipline",
+      "Farm workers face difficult conditions and deserve improved treatment",
+      "Farming is no longer profitable in South Africa",
+      "Farm workers should move to the cities"
     ],
-    "correctAnswer": 2,
-    "explanation": "Threat analytics notifications inform teams about newly discovered threat campaigns, vulnerabilities, and attack techniques identified by Microsoft threat intelligence.",
-    "topic": "manage-soc",
-    "section": "configure-sentinel-siem-platform"
+    "correctAnswer": 1,
+    "explanation": "The main idea is the central argument or message. The passage describes hardships (problem) and calls for better conditions (solution), so the main idea is that farm workers deserve improved treatment.",
+    "topic": "paper-1",
+    "section": "comprehension"
   },
   {
     "id": 2,
-    "question": "What is the purpose of alert tuning in Microsoft Defender XDR?",
+    "question": "Which of the following best describes the tone of this sentence? 'Yet again, the government has failed to deliver on its empty promises to the people.'",
     "options": [
-      "To delete false positive alerts permanently",
-      "To adjust alert volume based on organizational needs",
-      "To forward alerts to a third-party SIEM",
-      "To change alert severity across all tenants"
+      "Neutral and objective",
+      "Celebratory and joyful",
+      "Critical and cynical",
+      "Apologetic and regretful"
     ],
-    "correctAnswer": 1,
-    "explanation": "Alert tuning adjusts which alerts are generated based on organizational requirements, helping to reduce noise while maintaining security coverage.",
-    "topic": "manage-soc",
-    "section": "configure-sentinel-siem-platform"
+    "correctAnswer": 2,
+    "explanation": "The words 'yet again', 'failed', and 'empty promises' convey disappointment and distrust, indicating a critical and cynical tone rather than a neutral or positive one.",
+    "topic": "paper-1",
+    "section": "comprehension"
   },
   {
     "id": 3,
-    "question": "How does alert suppression differ from alert tuning in Microsoft Defender XDR?",
+    "question": "What is the primary purpose of a text that provides step-by-step instructions on how to register to vote?",
     "options": [
-      "Suppression hides alerts while tuning adjusts generation criteria",
-      "Suppression is permanent and tuning is temporary",
-      "Suppression only works for email alerts and tuning works for all alerts",
-      "Suppression requires PowerShell and tuning uses the portal"
+      "To entertain the reader with stories about voting",
+      "To persuade the reader to vote for a particular party",
+      "To inform the reader about the voting registration process",
+      "To describe the history of voting in South Africa"
     ],
-    "correctAnswer": 0,
-    "explanation": "Alert suppression hides specific alerts from view without changing detection logic, while alert tuning adjusts the conditions under which alerts are generated.",
-    "topic": "manage-soc",
-    "section": "configure-sentinel-siem-platform"
+    "correctAnswer": 2,
+    "explanation": "Step-by-step instructions are a characteristic of informative texts. The primary purpose is to inform and guide the reader through the process.",
+    "topic": "paper-1",
+    "section": "comprehension"
   },
   {
     "id": 4,
-    "question": "What is the primary purpose of alert correlation in Microsoft Defender XDR?",
+    "question": "Read the following sentence: 'The politician's speech was a masterclass in avoiding the real issues.' Which of the following inferences can be drawn from this statement?",
     "options": [
-      "To delete duplicate alerts",
-      "To group related alerts into a single incident",
-      "To change alert severity levels",
-      "To forward alerts to regulatory authorities"
+      "The politician gave a well-structured and detailed speech",
+      "The politician deliberately evaded discussing important topics",
+      "The audience was highly impressed by the speech",
+      "The speech was about masterclasses in public speaking"
     ],
     "correctAnswer": 1,
-    "explanation": "Alert correlation groups related alerts from different workloads into a single incident, providing a unified view of an attack chain across endpoints, identities, email, and cloud apps.",
-    "topic": "manage-soc",
-    "section": "configure-sentinel-siem-platform"
+    "explanation": "The phrase 'avoiding the real issues' implies that the politician deliberately evaded important matters. The ironic use of 'masterclass' suggests the opposite of genuine skill.",
+    "topic": "paper-1",
+    "section": "comprehension"
   },
   {
     "id": 5,
-    "question": "Which Defender for Endpoint feature allows configuring custom indicators of compromise (IOCs)?",
+    "question": "The phrase 'the thunder of applause erupted from the crowd' contains an example of which figure of speech?",
     "options": [
-      "Attack surface reduction rules",
-      "Indicators rules settings",
-      "Controlled folder access",
-      "Exploit protection"
+      "Simile",
+      "Metaphor",
+      "Hyperbole",
+      "Personification"
     ],
     "correctAnswer": 1,
-    "explanation": "Indicators rules settings allow configuring custom IOCs for files, IPs, URLs, domains, and certificates to block or allow specific entities.",
-    "topic": "manage-soc",
-    "section": "configure-sentinel-siem-platform"
+    "explanation": "This is a metaphor because applause is compared directly to thunder without using 'like' or 'as'. The sound of applause is described as if it were thunder.",
+    "topic": "paper-1",
+    "section": "comprehension"
   },
   {
     "id": 6,
-    "question": "What type of rule prevents common attack patterns such as scripts launched from Office documents?",
+    "question": "A passage is written from the first-person perspective using pronouns such as 'I' and 'we'. What is the effect of this point of view?",
     "options": [
-      "Network protection rules",
-      "Controlled folder access rules",
-      "Attack surface reduction (ASR) rules",
-      "Exploit protection rules"
+      "It creates objectivity and distance from the subject",
+      "It establishes a personal and subjective connection with the reader",
+      "It suggests that the narrator is unreliable",
+      "It indicates that the text is fiction"
     ],
-    "correctAnswer": 2,
-    "explanation": "ASR rules specifically target common attack patterns such as scripts launched from Office documents, suspicious macro behaviors, and process injection attempts.",
-    "topic": "manage-soc",
-    "section": "configure-sentinel-siem-platform"
+    "correctAnswer": 1,
+    "explanation": "First-person narration creates intimacy and subjectivity, as the reader experiences events through the narrator's personal perspective and emotions.",
+    "topic": "paper-1",
+    "section": "comprehension"
   },
   {
     "id": 7,
-    "question": "What is the role of device groups in Microsoft Defender for Endpoint?",
+    "question": "Which of the following statements best indicates bias in a news article about mining strikes?",
     "options": [
-      "To group devices by operating system version",
-      "To organize devices and apply different automation levels and RBAC permissions",
-      "To separate production from test devices only",
-      "To manage software update schedules"
+      "The article includes quotes from both union representatives and mine management",
+      "The article uses the phrase 'greedy union leaders' to describe strike organisers",
+      "The article states the number of workers involved in the strike",
+      "The article reports the date on which the strike began"
     ],
     "correctAnswer": 1,
-    "explanation": "Device groups organize endpoints and allow applying different automation levels, RBAC permissions, and remediation settings to each group.",
-    "topic": "manage-soc",
-    "section": "configure-sentinel-siem-platform"
+    "explanation": "The phrase 'greedy union leaders' is loaded language that reveals negative bias against the strikers. Objective reporting would use neutral terms such as 'union representatives'.",
+    "topic": "paper-1",
+    "section": "comprehension"
   },
   {
     "id": 8,
-    "question": "Which custom data collection method in Defender for Endpoint allows gathering specific telemetry beyond default collection?",
+    "question": "The word 'thrifty' has a positive connotation, while its synonym 'stingy' has a negative connotation. What does this difference illustrate?",
     "options": [
-      "Windows Event Forwarding",
-      "Advanced Hunting custom detections",
-      "Syslog collection",
-      "Azure Policy"
+      "The words have different denotative meanings",
+      "The words have different connotations despite similar denotative meanings",
+      "The word 'thrifty' is an antonym of 'stingy'",
+      "The word 'stingy' is a euphemism for 'thrifty'"
     ],
     "correctAnswer": 1,
-    "explanation": "Custom detections in Advanced Hunting allow creating custom KQL-based detection rules that collect and analyze specific telemetry beyond default collection.",
-    "topic": "manage-soc",
-    "section": "configure-sentinel-siem-platform"
+    "explanation": "Both words refer to being careful with money (similar denotation), but 'thrifty' carries positive associations while 'stingy' carries negative ones, illustrating the difference between connotation and denotation.",
+    "topic": "paper-1",
+    "section": "comprehension"
   },
   {
     "id": 9,
-    "question": "What is the difference between full and semi-automation levels in Microsoft Defender for Endpoint?",
+    "question": "When answering a comprehension question that asks you to 'explain in your own words', what should you do?",
     "options": [
-      "Full automation remediates all threats automatically; semi requires approval for destructive actions",
-      "Full automation requires no licensing; semi requires E5 licensing",
-      "Full automation only works on servers; semi works on all devices",
-      "Full automation uses AI and semi uses signature-based detection only"
+      "Copy the relevant sentence directly from the passage",
+      "Paraphrase the information without changing the original meaning",
+      "Provide your personal opinion on the topic",
+      "Summarise the entire passage in one sentence"
     ],
-    "correctAnswer": 0,
-    "explanation": "Full automation remediates all threats automatically. Semi-automation requires analyst approval before executing destructive remediation actions like file quarantine.",
-    "topic": "manage-soc",
-    "section": "configure-sentinel-siem-platform"
+    "correctAnswer": 1,
+    "explanation": "The instruction 'in your own words' requires you to paraphrase — to restate the information using different vocabulary and sentence structure while preserving the original meaning.",
+    "topic": "paper-1",
+    "section": "comprehension"
   },
   {
     "id": 10,
-    "question": "What permissions model does Microsoft Defender for Endpoint use for device group access control?",
+    "question": "Which of the following is a valid inference that can be drawn from a text stating that 'South Africa has 11 official languages, but English is used in most official government communications'?",
     "options": [
-      "Azure RBAC",
-      "Role-based access control (RBAC) within Defender for Endpoint",
-      "Active Directory group policy",
-      "Microsoft Entra Privileged Identity Management"
+      "All South Africans speak English fluently",
+      "English serves as a lingua franca despite not being the only official language",
+      "The other 10 official languages are no longer used in South Africa",
+      "English was declared the only official language of South Africa"
     ],
     "correctAnswer": 1,
-    "explanation": "Defender for Endpoint uses its own RBAC model to control access to device groups, allowing granular permissions for different security team roles.",
-    "topic": "manage-soc",
-    "section": "configure-sentinel-siem-platform"
+    "explanation": "The fact that English is used in most official communications despite having 11 official languages implies that English functions as a common language (lingua franca) for government business.",
+    "topic": "paper-1",
+    "section": "comprehension"
   },
   {
     "id": 11,
-    "question": "Which capability automatically stops active attacks across devices, identities, and email in real-time?",
+    "question": "When writing a summary, which of the following should you include?",
     "options": [
-      "Automated investigation and response (AIR)",
-      "Automatic attack disruption",
-      "Advanced Hunting",
-      "Threat analytics"
+      "Your personal opinion on the topic",
+      "Only the main points and essential supporting details",
+      "Every detail from the original text, including examples",
+      "New information not found in the original text"
     ],
     "correctAnswer": 1,
-    "explanation": "Automatic attack disruption stops active attacks in real-time across devices, identities, and email using AI and threat intelligence to contain compromised entities.",
-    "topic": "manage-soc",
-    "section": "configure-automation-defender-xdr-sentinel"
+    "explanation": "A summary should contain only the main ideas and key supporting points from the original text, without personal opinions, unnecessary detail, or new information.",
+    "topic": "paper-1",
+    "section": "summary"
   },
   {
     "id": 12,
-    "question": "What happens when automated investigation and response (AIR) triggers on an alert?",
+    "question": "Which of the following is an example of effective paraphrasing of the sentence 'Climate change poses a significant threat to global food security'?",
     "options": [
-      "The alert is automatically deleted",
-      "AIR analyzes the alert, determines severity, and takes remediation actions",
-      "All affected devices are immediately wiped",
-      "An email is sent to the global administrator"
+      "Climate change threatens food security around the world",
+      "Climate change poses a significant threat to global food security (original sentence)",
+      "Global warming is bad for food",
+      "I think climate change might affect food in some way"
     ],
-    "correctAnswer": 1,
-    "explanation": "AIR analyzes the alert and related entities, determines severity and scope, takes automated remediation actions, and presents remaining actions for analyst approval.",
-    "topic": "manage-soc",
-    "section": "configure-automation-defender-xdr-sentinel"
+    "correctAnswer": 0,
+    "explanation": "Effective paraphrasing restates the idea using different words and sentence structure without changing the meaning. Option A changes 'poses a significant threat' to 'threatens' while keeping the core meaning intact.",
+    "topic": "paper-1",
+    "section": "summary"
   },
   {
     "id": 13,
-    "question": "Which automation level requires analyst approval for ALL remediation actions?",
+    "question": "In the Grade 12 English Home Language exam, how should a summary be presented?",
     "options": [
-      "Full automation",
-      "Semi-automation",
-      "No automation",
-      "Supervised automation"
+      "As a single continuous paragraph in full sentences",
+      "In bullet points or numbered point form using full sentences",
+      "In a table with two columns",
+      "As a mind map or diagram"
     ],
-    "correctAnswer": 2,
-    "explanation": "No automation level requires analyst approval for all remediation actions. No actions are taken automatically without manual intervention.",
-    "topic": "manage-soc",
-    "section": "configure-automation-defender-xdr-sentinel"
+    "correctAnswer": 1,
+    "explanation": "The summary must be presented in point form using full sentences. Each point should contain one main idea, numbered sequentially, without introductory or concluding remarks.",
+    "topic": "paper-1",
+    "section": "summary"
   },
   {
     "id": 14,
-    "question": "What is the primary trigger for automatic attack disruption in Microsoft Defender XDR?",
+    "question": "When summarising a text, which of the following should you avoid?",
     "options": [
-      "Manual analyst request",
-      "Detection of an active ongoing attack using AI and threat intelligence",
-      "Scheduled daily scan results",
-      "User report of suspicious activity"
+      "Using your own words to express the main ideas",
+      "Including direct quotations from the original text",
+      "Identifying the most important points",
+      "Organising the points in a logical order"
     ],
     "correctAnswer": 1,
-    "explanation": "Automatic attack disruption is triggered when Microsoft's AI and threat intelligence detect an active ongoing attack, and it automatically contains compromised entities.",
-    "topic": "manage-soc",
-    "section": "configure-automation-defender-xdr-sentinel"
+    "explanation": "Direct quotations should be avoided in a summary. You must paraphrase the author's ideas in your own words rather than copying phrases or sentences from the original text.",
+    "topic": "paper-1",
+    "section": "summary"
   },
   {
     "id": 15,
-    "question": "Which entities can automatic attack disruption contain?",
+    "question": "What is the typical word limit for a summary in the Grade 12 English Home Language Paper 1 exam?",
     "options": [
-      "Devices only",
-      "Identities only",
-      "Devices, identities, and email",
-      "Network appliances only"
+      "50-60 words",
+      "90-100 words",
+      "200-250 words",
+      "There is no word limit"
     ],
-    "correctAnswer": 2,
-    "explanation": "Automatic attack disruption can contain compromised devices, user identities, and email-related threats across the Microsoft security stack.",
-    "topic": "manage-soc",
-    "section": "configure-automation-defender-xdr-sentinel"
+    "correctAnswer": 1,
+    "explanation": "The summary in the Grade 12 English Home Language Paper 1 exam typically has a word limit of 90-100 words. Staying within this limit is part of the assessment.",
+    "topic": "paper-1",
+    "section": "summary"
   },
   {
     "id": 16,
-    "question": "What is the purpose of automation rules in Microsoft Sentinel?",
+    "question": "In a political cartoon, the use of exaggerated physical features such as an oversized nose or ears to represent a public figure is called...",
     "options": [
-      "To automatically generate KQL queries",
-      "To centrally manage incident response automation including running playbooks",
-      "To create new data connectors",
-      "To manage user roles and permissions"
+      "Stereotyping",
+      "Caricature",
+      "Symbolism",
+      "Irony"
     ],
     "correctAnswer": 1,
-    "explanation": "Automation rules centrally manage incident automation by defining conditions and actions such as assigning incidents, changing severity, adding tags, and triggering playbooks.",
-    "topic": "manage-soc",
-    "section": "configure-automation-defender-xdr-sentinel"
+    "explanation": "Caricature is the deliberate exaggeration of physical features for humorous or satirical effect. It is a common technique in political cartoons to mock or critique public figures.",
+    "topic": "paper-1",
+    "section": "visual-literacy"
   },
   {
     "id": 17,
-    "question": "What Azure service powers Microsoft Sentinel playbooks?",
+    "question": "Which persuasive technique is being used when an advertisement features a doctor in a white coat recommending a particular brand of medicine?",
     "options": [
-      "Azure Functions",
-      "Azure Logic Apps",
-      "Azure Automation",
-      "Azure Kubernetes Service"
+      "Bandwagon appeal",
+      "Celebrity endorsement",
+      "Appeal to authority",
+      "Emotional appeal"
     ],
-    "correctAnswer": 1,
-    "explanation": "Microsoft Sentinel playbooks are built on Azure Logic Apps, which provides hundreds of connectors for automating security response actions.",
-    "topic": "manage-soc",
-    "section": "configure-automation-defender-xdr-sentinel"
+    "correctAnswer": 2,
+    "explanation": "Using a doctor to endorse a product is an appeal to authority — the advertiser relies on the credibility and expertise of the figure to persuade the audience that the product is trustworthy and effective.",
+    "topic": "paper-1",
+    "section": "visual-literacy"
   },
   {
     "id": 18,
-    "question": "What is the difference between an incident trigger and an alert trigger for Sentinel playbooks?",
+    "question": "An advertisement for a luxury car uses dark colours, soft lighting, and elegant font. What is the most likely intended effect on the target audience?",
     "options": [
-      "Alert trigger runs before incident creation; incident trigger runs when incident is created or updated",
-      "Alert trigger requires manual approval; incident trigger is fully automated",
-      "Incident trigger only works with Microsoft Defender alerts",
-      "Alert trigger is being deprecated"
+      "To suggest the car is affordable for everyone",
+      "To convey a sense of sophistication and exclusivity",
+      "To emphasise the car's fuel efficiency and practicality",
+      "To appeal to children and young adults"
     ],
-    "correctAnswer": 0,
-    "explanation": "Alert trigger playbooks run when an alert is generated before incident creation, while incident trigger playbooks run when an incident is created or updated.",
-    "topic": "manage-soc",
-    "section": "configure-automation-defender-xdr-sentinel"
+    "correctAnswer": 1,
+    "explanation": "Dark colours, soft lighting, and elegant font create an atmosphere of luxury and sophistication, suggesting that the product is exclusive and high-status, appealing to aspirational consumers.",
+    "topic": "paper-1",
+    "section": "visual-literacy"
   },
   {
     "id": 19,
-    "question": "How are automation rules ordered in Microsoft Sentinel?",
+    "question": "In cartoon analysis, what does the term 'body language' refer to?",
     "options": [
-      "Alphabetically by rule name",
-      "By priority number (lower number = higher priority)",
-      "By creation date",
-      "Randomly"
+      "The spoken words of the characters",
+      "The posture, gestures, and facial expressions of the characters",
+      "The background setting of the cartoon",
+      "The font used in the speech bubbles"
     ],
     "correctAnswer": 1,
-    "explanation": "Automation rules are ordered by priority. Lower priority numbers have higher priority. Only the first matching rule runs when an incident matches multiple rules.",
-    "topic": "manage-soc",
-    "section": "configure-automation-defender-xdr-sentinel"
+    "explanation": "Body language in cartoons refers to non-verbal communication through posture, gestures, and facial expressions, which reveal the characters' emotions, attitudes, and reactions.",
+    "topic": "paper-1",
+    "section": "visual-literacy"
   },
   {
     "id": 20,
-    "question": "Which action can an automation rule perform in Microsoft Sentinel?",
+    "question": "Which of the following is an example of a stereotype commonly found in advertisements?",
     "options": [
-      "Modify data retention policies",
-      "Assign incident to an analyst",
-      "Create new analytics rules",
-      "Deploy new data connectors"
+      "Showing people of all races using a product",
+      "Depicting women exclusively in domestic roles such as cleaning and cooking",
+      "Using bright colours to attract attention",
+      "Including the price of the product in the advertisement"
     ],
     "correctAnswer": 1,
-    "explanation": "Automation rules can assign incidents to analysts, change severity, add tags, and run playbooks. They manage incident lifecycle actions, not infrastructure changes.",
-    "topic": "manage-soc",
-    "section": "configure-automation-defender-xdr-sentinel"
+    "explanation": "A stereotype is a oversimplified and generalised representation of a group. Depicting women only in domestic roles reinforces the gender stereotype that women belong in the home.",
+    "topic": "paper-1",
+    "section": "visual-literacy"
   },
   {
     "id": 21,
-    "question": "Where do you edit a Sentinel playbook's logic?",
+    "question": "An advertisement for a sports drink shows athletes competing at the Olympic Games. What persuasive technique is being used?",
     "options": [
-      "In the Sentinel playbook editor",
-      "In the Logic Apps Designer",
-      "In the Azure portal Functions editor",
-      "In Visual Studio Code"
+      "Plain folks appeal",
+      "Transfer (association)",
+      "Name-calling",
+      "Testimonial"
     ],
     "correctAnswer": 1,
-    "explanation": "Playbooks are edited in the Logic Apps Designer, not directly in Sentinel. Sentinel integrates with Logic Apps for playbook creation and management.",
-    "topic": "manage-soc",
-    "section": "configure-automation-defender-xdr-sentinel"
+    "explanation": "Transfer is a persuasive technique that associates a product with positive qualities or prestigious contexts. By linking the sports drink with Olympic athletes, the advertiser transfers the values of excellence and achievement to the product.",
+    "topic": "paper-1",
+    "section": "visual-literacy"
   },
   {
     "id": 22,
-    "question": "Which Microsoft Sentinel role allows a user to create and edit analytics rules and workbooks?",
+    "question": "In a cartoon, a character is drawn with a speech bubble containing words, while another character has a thought bubble showing a dollar sign. This contrast indicates that...",
     "options": [
-      "Microsoft Sentinel Reader",
-      "Microsoft Sentinel Responder",
-      "Microsoft Sentinel Contributor",
-      "Microsoft Sentinel Automation Contributor"
+      "Both characters are thinking about money",
+      "One character is speaking while the other is thinking about money, suggesting dishonesty",
+      "The cartoon is about the stock market",
+      "The characters are exchanging currency"
     ],
-    "correctAnswer": 2,
-    "explanation": "Microsoft Sentinel Contributor can create and edit analytics rules, workbooks, and other Sentinel resources. Automation Contributor manages automation rules and playbooks.",
-    "topic": "manage-soc",
-    "section": "configure-sentinel-siem-platform"
+    "correctAnswer": 1,
+    "explanation": "Speech bubbles show what a character says aloud, while thought bubbles reveal their true thoughts. When a character's public words differ from their private thoughts (shown as a dollar sign), it suggests hypocrisy or hidden motives.",
+    "topic": "paper-1",
+    "section": "visual-literacy"
   },
   {
     "id": 23,
-    "question": "What is the Data lake tier in Microsoft Sentinel used for?",
+    "question": "Which of the following is a persuasive technique that involves encouraging the consumer to buy a product because 'everyone else is buying it'?",
     "options": [
-      "Real-time querying of all data",
-      "Long-term retention at lower cost with pay-per-scan queries",
-      "Storing only security events",
-      "Backup of all Sentinel configuration"
+      "Snob appeal",
+      "Bandwagon appeal",
+      "Plain folks appeal",
+      "Glittering generalities"
     ],
     "correctAnswer": 1,
-    "explanation": "The Data lake tier provides long-term data retention at lower cost. Data is queried using KQL jobs with a pay-per-scan model rather than interactive queries.",
-    "topic": "manage-soc",
-    "section": "configure-sentinel-siem-platform"
+    "explanation": "Bandwagon appeal pressures the consumer to join the majority. It suggests that because many people are buying the product, you should too, or you will be left out.",
+    "topic": "paper-1",
+    "section": "visual-literacy"
   },
   {
     "id": 24,
-    "question": "What Azure service powers Microsoft Sentinel workbooks?",
+    "question": "In analysing an advertisement, the use of large bold font for the product name and small fine print for the terms and conditions suggests that...",
     "options": [
-      "Azure Dashboards",
-      "Azure Monitor Workbooks",
-      "Power BI",
-      "Azure Data Explorer"
+      "The advertiser wants to highlight the benefits while downplaying the limitations",
+      "The product name and the terms are equally important",
+      "The terms and conditions are the main selling point",
+      "The advertisement is designed for people with poor eyesight"
     ],
-    "correctAnswer": 1,
-    "explanation": "Sentinel workbooks are built on Azure Monitor Workbooks, providing interactive KQL-powered visualizations with parameters and customizable templates.",
-    "topic": "manage-soc",
-    "section": "configure-sentinel-siem-platform"
+    "correctAnswer": 0,
+    "explanation": "Font size and weight direct the reader's attention. Large bold font emphasises the product name (benefits), while small fine print makes the terms and conditions less noticeable, suggesting the advertiser wants to minimise attention to limitations.",
+    "topic": "paper-1",
+    "section": "visual-literacy"
   },
   {
     "id": 25,
-    "question": "What is the purpose of SOC optimization recommendations in Microsoft Sentinel?",
+    "question": "A cartoon about corruption shows a politician with a briefcase full of money while speaking about 'serving the people'. This contrast between image and words is an example of...",
     "options": [
-      "To reduce cloud infrastructure costs",
-      "To suggest improvements in data coverage, analytics rules, and SOC efficiency",
-      "To automatically resolve all security incidents",
-      "To migrate from on-premises SIEM"
+      "Parody",
+      "Irony",
+      "Caricature",
+      "Exaggeration"
     ],
     "correctAnswer": 1,
-    "explanation": "SOC optimization recommendations analyze your environment and suggest improvements including enabling data connectors, creating analytics rules, and optimizing Defender plans.",
-    "topic": "manage-soc",
-    "section": "configure-sentinel-siem-platform"
+    "explanation": "Irony involves a contrast between appearance and reality. Here, the politician's words about serving the people contradict the visual of accepting bribes, creating dramatic irony that exposes corruption.",
+    "topic": "paper-1",
+    "section": "visual-literacy"
   },
   {
     "id": 26,
-    "question": "What is the minimum and maximum run frequency for scheduled analytics rules in Microsoft Sentinel?",
+    "question": "Identify the part of speech of the underlined word in the following sentence: 'She **very** carefully painted the delicate flowers.'",
     "options": [
-      "Every 1 minute to every 1 day",
-      "Every 5 minutes to every 14 days",
-      "Every 1 hour to every 7 days",
-      "Every 30 minutes to every 30 days"
+      "Adjective",
+      "Adverb",
+      "Preposition",
+      "Conjunction"
     ],
     "correctAnswer": 1,
-    "explanation": "Scheduled query rules can run every 5 minutes (minimum) to every 14 days (maximum), with the lookback period needing to be at least as long as the frequency.",
-    "topic": "manage-soc",
-    "section": "configure-sentinel-siem-platform"
+    "explanation": "'Very' modifies the adverb 'carefully', telling us the degree of care. Words that modify adjectives or other adverbs are adverbs of degree.",
+    "topic": "paper-1",
+    "section": "language-structures"
   },
   {
     "id": 27,
-    "question": "Which data ingestion connector type should you use for Linux-based log sources in Microsoft Sentinel?",
+    "question": "Which of the following sentences is written in the passive voice?",
     "options": [
-      "CEF via AMA",
-      "Syslog via AMA",
-      "Windows Security Events via AMA",
-      "REST API connector"
+      "The dog chased the cat across the garden",
+      "The cat was chased by the dog across the garden",
+      "The dog is chasing the cat across the garden",
+      "The dog has chased the cat across the garden"
     ],
     "correctAnswer": 1,
-    "explanation": "Syslog via AMA is specifically designed for collecting logs from Linux-based systems. CEF via AMA is for security appliances in Common Event Format.",
-    "topic": "manage-soc",
-    "section": "ingest-data-sentinel"
+    "explanation": "In the passive voice, the subject receives the action rather than performing it. 'The cat' (subject) is receiving the action of being chased. The agent ('by the dog') often follows.",
+    "topic": "paper-1",
+    "section": "language-structures"
   },
   {
     "id": 28,
-    "question": "What is the primary benefit of using workspace transformations during data ingestion in Sentinel?",
+    "question": "Choose the correct verb form to complete the sentence: 'The committee of members ___ decided to postpone the meeting.'",
     "options": [
-      "They encrypt all data at rest",
-      "They filter or enrich data at ingestion time to reduce storage costs",
-      "They automatically create analytics rules",
-      "They replicate data to multiple regions"
+      "has",
+      "have",
+      "were",
+      "are"
     ],
-    "correctAnswer": 1,
-    "explanation": "Workspace transformations filter or enrich data before it's stored in the Log Analytics workspace, reducing ingestion costs and storage requirements.",
-    "topic": "manage-soc",
-    "section": "ingest-data-sentinel"
+    "correctAnswer": 0,
+    "explanation": "The subject is 'committee', which is a collective noun treated as singular in South African English. Even though it consists of multiple members, the group acts as one unit, so the singular verb 'has' is correct.",
+    "topic": "paper-1",
+    "section": "language-structures"
   },
   {
     "id": 29,
-    "question": "Which method should you use to collect Windows Security events from multiple machines without installing an agent on each one?",
+    "question": "The prefix 'mis-' in the word 'misinterpret' means...",
     "options": [
-      "Syslog via AMA",
-      "Windows Event Forwarding (WEF)",
-      "Azure Policy diagnostic settings",
-      "REST API"
+      "Again",
+      "Before",
+      "Wrongly or incorrectly",
+      "Not"
     ],
-    "correctAnswer": 1,
-    "explanation": "Windows Event Forwarding (WEF) forwards events from multiple source machines to a collector server, which then uses AMA to send events to Sentinel.",
-    "topic": "manage-soc",
-    "section": "ingest-data-sentinel"
+    "correctAnswer": 2,
+    "explanation": "The prefix 'mis-' means 'wrongly' or 'incorrectly'. To misinterpret means to interpret something incorrectly. Other examples include 'misunderstand' and 'misjudge'.",
+    "topic": "paper-1",
+    "section": "language-structures"
   },
   {
     "id": 30,
-    "question": "How do you deploy diagnostic settings to stream Azure Activity Logs to Sentinel across multiple subscriptions?",
+    "question": "Which of the following words is an antonym of 'ephemeral'?",
     "options": [
-      "Manual configuration per subscription",
-      "Azure Policy",
-      "PowerShell script on each VM",
-      "Azure Blueprints"
+      "Temporary",
+      "Brief",
+      "Permanent",
+      "Fleeting"
     ],
-    "correctAnswer": 1,
-    "explanation": "Azure Policy is used to deploy diagnostic settings across multiple subscriptions at scale, ensuring consistent streaming of Azure Activity Logs and resource logs to Sentinel.",
-    "topic": "manage-soc",
-    "section": "ingest-data-sentinel"
+    "correctAnswer": 2,
+    "explanation": "'Ephemeral' means lasting for a very short time. Its antonym is 'permanent', meaning lasting indefinitely. 'Temporary', 'brief', and 'fleeting' are all synonyms of 'ephemeral'.",
+    "topic": "paper-1",
+    "section": "language-structures"
   },
   {
     "id": 31,
-    "question": "What format is used to ingest threat intelligence feeds into Microsoft Sentinel?",
+    "question": "Convert the following direct speech to indirect speech: 'Maria said, \u201cI am feeling unwell today.\u201d'",
     "options": [
-      "JSON only",
-      "STIX/TAXII",
-      "CSV format",
-      "XML format"
+      "Maria said that I am feeling unwell today",
+      "Maria said that she was feeling unwell that day",
+      "Maria said that she is feeling unwell today",
+      "Maria said that she feels unwell today"
     ],
     "correctAnswer": 1,
-    "explanation": "Threat intelligence feeds are ingested using the STIX/TAXII protocol, which is the industry standard for sharing threat intelligence information.",
-    "topic": "manage-soc",
-    "section": "ingest-data-sentinel"
+    "explanation": "When converting to indirect speech, the pronoun 'I' changes to 'she', the present continuous 'am feeling' shifts to past continuous 'was feeling', and 'today' becomes 'that day'.",
+    "topic": "paper-1",
+    "section": "language-structures"
   },
   {
     "id": 32,
-    "question": "What is a custom log table in Microsoft Sentinel?",
+    "question": "Which sentence uses the past perfect tense correctly?",
     "options": [
-      "A pre-defined table with fixed schema",
-      "A user-defined table for storing ingested data with a custom schema",
-      "A table that only stores Windows event logs",
-      "A temporary table that auto-deletes after 30 days"
+      "She finished her homework before dinner",
+      "She had finished her homework before dinner",
+      "She has finished her homework before dinner",
+      "She finishes her homework before dinner"
     ],
     "correctAnswer": 1,
-    "explanation": "Custom log tables allow users to define their own schemas for storing ingested data from custom sources, APIs, or specialized applications.",
-    "topic": "manage-soc",
-    "section": "ingest-data-sentinel"
+    "explanation": "The past perfect tense ('had finished') is used to indicate an action that was completed before another past action or time. It shows the sequence: first she finished, then dinner.",
+    "topic": "paper-1",
+    "section": "language-structures"
   },
   {
     "id": 33,
-    "question": "Which data connector type should you use to collect logs from a third-party firewall in Microsoft Sentinel?",
+    "question": "Which punctuation mark is used to separate items in a list when those items already contain commas?",
     "options": [
-      "Windows Security Events via AMA",
-      "CEF via AMA",
-      "Azure Activity connector",
-      "Office 365 connector"
+      "Colon",
+      "Semicolon",
+      "Dash",
+      "Full stop"
     ],
     "correctAnswer": 1,
-    "explanation": "CEF (Common Event Format) via AMA is designed for collecting logs from third-party security appliances like firewalls, IDS/IPS, and other network security devices.",
-    "topic": "manage-soc",
-    "section": "ingest-data-sentinel"
+    "explanation": "A semicolon is used to separate complex items in a list where individual items already contain commas. For example: 'We visited Cape Town, South Africa; London, England; and Paris, France.'",
+    "topic": "paper-1",
+    "section": "language-structures"
   },
   {
     "id": 34,
-    "question": "What is the lookback period for near-real-time (NRT) analytics rules in Microsoft Sentinel?",
+    "question": "Which of the following is an example of a complex sentence?",
     "options": [
-      "5 minutes",
-      "1 minute",
-      "30 seconds",
-      "10 minutes"
+      "I went to the shop and bought milk",
+      "Although it was raining, she went for a walk",
+      "The cat sat on the mat",
+      "He ran, jumped, and cheered"
     ],
     "correctAnswer": 1,
-    "explanation": "NRT rules have a 1-minute lookback period with a 1-minute run frequency, providing near-real-time detection capabilities.",
-    "topic": "manage-soc",
-    "section": "configure-detections"
+    "explanation": "A complex sentence contains one independent clause and at least one dependent clause. 'Although it was raining' (dependent clause) + 'she went for a walk' (independent clause) forms a complex sentence.",
+    "topic": "paper-1",
+    "section": "language-structures"
   },
   {
     "id": 35,
-    "question": "What does the MITRE ATT&CK matrix integration in Microsoft Sentinel visualize?",
+    "question": "Identify the synonym of 'eloquent' in the following sentence: 'The speaker delivered a fluent and persuasive address that moved the audience to tears.'",
     "options": [
-      "Network topology and device connections",
-      "Detection coverage across tactics and techniques",
-      "User authentication patterns",
-      "Data ingestion costs by source"
+      "Hesitant",
+      "Articulate",
+      "Confusing",
+      "Monotonous"
     ],
     "correctAnswer": 1,
-    "explanation": "The MITRE ATT&CK matrix integration shows which attack techniques are covered by analytics rules and identifies gaps in detection coverage across tactics.",
-    "topic": "manage-soc",
-    "section": "configure-detections"
+    "explanation": "'Eloquent' means fluent and persuasive in speaking or writing. 'Articulate' is a close synonym, meaning able to express oneself clearly and effectively.",
+    "topic": "paper-1",
+    "section": "language-structures"
   },
   {
     "id": 36,
-    "question": "How are machine learning analytics rules in Microsoft Sentinel configured?",
+    "question": "The use of the phrase 'economically disadvantaged' instead of 'poor' is an example of...",
     "options": [
-      "Require custom ML model training in Azure Machine Learning",
-      "Built-in ML detection enabled by default with no configuration needed",
-      "Require Python scripts to be uploaded",
-      "Need Azure Cognitive Services integration"
+      "A dysphemism",
+      "A euphemism",
+      "Jargon",
+      "Slang"
     ],
     "correctAnswer": 1,
-    "explanation": "ML-based anomaly detection in Sentinel is built-in and enabled by default. It uses behavioral analytics without requiring custom configuration or model training.",
-    "topic": "manage-soc",
-    "section": "configure-detections"
+    "explanation": "A euphemism is a mild or indirect word or expression used to replace one that is considered too harsh or blunt. 'Economically disadvantaged' softens the harshness of 'poor'.",
+    "topic": "paper-1",
+    "section": "critical-language-awareness"
   },
   {
     "id": 37,
-    "question": "What is the maximum lookback period for a scheduled analytics rule in Microsoft Sentinel?",
+    "question": "Emotive language is used in a text primarily to...",
     "options": [
-      "24 hours",
-      "The same as the run frequency",
-      "14 days",
-      "7 days"
+      "Provide factual information objectively",
+      "Explain technical concepts clearly",
+      "Evoke an emotional response from the reader",
+      "Summarise the main points concisely"
     ],
     "correctAnswer": 2,
-    "explanation": "The lookback period can be up to 14 days for scheduled analytics rules, but it must be at least as long as the run frequency.",
-    "topic": "manage-soc",
-    "section": "configure-detections"
+    "explanation": "Emotive language is deliberately chosen to stir emotions such as anger, sympathy, fear, or excitement in the reader, often to persuade or manipulate rather than to inform objectively.",
+    "topic": "paper-1",
+    "section": "critical-language-awareness"
   },
   {
     "id": 38,
-    "question": "Where are custom detection rules created in Microsoft Defender XDR?",
+    "question": "The propaganda technique that involves repeating a catchy but vague phrase such as 'a better future for all' without providing any specific details is known as...",
     "options": [
-      "In the Microsoft 365 Defender portal settings",
-      "Using Advanced Hunting with KQL queries",
-      "In the Azure portal",
-      "In Microsoft Sentinel analytics rules"
+      "Name-calling",
+      "Glittering generalities",
+      "Testimonial",
+      "Card stacking"
     ],
     "correctAnswer": 1,
-    "explanation": "Custom detection rules in Defender XDR are created by writing KQL queries in the Advanced Hunting section, which then run on a schedule to generate alerts.",
-    "topic": "manage-soc",
-    "section": "configure-detections"
+    "explanation": "Glittering generalities use emotionally appealing but vague words that sound good but lack concrete meaning. 'A better future for all' appeals to hope without specifying how it will be achieved.",
+    "topic": "paper-1",
+    "section": "critical-language-awareness"
   },
   {
     "id": 39,
-    "question": "What type of analytics rule in Microsoft Sentinel matches ingested data against threat intelligence feeds?",
+    "question": "Which of the following is an example of dysphemism?",
     "options": [
-      "Scheduled query rules",
-      "NRT rules",
-      "Threat intelligence rules",
-      "Machine learning rules"
+      "Describing someone who passed away as 'having passed on'",
+      "Referring to a strike as 'economic action'",
+      "Calling a political opponent a 'snake'",
+      "Describing a toilet as 'the restroom'"
     ],
     "correctAnswer": 2,
-    "explanation": "Threat intelligence analytics rules match data in your workspace against threat indicators from ingested threat intelligence feeds to generate alerts.",
-    "topic": "manage-soc",
-    "section": "configure-detections"
+    "explanation": "A dysphemism is a harsh or derogatory expression used in place of a neutral one. Calling someone a 'snake' is intentionally insulting and negative, far harsher than neutral terms like 'opponent' or 'critic'.",
+    "topic": "paper-1",
+    "section": "critical-language-awareness"
   },
   {
     "id": 40,
-    "question": "Which tool in Sentinel provides coverage analysis across MITRE ATT&CK techniques?",
+    "question": "When a news article describes a group of protesters as a 'mob' rather than a 'crowd' or 'gathering', this word choice reveals...",
     "options": [
-      "SOC optimization",
-      "MITRE ATT&CK coverage matrix",
-      "Threat analytics",
-      "Workbook templates"
+      "Objective and unbiased reporting",
+      "A negative bias against the protesters",
+      "A positive attitude towards the protest",
+      "Neutral journalistic standards"
     ],
     "correctAnswer": 1,
-    "explanation": "The MITRE ATT&CK coverage matrix shows which techniques have detection coverage and identifies gaps where analytics rules are needed.",
-    "topic": "manage-soc",
-    "section": "configure-detections"
+    "explanation": "Word choice reveals attitude. 'Mob' has negative connotations of disorder and violence, while 'crowd' or 'gathering' are neutral. The choice of 'mob' indicates bias against the protesters.",
+    "topic": "paper-1",
+    "section": "critical-language-awareness"
   },
   {
     "id": 41,
-    "question": "How do you manage custom detection rules in Microsoft Defender XDR after creation?",
+    "question": "The propaganda technique known as 'card stacking' involves...",
     "options": [
-      "Through the Microsoft 365 Defender Advanced Hunting section",
-      "In the Defender for Endpoint configuration page",
-      "Via PowerShell only",
-      "Through Azure Resource Manager templates"
+      "Presenting only favourable information while suppressing unfavourable facts",
+      "Using a celebrity to endorse a product or idea",
+      "Attacking an opponent's character rather than their arguments",
+      "Appealing to the audience's fear of being left out"
     ],
     "correctAnswer": 0,
-    "explanation": "Custom detection rules are managed in the Advanced Hunting section where they were created. You can edit, enable, disable, or delete them from there.",
-    "topic": "manage-soc",
-    "section": "configure-detections"
+    "explanation": "Card stacking (or selective omission) presents only one side of the argument by highlighting positive facts and suppressing negative ones, creating a misleadingly favourable impression.",
+    "topic": "paper-1",
+    "section": "critical-language-awareness"
   },
   {
     "id": 42,
-    "question": "What is the purpose of anomaly detection rules in Microsoft Sentinel?",
+    "question": "A politician says: 'My opponent claims to care about education, but we all know he failed his own matric.' This is an example of which propaganda technique?",
     "options": [
-      "To detect known malware signatures",
-      "To identify unusual behavior patterns using ML without manual configuration",
-      "To block suspicious IP addresses",
-      "To enforce data retention policies"
+      "Testimonial",
+      "Plain folks appeal",
+      "Ad hominem (name-calling)",
+      "Bandwagon appeal"
     ],
-    "correctAnswer": 1,
-    "explanation": "Anomaly detection rules use built-in machine learning to identify unusual behavior patterns without requiring manual configuration, providing baseline deviation detection.",
-    "topic": "manage-soc",
-    "section": "configure-detections"
+    "correctAnswer": 2,
+    "explanation": "Ad hominem is an attack on a person's character rather than their arguments or policies. The politician attacks the opponent's personal history instead of addressing their education policies.",
+    "topic": "paper-1",
+    "section": "critical-language-awareness"
   },
   {
     "id": 43,
-    "question": "Which Defender for Endpoint action is used to respond to a confirmed compromised device?",
+    "question": "Which of the following sentences uses loaded language?",
     "options": [
-      "Run AV scan only",
-      "Isolate device from network",
-      "Send email alert",
-      "Disable user account"
+      "The meeting is scheduled for 10 am on Tuesday",
+      "The reckless destruction of our heritage must stop immediately",
+      "The report contains five sections and an appendix",
+      "The train departs from platform 3 at 6 pm"
     ],
     "correctAnswer": 1,
-    "explanation": "Isolating a device from the network is a key response action that prevents a compromised device from communicating with other systems while allowing investigation.",
-    "topic": "respond-incidents",
-    "section": "respond-defender-endpoint"
+    "explanation": "Loaded language uses words with strong emotional associations to influence the reader. 'Reckless destruction' is emotionally charged and intended to provoke outrage, unlike the neutral factual statements in the other options.",
+    "topic": "paper-1",
+    "section": "critical-language-awareness"
   },
   {
     "id": 44,
-    "question": "What is the first step when investigating a compromised identity identified by Microsoft Entra ID?",
+    "question": "Stereotyping in language occurs when...",
     "options": [
-      "Reset the user password immediately",
-      "Review the risk level and sign-in details from Identity Protection",
-      "Delete the user account",
-      "Block all sign-ins globally"
+      "A writer uses complex vocabulary to impress readers",
+      "A generalisation is made about all members of a particular group",
+      "An author describes a character in detail",
+      "Two different words are used to describe the same object"
     ],
     "correctAnswer": 1,
-    "explanation": "Start by reviewing the risk level and sign-in details in Microsoft Entra Identity Protection to understand the nature and scope of the compromise before taking action.",
-    "topic": "respond-incidents",
-    "section": "respond-defender-xdr"
+    "explanation": "Stereotyping involves making sweeping generalisations about an entire group of people, often based on prejudice or oversimplified beliefs, such as assuming all teenagers are irresponsible.",
+    "topic": "paper-1",
+    "section": "critical-language-awareness"
   },
   {
     "id": 45,
-    "question": "Which Microsoft service provides AI-assisted investigation with natural language capabilities in the Defender portal?",
+    "question": "When a company advertises its product as 'environmentally friendly' without providing any evidence or certification, this is an example of...",
     "options": [
-      "Microsoft Copilot for Security",
-      "Azure OpenAI Service",
-      "Microsoft Copilot for M365",
-      "Microsoft Copilot Studio"
+      "Greenwashing",
+      "Testimonial advertising",
+      "Plain folks appeal",
+      "Transfer"
     ],
     "correctAnswer": 0,
-    "explanation": "Microsoft Copilot for Security provides AI-assisted investigation in the Defender portal, including natural language incident summaries, KQL generation, and response recommendations.",
-    "topic": "respond-incidents",
-    "section": "respond-defender-xdr"
+    "explanation": "Greenwashing is a form of deceptive marketing where a company creates a false impression of environmental responsibility. Using vague claims like 'environmentally friendly' without evidence is a common greenwashing tactic.",
+    "topic": "paper-1",
+    "section": "critical-language-awareness"
   },
   {
     "id": 46,
-    "question": "What is the purpose of case management in Microsoft Defender XDR?",
+    "question": "In Shakespeare's Sonnet 130, the line 'My mistress' eyes are nothing like the sun' is notable because it...",
     "options": [
-      "To track legal cases for compliance",
-      "To manage the incident lifecycle including assignment, status, and resolution",
-      "To manage customer support tickets",
-      "To manage software license cases"
+      "Follows the conventional Petrarchan tradition of idealising the beloved",
+      "Rejects conventional idealized comparisons in favour of realistic描写",
+      "Uses a simile to compare the mistress to the sun",
+      "Suggests that the speaker's mistress is blind"
     ],
     "correctAnswer": 1,
-    "explanation": "Case management tracks the incident lifecycle (New, In Progress, Resolved) including assignment to analysts, severity classification, comments, and resolution tracking.",
-    "topic": "respond-incidents",
-    "section": "respond-defender-xdr"
+    "explanation": "Shakespeare deliberately subverts the Petrarchan convention of idealising the beloved through exaggerated comparisons. By saying her eyes are 'nothing like the sun', he rejects the clich\u00e9d praise typical of love poetry of his time.",
+    "topic": "paper-2",
+    "section": "poetry-sonnet-130"
   },
   {
     "id": 47,
-    "question": "Which Defender for Cloud alert type indicates a crypto mining threat on an Azure VM?",
+    "question": "The rhyme scheme of Shakespeare's Sonnet 130 is...",
     "options": [
-      "SQL injection detection",
-      "Crypto mining alert from Defender for Servers",
-      "Anonymous access alert from Defender for Storage",
-      "Privileged container alert from Defender for Containers"
+      "ABAB CDCD EFEF GG",
+      "ABBA ABBA CDDC EE",
+      "AABB CCDD EEFF GG",
+      "ABAB BCBC CDCD EE"
     ],
-    "correctAnswer": 1,
-    "explanation": "Defender for Servers generates crypto mining alerts when suspicious processes or network connections indicating cryptocurrency mining activity are detected on VMs.",
-    "topic": "respond-incidents",
-    "section": "respond-defender-xdr"
+    "correctAnswer": 0,
+    "explanation": "Sonnet 130 follows the Shakespearean (English) sonnet form: three quatrains with alternating rhyme (ABAB CDCD EFEF) and a concluding rhyming couplet (GG).",
+    "topic": "paper-2",
+    "section": "poetry-sonnet-130"
   },
   {
     "id": 48,
-    "question": "What is the cost of ingesting Defender for Cloud alerts into Microsoft Sentinel?",
+    "question": "In Sonnet 130, Shakespeare describes his mistress's breath as 'reeks'. This word choice is deliberately shocking because...",
     "options": [
-      "Full data ingestion rates apply",
-      "Free — no additional data ingestion cost for security alerts",
-      "50% of standard ingestion cost",
-      "Charged per alert rather than per GB"
+      "It suggests the mistress is unwell",
+      "It contradicts the idealized language expected in love poetry",
+      "It is an example of alliteration",
+      "It indicates that the mistress has been eating garlic"
     ],
     "correctAnswer": 1,
-    "explanation": "Defender for Cloud security alerts are free to ingest into Microsoft Sentinel, providing a cost-effective way to centralize all security alerts.",
-    "topic": "respond-incidents",
-    "section": "respond-defender-xdr"
+    "explanation": "The word 'reeks' is harsh and unflattering, deliberately contrasting with the sweet perfumes and pleasant scents that conventional love poets would attribute to their beloved. This reinforces the poem's rejection of idealisation.",
+    "topic": "paper-2",
+    "section": "poetry-sonnet-130"
   },
   {
     "id": 49,
-    "question": "Which Defender for Cloud workload protection detects web shells on App Service instances?",
+    "question": "The final couplet of Sonnet 130 ('And yet, by heaven, I think my love as rare / As any she belied with false compare') serves to...",
     "options": [
-      "Defender for Servers",
-      "Defender for App Service",
-      "Defender for Containers",
-      "Defender for Storage"
+      "Undermine everything the speaker has said before",
+      "Assert that the speaker's love is genuine and not dependent on false comparisons",
+      "Suggest that the speaker is actually being ironic and does love false comparisons",
+      "Apologise for the unflattering descriptions in the preceding lines"
     ],
     "correctAnswer": 1,
-    "explanation": "Defender for App Service detects threats specific to Azure App Service including web shells, fileless execution, and crypto mining on app hosts.",
-    "topic": "respond-incidents",
-    "section": "respond-defender-xdr"
+    "explanation": "The volta (turn) in the couplet shifts from negative descriptions to a positive assertion: the speaker's love is 'as rare' as any, precisely because it is based on truth rather than exaggerated 'false compare'.",
+    "topic": "paper-2",
+    "section": "poetry-sonnet-130"
   },
   {
     "id": 50,
-    "question": "What is the default retention period for the Microsoft Purview unified audit log?",
+    "question": "In Sonnet 130, the line 'If snow be white, why then her breasts are dun' employs which literary device?",
     "options": [
-      "30 days",
-      "90 days",
-      "180 days",
-      "365 days"
+      "Metaphor and hyperbole",
+      "Comparison and contrast",
+      "Personification and apostrophe",
+      "Onomatopoeia and alliteration"
     ],
     "correctAnswer": 1,
-    "explanation": "The default retention period for the Microsoft Purview unified audit log is 90 days. Extended retention up to 10 years is available with an add-on license.",
-    "topic": "respond-incidents",
-    "section": "investigate-m365-activities"
+    "explanation": "The line uses comparison (snow as the standard of whiteness) and contrast (her breasts are 'dun', a dull grey-brown, compared to snow). This contrast rejects the Petrarchan ideal of snow-white skin.",
+    "topic": "paper-2",
+    "section": "poetry-sonnet-130"
   },
   {
     "id": 51,
-    "question": "Which tool should you use to locate specific email content related to an investigation in Microsoft Purview?",
+    "question": "In Ingrid Jonker's 'The child who was shot dead by soldiers in Nyanga', the repeated line 'the child is not dead' serves to...",
     "options": [
-      "Audit log search",
-      "Content Search",
-      "Data Loss Prevention policies",
-      "Microsoft Graph activity logs"
+      "Suggest that the child survived the shooting",
+      "Emphasise the child's enduring symbolic presence and the lasting impact of the tragedy",
+      "Indicate that the poem is about resurrection",
+      "Contradict the title of the poem"
     ],
     "correctAnswer": 1,
-    "explanation": "Content Search in Microsoft Purview can search across Exchange, SharePoint, OneDrive, and Teams to locate specific content related to an investigation.",
-    "topic": "respond-incidents",
-    "section": "investigate-m365-activities"
+    "explanation": "The repetition is not literal but symbolic: the child's death represents the innocent victims of apartheid, and the refrain insists that the memory and significance of such losses cannot be erased.",
+    "topic": "paper-2",
+    "section": "poetry-child-shot"
   },
   {
     "id": 52,
-    "question": "What is the recommended workflow for investigating suspicious data access in Microsoft Purview?",
+    "question": "The tone of Jonker's 'The child who was shot dead by soldiers in Nyanga' can best be described as...",
     "options": [
-      "Start with Content Search, then use Audit log",
-      "Start with Audit log to identify the activity, then use Content Search to locate the content",
-      "Use Microsoft Graph activity logs only",
-      "Use Data Lifecycle Management only"
+      "Joyful and celebratory",
+      "Detached and clinical",
+      "Anguished and accusatory",
+      "Humorous and light-hearted"
     ],
-    "correctAnswer": 1,
-    "explanation": "The recommended workflow is to use Audit log first to identify WHO did WHAT and WHEN, then use Content Search to locate the actual content involved.",
-    "topic": "respond-incidents",
-    "section": "investigate-m365-activities"
+    "correctAnswer": 2,
+    "explanation": "The poem's tone is one of deep anguish and accusation. It mourns the death of an innocent child while implicitly condemning the apartheid system and the soldiers who shot her.",
+    "topic": "paper-2",
+    "section": "poetry-child-shot"
   },
   {
     "id": 53,
-    "question": "What kind of information does the device timeline in Microsoft Defender for Endpoint provide?",
+    "question": "The setting of Jonker's poem is Nyanga, which is significant because...",
     "options": [
-      "Only antivirus scan results",
-      "A chronological view of all events including processes, files, and network connections",
-      "User login history only",
-      "Software update status"
+      "It is a wealthy suburb of Cape Town",
+      "It was a township where resistance against apartheid was strong",
+      "It is the birthplace of the poet",
+      "It is known for its natural beauty"
     ],
     "correctAnswer": 1,
-    "explanation": "The device timeline provides a chronological view of all events on a device, including processes, files, network connections, registry changes, and security alerts.",
-    "topic": "respond-incidents",
-    "section": "respond-defender-endpoint"
+    "explanation": "Nyanga is a township in Cape Town that was a site of significant anti-apartheid activism and police violence. The specific location grounds the poem in the reality of apartheid-era South Africa.",
+    "topic": "paper-2",
+    "section": "poetry-child-shot"
   },
   {
     "id": 54,
-    "question": "What is the purpose of live response in Microsoft Defender for Endpoint?",
-    "options": [
-      "To view real-time device location",
-      "To execute PowerShell commands and scripts on an endpoint remotely for investigation",
-      "To stream live video from the device camera",
-      "To monitor network traffic in real-time"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Live response provides a real-time remote shell on the endpoint for running PowerShell commands, scripts, forensic collection, and remediation actions.",
-    "topic": "respond-incidents",
-    "section": "respond-defender-endpoint"
-  },
-  {
-    "id": 55,
-    "question": "What is the primary use case for collecting an investigation package in Defender for Endpoint?",
-    "options": [
-      "To install new security software",
-      "To collect a comprehensive forensic package from a device for offline analysis",
-      "To update device configuration",
-      "To migrate devices to a new tenant"
-    ],
-    "correctAnswer": 1,
-    "explanation": "An investigation package collects a comprehensive forensic package from a device including registry, processes, services, and network connections for offline analysis.",
-    "topic": "respond-incidents",
-    "section": "respond-defender-endpoint"
-  },
-  {
-    "id": 56,
-    "question": "What is the purpose of the incident graph in Microsoft Defender XDR?",
-    "options": [
-      "To display network topology",
-      "To visualize relationships between alerts, users, devices, and email in an attack",
-      "To show organizational hierarchy",
-      "To map physical office locations"
-    ],
-    "correctAnswer": 1,
-    "explanation": "The incident graph visualizes the relationships between alerts, users, devices, IPs, and email to help analysts understand the full attack path and scope.",
-    "topic": "respond-incidents",
-    "section": "respond-defender-xdr"
-  },
-  {
-    "id": 57,
-    "question": "Which Microsoft security solution is specifically designed to detect lateral movement in Active Directory environments?",
-    "options": [
-      "Microsoft Defender for Endpoint",
-      "Microsoft Defender for Identity",
-      "Microsoft Defender for Cloud Apps",
-      "Microsoft Defender for Office 365"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Microsoft Defender for Identity specifically monitors on-premises Active Directory to detect lateral movement techniques like pass-the-hash, kerberoasting, and unusual service creation.",
-    "topic": "respond-incidents",
-    "section": "respond-defender-xdr"
-  },
-  {
-    "id": 58,
-    "question": "What is multi-stage attack detection in Microsoft Defender XDR?",
-    "options": [
-      "Detection of attacks that span multiple phases like initial access, persistence, and exfiltration",
-      "Detection of attacks targeting multiple companies",
-      "Detection of attacks using multiple malware variants",
-      "Detection of attacks lasting more than 24 hours"
-    ],
-    "correctAnswer": 0,
-    "explanation": "Multi-stage attack detection correlates alerts across different phases of an attack chain, from initial access through persistence, lateral movement, and exfiltration.",
-    "topic": "respond-incidents",
-    "section": "respond-defender-xdr"
-  },
-  {
-    "id": 59,
-    "question": "What information do Microsoft Graph activity logs capture?",
-    "options": [
-      "Only user sign-in events",
-      "All REST API calls to Microsoft Graph including caller identity and target resource",
-      "Only application registration events",
-      "Only mail flow data"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Microsoft Graph activity logs capture all REST API calls made to Microsoft Graph, including the caller identity (user or application), target resource, HTTP method, and timestamp.",
-    "topic": "respond-incidents",
-    "section": "investigate-m365-activities"
-  },
-  {
-    "id": 60,
-    "question": "How do you enable Microsoft Graph activity logs for investigation?",
-    "options": [
-      "They are enabled by default",
-      "Configure diagnostic settings to send them to a Log Analytics workspace",
-      "Enable via Microsoft Entra admin center only",
-      "Contact Microsoft Support to enable"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Microsoft Graph activity logs are not enabled by default. You must configure diagnostic settings to route them to a Log Analytics workspace or storage account.",
-    "topic": "respond-incidents",
-    "section": "investigate-m365-activities"
-  },
-  {
-    "id": 61,
-    "question": "Which scenario would Microsoft Graph activity logs help investigate?",
-    "options": [
-      "A user accidentally deleted a file",
-      "An application suddenly reading large volumes of mail via Graph API",
-      "A failed hard drive on a server",
-      "A network switch configuration error"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Graph activity logs would reveal an application making unusual API calls, such as reading large volumes of mail or accessing resources outside its normal scope.",
-    "topic": "respond-incidents",
-    "section": "investigate-m365-activities"
-  },
-  {
-    "id": 62,
-    "question": "Which Advanced Hunting table contains process creation events in Microsoft Defender XDR?",
-    "options": [
-      "DeviceNetworkEvents",
-      "DeviceProcessEvents",
-      "DeviceFileEvents",
-      "DeviceLogonEvents"
-    ],
-    "correctAnswer": 1,
-    "explanation": "DeviceProcessEvents contains process creation events, including parent process, command line, and other process-related telemetry.",
-    "topic": "threat-hunting",
-    "section": "detect-threats-defender-xdr"
-  },
-  {
-    "id": 63,
-    "question": "Which KQL operator is used to aggregate data over time?",
-    "options": [
-      "where",
-      "project",
-      "summarize",
-      "extend"
-    ],
-    "correctAnswer": 2,
-    "explanation": "The summarize operator aggregates data using functions like count(), dcount(), sum(), and avg(), often used with bin() for time-based aggregation.",
-    "topic": "threat-hunting",
-    "section": "detect-threats-defender-xdr"
-  },
-  {
-    "id": 64,
-    "question": "How long are Advanced Hunting data retained in Microsoft Defender XDR?",
-    "options": [
-      "7 days",
-      "30 days",
-      "90 days",
-      "365 days"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Advanced Hunting data in Microsoft Defender XDR is retained for 30 days, providing a 30-day window for proactive threat hunting.",
-    "topic": "threat-hunting",
-    "section": "detect-threats-defender-xdr"
-  },
-  {
-    "id": 65,
-    "question": "What is the purpose of the `let` statement in KQL for threat hunting?",
-    "options": [
-      "To create a loop in the query",
-      "To define variables for reuse in the query",
-      "To join two tables",
-      "To export query results"
-    ],
-    "correctAnswer": 1,
-    "explanation": "The `let` statement defines variables at the top of a KQL query for reusability, making it easier to modify time ranges, entities, or thresholds across the query.",
-    "topic": "threat-hunting",
-    "section": "detect-threats-defender-xdr"
-  },
-  {
-    "id": 66,
-    "question": "Which table would you query to investigate user logon activity in Microsoft Defender XDR hunting?",
-    "options": [
-      "DeviceProcessEvents",
-      "DeviceLogonEvents",
-      "IdentityLogonEvents",
-      "CloudAppEvents"
-    ],
-    "correctAnswer": 1,
-    "explanation": "DeviceLogonEvents contains endpoint logon events including local and remote logons, while IdentityLogonEvents contains identity-related authentication events.",
-    "topic": "threat-hunting",
-    "section": "detect-threats-defender-xdr"
-  },
-  {
-    "id": 67,
-    "question": "What is the purpose of threat analytics in Microsoft Defender XDR?",
-    "options": [
-      "To analyze network traffic patterns",
-      "To provide Microsoft threat intelligence reports about active threats and campaigns",
-      "To calculate secure score",
-      "To monitor data ingestion costs"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Threat analytics provides threat intelligence reports including threat descriptions, techniques, mitigations, and whether your environment has been targeted.",
-    "topic": "threat-hunting",
-    "section": "detect-threats-defender-xdr"
-  },
-  {
-    "id": 68,
-    "question": "What does blast radius analysis show in a hunting investigation?",
-    "options": [
-      "The physical location of affected devices",
-      "The full scope of potentially compromised entities in an attack",
-      "The severity distribution of alerts",
-      "The performance impact of security controls"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Blast radius analysis shows all entities potentially affected by an attack, including devices, users, mailboxes, and apps, helping prioritize containment.",
-    "topic": "threat-hunting",
-    "section": "detect-threats-sentinel"
-  },
-  {
-    "id": 69,
-    "question": "What is Sentinel Graph used for?",
-    "options": [
-      "To visualize network topology",
-      "To analyze relationships between entities like users, devices, and alerts to find hidden connections",
-      "To map organizational hierarchy",
-      "To create organizational charts"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Sentinel Graph analyzes relationships between entities across the entire data estate to find hidden connections and attack propagation paths.",
-    "topic": "threat-hunting",
-    "section": "detect-threats-sentinel"
-  },
-  {
-    "id": 70,
-    "question": "What should you prioritize first when containing a blast radius?",
-    "options": [
-      "Low-severity alerts",
-      "Entities with the most connections — highest risk of further spread",
-      "Recently created user accounts",
-      "Devices running legacy operating systems"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Start containment with entities that have the most connections in the blast radius graph, as they represent the highest risk of further attack spread.",
-    "topic": "threat-hunting",
-    "section": "detect-threats-sentinel"
-  },
-  {
-    "id": 71,
-    "question": "What can you do with bookmarked hunting results in Microsoft Sentinel?",
-    "options": [
-      "Only view them",
-      "Convert them to analytics rules or add them to incidents",
-      "Share them externally",
-      "Delete them permanently"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Bookmarked hunting results can be converted into analytics rules for ongoing detection or added to existing incidents for further investigation.",
-    "topic": "threat-hunting",
-    "section": "detect-threats-sentinel"
-  },
-  {
-    "id": 72,
-    "question": "What is a KQL job in Microsoft Sentinel Data lake?",
-    "options": [
-      "A scheduled query that runs continuously",
-      "A pay-per-scan query against long-term retention data",
-      "A job that exports all data to Azure Storage",
-      "A job that creates new data connectors"
-    ],
-    "correctAnswer": 1,
-    "explanation": "KQL jobs in Data lake run pay-per-scan queries against long-term retention data, enabling cost-effective investigation of historical data beyond the interactive retention period.",
-    "topic": "threat-hunting",
-    "section": "detect-threats-defender-xdr"
-  },
-  {
-    "id": 73,
-    "question": "What is the purpose of Summary rule tables in Microsoft Sentinel?",
-    "options": [
-      "To delete old data",
-      "To pre-compute aggregations on a schedule for faster querying",
-      "To create new data connectors",
-      "To manage user permissions"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Summary rule tables pre-compute aggregations from multiple queries on a schedule, reducing query time for common hunting patterns and enabling historical comparison.",
-    "topic": "threat-hunting",
-    "section": "detect-threats-sentinel"
-  },
-  {
-    "id": 74,
-    "question": "What platform are Microsoft Sentinel notebooks based on?",
-    "options": [
-      "Azure Data Studio",
-      "Azure Machine Learning notebooks (Jupyter)",
-      "Visual Studio Code",
-      "Azure Synapse Analytics"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Sentinel notebooks are based on Azure Machine Learning notebooks, using the Jupyter framework to combine KQL queries with Python code and visualizations.",
-    "topic": "threat-hunting",
-    "section": "detect-threats-sentinel"
-  },
-  {
-    "id": 75,
-    "question": "What is the Sentinel MCP Server?",
-    "options": [
-      "A managed content pack server providing curated notebook templates",
-      "A mail content processing server",
-      "A malware control protocol server",
-      "A multi-cloud processing server"
-    ],
-    "correctAnswer": 0,
-    "explanation": "The Sentinel MCP (Managed Content Pack) Server provides curated notebook templates for common hunting scenarios that are automatically updated by Microsoft.",
-    "topic": "threat-hunting",
-    "section": "detect-threats-sentinel"
-  },
-  {
-    "id": 76,
-    "question": "When should you use notebooks instead of built-in hunting queries in Sentinel?",
-    "options": [
-      "For all hunting activities",
-      "For complex investigations needing custom algorithms or visualizations",
-      "Never — built-in queries are always better",
-      "Only for compliance reporting"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Notebooks are ideal for complex investigations that need custom algorithms, ML models, or advanced visualizations. For simple queries, built-in hunting queries are faster and easier.",
-    "topic": "threat-hunting",
-    "section": "detect-threats-sentinel"
-  },
-  {
-    "id": 77,
-    "question": "Which KQL operator combines data from two tables based on a common field?",
-    "options": [
-      "where",
-      "summarize",
-      "join",
-      "extend"
-    ],
-    "correctAnswer": 2,
-    "explanation": "The join operator combines rows from two tables based on matching values in specified columns, essential for correlating events across different data sources.",
-    "topic": "threat-hunting",
-    "section": "detect-threats-defender-xdr"
-  },
-  {
-    "id": 78,
-    "question": "What type of analytics rule in Sentinel provides the lowest latency detection?",
-    "options": [
-      "Scheduled query rules",
-      "NRT (near-real-time) rules",
-      "Threat intelligence rules",
-      "Machine learning rules"
-    ],
-    "correctAnswer": 1,
-    "explanation": "NRT rules run every minute with a 1-minute lookback, providing the lowest latency detection among Sentinel analytics rules.",
-    "topic": "manage-soc",
-    "section": "configure-detections"
-  },
-  {
-    "id": 79,
-    "question": "What is the maximum number of records that can be bookmarked during a Sentinel hunting session?",
-    "options": [
-      "100",
-      "500",
-      "1000",
-      "Unlimited"
-    ],
-    "correctAnswer": 2,
-    "explanation": "You can bookmark up to 1000 results per hunting session in Microsoft Sentinel for further investigation or conversion to analytics rules.",
-    "topic": "threat-hunting",
-    "section": "detect-threats-sentinel"
-  },
-  {
-    "id": 80,
-    "question": "Which Azure service provides the underlying compute for Sentinel playbooks?",
-    "options": [
-      "Azure Functions",
-      "Azure Logic Apps",
-      "Azure Automation",
-      "Azure Container Instances"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Sentinel playbooks are built on Azure Logic Apps, leveraging its extensive connector ecosystem for automating security response actions.",
-    "topic": "manage-soc",
-    "section": "configure-automation-defender-xdr-sentinel"
-  },
-  {
-    "id": 81,
-    "question": "What is the purpose of email notifications for incidents in Microsoft Defender XDR?",
-    "options": [
-      "To send marketing emails to customers",
-      "To keep security team members informed about new incidents and actions without logging into the portal",
-      "To notify end users about their security training",
-      "To send daily threat intelligence reports"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Email notifications for incidents keep security team members informed about new incidents, status changes, and required actions without requiring portal access.",
-    "topic": "manage-soc",
-    "section": "configure-sentinel-siem-platform"
-  },
-  {
-    "id": 82,
-    "question": "Which retention tier is most cost-effective for storing security data that is rarely queried?",
-    "options": [
-      "Analytics tier",
-      "Data lake tier",
-      "XDR tier",
-      "Interactive tier"
-    ],
-    "correctAnswer": 1,
-    "explanation": "The Data lake tier provides the most cost-effective long-term storage for rarely queried data, with pay-per-scan query pricing instead of interactive query costs.",
-    "topic": "manage-soc",
-    "section": "configure-sentinel-siem-platform"
-  },
-  {
-    "id": 83,
-    "question": "What is the purpose of data collection rules (DCRs) in Azure Monitor Agent?",
-    "parameters": [],
-    "options": [
-      "To encrypt data at rest",
-      "To define what events to collect and filter at the source",
-      "To create analytics rules",
-      "To manage user permissions"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Data collection rules define which events to collect and can filter data at the source before it's sent to Sentinel, reducing ingestion volume and costs.",
-    "topic": "manage-soc",
-    "section": "ingest-data-sentinel"
-  },
-  {
-    "id": 84,
-    "question": "Which connector type is preferred for collecting Microsoft 365 logs into Microsoft Sentinel?",
-    "options": [
-      "Syslog via AMA",
-      "Native Microsoft service connector",
-      "CEF via AMA",
-      "REST API connector"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Native Microsoft service connectors are preferred for Microsoft services because they require minimal configuration and provide optimized data collection.",
-    "topic": "manage-soc",
-    "section": "ingest-data-sentinel"
-  },
-  {
-    "id": 85,
-    "question": "What is the primary function of the Microsoft cloud security benchmark (MCSB) in Defender for Cloud?",
-    "options": [
-      "To calculate secure score",
-      "To serve as the default policy initiative for security compliance",
-      "To generate threat alerts",
-      "To manage user permissions"
-    ],
-    "correctAnswer": 1,
-    "explanation": "The Microsoft cloud security benchmark (MCSB) is the default policy initiative that defines security best practices and compliance standards in Defender for Cloud.",
-    "topic": "respond-incidents",
-    "section": "respond-defender-xdr"
-  },
-  {
-    "id": 86,
-    "question": "Which Python library is commonly used in Sentinel notebooks for data manipulation?",
-    "options": [
-      "requests",
-      "pandas",
-      "flask",
-      "django"
-    ],
-    "correctAnswer": 1,
-    "explanation": "pandas is the primary Python library used in Sentinel notebooks for data manipulation, analysis, and transformation of security data.",
-    "topic": "threat-hunting",
-    "section": "detect-threats-sentinel"
-  },
-  {
-    "id": 87,
-    "question": "What does the `where` operator do in KQL?",
-    "options": [
-      "Selects specific columns",
-      "Filters rows based on a condition",
-      "Groups data by categories",
-      "Sorts results"
-    ],
-    "correctAnswer": 1,
-    "explanation": "The `where` operator filters rows in a table based on a boolean condition, similar to WHERE in SQL. It's the most commonly used KQL operator.",
-    "topic": "threat-hunting",
-    "section": "detect-threats-defender-xdr"
-  },
-  {
-    "id": 88,
-    "question": "Which retention setting applies to the Data lake tier in Microsoft Sentinel?",
-    "options": [
-      "30 days maximum",
-      "Up to 2 years",
-      "Up to 12 years",
-      "Up to 7 years"
-    ],
-    "correctAnswer": 2,
-    "explanation": "The Data lake tier supports retention up to 12 years, with lower storage costs and pay-per-scan query access through KQL jobs.",
-    "topic": "manage-soc",
-    "section": "configure-sentinel-siem-platform"
-  },
-  {
-    "id": 89,
-    "question": "Which Microsoft Sentinel role is required to manage automation rules and playbooks?",
-    "options": [
-      "Microsoft Sentinel Reader",
-      "Microsoft Sentinel Responder",
-      "Microsoft Sentinel Contributor",
-      "Microsoft Sentinel Automation Contributor"
-    ],
-    "correctAnswer": 3,
-    "explanation": "Microsoft Sentinel Automation Contributor can manage automation rules and playbooks. This role is specifically designed for automation management.",
-    "topic": "manage-soc",
-    "section": "configure-sentinel-siem-platform"
-  },
-  {
-    "id": 90,
-    "question": "What type of playbook trigger runs when an incident is created or updated?",
-    "options": [
-      "Alert trigger",
-      "Incident trigger",
-      "Action trigger",
-      "Schedule trigger"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Incident trigger playbooks run when an incident is created or updated in Sentinel, making them the most common trigger type for incident response automation.",
-    "topic": "manage-soc",
-    "section": "configure-automation-defender-xdr-sentinel"
-  },
-  {
-    "id": 91,
-    "question": "What is the purpose of `extend` in KQL?",
-    "options": [
-      "To add new rows to a table",
-      "To create calculated fields or columns",
-      "To extend query timeout",
-      "To extend table schema"
-    ],
-    "correctAnswer": 1,
-    "explanation": "The `extend` operator creates calculated columns based on expressions, useful for normalizing data or computing derived values during hunting.",
-    "topic": "threat-hunting",
-    "section": "detect-threats-defender-xdr"
-  },
-  {
-    "id": 92,
-    "question": "Which table in Advanced Hunting contains information about user authentication in cloud apps?",
-    "options": [
-      "DeviceLogonEvents",
-      "IdentityLogonEvents",
-      "CloudAppEvents",
-      "AADSignInEvents"
-    ],
-    "correctAnswer": 2,
-    "explanation": "CloudAppEvents contains user authentication and activity events from cloud applications, including Microsoft and third-party cloud services.",
-    "topic": "threat-hunting",
-    "section": "detect-threats-defender-xdr"
-  },
-  {
-    "id": 93,
-    "question": "What is the recommended approach for managing custom detection rules in Microsoft Defender XDR?",
-    "options": [
-      "Create all rules in Azure Sentinel",
-      "Create rules in Advanced Hunting, test with KQL, and manage from the custom detections page",
-      "Use PowerShell exclusively",
-      "Use Azure Policy to deploy rules"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Custom detection rules are created and managed from the Advanced Hunting custom detections page, where you write KQL queries, test them, and configure alert settings.",
-    "topic": "manage-soc",
-    "section": "configure-detections"
-  },
-  {
-    "id": 94,
-    "question": "Which Microsoft Entra ID feature provides risk-based investigation of compromised identities?",
-    "options": [
-      "Microsoft Entra ID Governance",
-      "Microsoft Entra Identity Protection",
-      "Microsoft Entra Verified ID",
-      "Microsoft Entra Permissions Management"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Microsoft Entra Identity Protection provides risk-based investigation with user risk, sign-in risk, and automated remediation policies for compromised identities.",
-    "topic": "respond-incidents",
-    "section": "respond-defender-xdr"
-  },
-  {
-    "id": 95,
-    "question": "What type of alert does Defender for Storage generate when a user accesses a blob anonymously?",
-    "options": [
-      "SQL injection alert",
-      "Anonymous access alert",
-      "Malware upload alert",
-      "Data exfiltration alert"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Defender for Storage generates anonymous access alerts when storage resources are accessed without proper authentication, indicating potential misconfiguration or data exposure.",
-    "topic": "respond-incidents",
-    "section": "respond-defender-xdr"
-  },
-  {
-    "id": 96,
-    "question": "What information does a Microsoft Purview Audit log record include?",
-    "options": [
-      "The full content of the email or document",
-      "Who performed the action, what action was performed, and when",
-      "The user's password hash",
-      "The user's IP address history"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Audit logs record who performed an action, what action was performed, the target resource, and the timestamp. They don't store the actual content.",
-    "topic": "respond-incidents",
-    "section": "investigate-m365-activities"
-  },
-  {
-    "id": 97,
-    "question": "Which Defender for Endpoint capability provides real-time remote shell access to an endpoint?",
-    "options": [
-      "Device isolation",
-      "Live response",
-      "Investigation package",
-      "Threat analytics"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Live response provides a real-time remote shell for running commands, scripts, and forensic collection on endpoints.",
-    "topic": "respond-incidents",
-    "section": "respond-defender-endpoint"
-  },
-  {
-    "id": 98,
-    "question": "Which KQL operator is used to select specific columns in query results?",
-    "options": [
-      "where",
-      "project",
-      "summarize",
-      "limit"
-    ],
-    "correctAnswer": 1,
-    "explanation": "The `project` operator selects specific columns to include or exclude from query results, reducing data volume and focusing on relevant fields.",
-    "topic": "threat-hunting",
-    "section": "detect-threats-defender-xdr"
-  },
-  {
-    "id": 99,
-    "question": "What is the purpose of device isolation in Microsoft Defender for Endpoint?",
-    "options": [
-      "To disconnect the device from the internet only",
-      "To disconnect the device from the network while allowing communication with the Defender service",
-      "To physically disable the device",
-      "To remove the device from the domain"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Device isolation disconnects the device from the network while maintaining communication with the Defender for Endpoint service, preventing further spread while allowing management.",
-    "topic": "respond-incidents",
-    "section": "respond-defender-endpoint"
-  },
-  {
-    "id": 100,
-    "question": "What is the difference between scheduled query rules and NRT rules in Microsoft Sentinel?",
-    "options": [
-      "NRT rules are more accurate than scheduled rules",
-      "NRT rules run every minute with 1-minute lookback; scheduled rules run every 5 minutes to 14 days",
-      "Scheduled rules only work with Microsoft services",
-      "NRT rules cannot generate incidents"
-    ],
-    "correctAnswer": 1,
-    "explanation": "NRT rules run every minute with a 1-minute lookback for near-real-time detection. Scheduled rules have configurable frequency from every 5 minutes to every 14 days.",
-    "topic": "manage-soc",
-    "section": "configure-detections"
-  },
-  {
-    "id": 101,
-    "question": "Which Microsoft 365 workload does Defender for Office 365 primarily protect?",
-    "options": [
-      "SharePoint Online",
-      "Exchange Online, Teams, and SharePoint Online",
-      "OneDrive for Business only",
-      "Microsoft Teams only"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Defender for Office 365 protects Exchange Online (email), Microsoft Teams, and SharePoint Online/OneDrive from malicious threats.",
-    "topic": "respond-incidents",
-    "section": "respond-defender-xdr"
-  },
-  {
-    "id": 102,
-    "question": "What is the purpose of the `bin()` function in KQL queries?",
-    "options": [
-      "To create binary data",
-      "To group values into time intervals for aggregation",
-      "To convert data to binary format",
-      "To filter binary data"
-    ],
-    "correctAnswer": 1,
-    "explanation": "The `bin()` function rounds values down to the nearest multiple of a specified interval, commonly used with `summarize` for time-based aggregations like counts per hour.",
-    "topic": "threat-hunting",
-    "section": "detect-threats-defender-xdr"
-  },
-  {
-    "id": 103,
-    "question": "Which Azure service provides the underlying infrastructure for Microsoft Sentinel workbooks?",
-    "options": [
-      "Azure Dashboard",
-      "Azure Monitor Workbooks",
-      "Power BI Embedded",
-      "Azure Data Explorer"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Sentinel workbooks are built on Azure Monitor Workbooks, which provide interactive visualizations with KQL query support and parameterized templates.",
-    "topic": "manage-soc",
-    "section": "configure-sentinel-siem-platform"
-  },
-  {
-    "id": 104,
-    "question": "What should you do first when investigating an alert from Defender for Cloud workload protections?",
-    "options": [
-      "Isolate the affected resource immediately",
-      "Review alert details including affected resources and suggested remediation steps",
-      "Delete the alert",
-      "Escalate to Microsoft support"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Start by reviewing the alert details to understand the threat, affected resources, severity, and suggested remediation steps before taking action.",
-    "topic": "respond-incidents",
-    "section": "respond-defender-xdr"
-  },
-  {
-    "id": 105,
-    "question": "Which type of automation rule trigger runs when specific conditions are met on an incident?",
-    "options": [
-      "Alert creation trigger",
-      "Incident creation or update trigger",
-      "Schedule-based trigger",
-      "User action trigger"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Automation rules trigger on incident creation or update when conditions like analytics rule name, severity, or entity type match the configured criteria.",
-    "topic": "manage-soc",
-    "section": "configure-automation-defender-xdr-sentinel"
-  },
-  {
-    "id": 106,
-    "question": "What is the purpose of threat intelligence rules in Microsoft Sentinel?",
-    "options": [
-      "To detect known malware signatures",
-      "To match workspace data against threat indicators from intelligence feeds",
-      "To analyze network traffic patterns",
-      "To create threat intelligence reports"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Threat intelligence analytics rules match data in your Log Analytics workspace against ingested threat indicators to detect threats based on known IOCs.",
-    "topic": "manage-soc",
-    "section": "configure-detections"
-  },
-  {
-    "id": 107,
-    "question": "What is the default policy initiative in Microsoft Defender for Cloud?",
-    "options": [
-      "ISO 27001",
-      "Microsoft cloud security benchmark (MCSB)",
-      "NIST SP 800-53",
-      "PCI DSS"
-    ],
-    "correctAnswer": 1,
-    "explanation": "The Microsoft cloud security benchmark (MCSB) is the default policy initiative that replaced the Azure Security Benchmark (ASB).",
-    "topic": "respond-incidents",
-    "section": "respond-defender-xdr"
-  },
-  {
-    "id": 108,
-    "question": "Which response action can be taken directly from a Defender for Endpoint investigation?",
-    "options": [
-      "Reset user password",
-      "Block a file or IP indicator",
-      "Modify Azure AD roles",
-      "Create a new Azure subscription"
-    ],
-    "correctAnswer": 1,
-    "explanation": "From a Defender for Endpoint investigation, you can block files, IPs, URLs, or domains as indicators, preventing further execution or communication.",
-    "topic": "respond-incidents",
-    "section": "respond-defender-endpoint"
-  },
-  {
-    "id": 109,
-    "question": "Which tool in Microsoft Defender XDR proactively identifies threats using KQL without relying on automated detection rules?",
-    "options": [
-      "Incident investigation",
-      "Advanced Hunting",
-      "Threat analytics",
-      "Secure score"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Advanced Hunting allows proactive threat hunting using KQL queries to find threats that may have evaded automated detection rules.",
-    "topic": "threat-hunting",
-    "section": "detect-threats-defender-xdr"
-  },
-  {
-    "id": 110,
-    "question": "What does the Microsoft cloud security benchmark (MCSB) provide in Defender for Cloud?",
-    "options": [
-      "Real-time threat detection",
-      "A set of security best practices and compliance controls",
-      "Automated incident response",
-      "User behavior analytics"
-    ],
-    "correctAnswer": 1,
-    "explanation": "MCSB provides a comprehensive set of security best practices, compliance controls, and recommendations for securing cloud workloads.",
-    "topic": "respond-incidents",
-    "section": "respond-defender-xdr"
-  },
-  {
-    "id": 111,
-    "question": "How can you extend audit log retention in Microsoft Purview beyond the default 90 days?",
-    "options": [
-      "It cannot be extended",
-      "Purchase an add-on license for extended retention up to 10 years",
-      "Export logs daily to Azure Storage",
-      "Use PowerShell to configure extended retention in Azure AD"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Extended audit log retention up to 10 years is available with an add-on license, enabling long-term compliance and investigation capabilities.",
-    "topic": "respond-incidents",
-    "section": "investigate-m365-activities"
-  },
-  {
-    "id": 112,
-    "question": "Which hunting technique would you use to find anomalies spanning multiple years of data?",
-    "options": [
-      "Advanced Hunting in Defender XDR",
-      "KQL jobs in Sentinel Data lake",
-      "Real-time hunting queries",
-      "Threat analytics"
-    ],
-    "correctAnswer": 1,
-    "explanation": "KQL jobs in Sentinel Data lake can query data retained for years in the Data lake tier using pay-per-scan pricing, ideal for cold case investigations.",
-    "topic": "threat-hunting",
-    "section": "detect-threats-sentinel"
-  },
-  {
-    "id": 113,
-    "question": "What must be configured before Microsoft Defender for Cloud alerts can be sent to Microsoft Sentinel?",
-    "options": [
-      "Azure Policy",
-      "A data connector between Defender for Cloud and Sentinel",
-      "Azure Lighthouse",
-      "Azure Front Door"
-    ],
-    "correctAnswer": 1,
-    "explanation": "A data connector must be configured in Sentinel to receive Defender for Cloud alerts. Once configured, alerts are forwarded at no additional ingestion cost.",
-    "topic": "respond-incidents",
-    "section": "respond-defender-xdr"
-  },
-  {
-    "id": 114,
-    "question": "Which Copilot for Security capability helps during incident investigation?",
-    "options": [
-      "Automatically resolving all incidents",
-      "Generating incident summaries and KQL queries from natural language",
-      "Deleting false positive alerts",
-      "Creating new Azure subscriptions"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Copilot for Security can generate incident summaries, create KQL queries from natural language descriptions, and suggest response actions during investigation.",
-    "topic": "respond-incidents",
-    "section": "respond-defender-xdr"
-  },
-  {
-    "id": 115,
-    "question": "What is the primary benefit of using Azure Policy to deploy diagnostic settings for Sentinel?",
-    "options": [
-      "It requires less storage space",
-      "It ensures consistent data collection across multiple subscriptions at scale",
-      "It reduces data ingestion costs",
-      "It automatically creates analytics rules"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Azure Policy enables consistent deployment of diagnostic settings across multiple subscriptions and resources, ensuring comprehensive and standardized data collection.",
-    "topic": "manage-soc",
-    "section": "ingest-data-sentinel"
-  },
-  {
-    "id": 116,
-    "question": "Which log type would you query in Advanced Hunting to investigate registry modifications on endpoints?",
-    "options": [
-      "DeviceProcessEvents",
-      "DeviceRegistryEvents",
-      "DeviceFileEvents",
-      "DeviceEvents"
-    ],
-    "correctAnswer": 1,
-    "explanation": "DeviceRegistryEvents contains registry modification events including create, modify, and delete operations on Windows registry keys.",
-    "topic": "threat-hunting",
-    "section": "detect-threats-defender-xdr"
-  },
-  {
-    "id": 117,
-    "question": "What is the minimum role required for an analyst to triage and manage incidents in Microsoft Sentinel?",
-    "options": [
-      "Microsoft Sentinel Reader",
-      "Microsoft Sentinel Responder",
-      "Microsoft Sentinel Contributor",
-      "Microsoft Sentinel Automation Contributor"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Microsoft Sentinel Responder can view and manage incidents including triage, assignment, and status changes, making it the minimum role for incident management.",
-    "topic": "manage-soc",
-    "section": "configure-sentinel-siem-platform"
-  },
-  {
-    "id": 118,
-    "question": "Which action is NOT possible with live response in Microsoft Defender for Endpoint?",
-    "options": [
-      "Run PowerShell commands",
-      "Collect forensic data",
-      "Isolate the device from the network",
-      "Modify the device BIOS settings"
-    ],
-    "correctAnswer": 3,
-    "explanation": "Live response can run commands, collect forensics, isolate devices, block files, and run scans. It cannot modify BIOS settings or perform hardware-level operations.",
-    "topic": "respond-incidents",
-    "section": "respond-defender-endpoint"
-  },
-  {
-    "id": 119,
-    "question": "What is the purpose of the `dcount()` function in KQL?",
-    "options": [
-      "To count duplicate values",
-      "To count distinct values in a column",
-      "To delete duplicate records",
-      "To show the total count of records"
-    ],
-    "correctAnswer": 1,
-    "explanation": "The `dcount()` function returns an approximate count of distinct values in a column, useful for estimating unique entities like users or IP addresses.",
-    "topic": "threat-hunting",
-    "section": "detect-threats-defender-xdr"
-  },
-  {
-    "id": 120,
-    "question": "What type of notebook does the Sentinel MCP Server provide?",
-    "options": [
-      "Random analysis notebooks",
-      "Curated notebook templates for common hunting scenarios",
-      "Training notebooks for KQL",
-      "Administrative notebooks for configuration"
-    ],
-    "correctAnswer": 1,
-    "explanation": "The Sentinel MCP Server provides curated notebook templates for common hunting scenarios that are automatically updated by Microsoft for compatibility.",
-    "topic": "threat-hunting",
-    "section": "detect-threats-sentinel"
-  },
-  {
-    "id": 121,
-    "question": "Which Microsoft Sentinel feature provides personalized recommendations to improve SOC efficiency?",
-    "options": [
-      "SOC optimization recommendations",
-      "Threat intelligence",
-      "MITRE ATT&CK coverage",
-      "Hunting bookmarks"
-    ],
-    "correctAnswer": 0,
-    "explanation": "SOC optimization recommendations analyze your environment and provide personalized suggestions for improving data coverage, analytics rules, and Defender plan adoption.",
-    "topic": "manage-soc",
-    "section": "configure-sentinel-siem-platform"
-  },
-  {
-    "id": 122,
-    "question": "What is the correct order of steps when using the incident response process in Microsoft Defender XDR?",
-    "options": [
-      "Contain, investigate, eradicate, recover, learn",
-      "Investigate, contain, eradicate, recover, learn",
-      "Triage, investigate, contain, eradicate, recover, post-incident review",
-      "Report, investigate, contain, recover"
-    ],
-    "correctAnswer": 2,
-    "explanation": "The standard incident response process includes: triage (prioritize), investigate (analyze), contain (stop spread), eradicate (remove threat), recover (restore), and post-incident review.",
-    "topic": "respond-incidents",
-    "section": "respond-defender-xdr"
-  },
-  {
-    "id": 123,
-    "question": "Which log source is commonly analyzed in notebooks for geospatial analysis of authentication attempts?",
-    "options": [
-      "Windows event logs only",
-      "Combined authentication logs with geographic IP data",
-      "Only network firewall logs",
-      "DNS query logs only"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Notebooks are commonly used for geospatial analysis by combining authentication logs with geographic IP data, creating visualizations of login locations.",
-    "topic": "threat-hunting",
-    "section": "detect-threats-sentinel"
-  },
-  {
-    "id": 124,
-    "question": "What is the purpose of the Evidence and Entity investigation in Defender for Endpoint?",
-    "options": [
-      "To collect forensic evidence for court",
-      "To investigate files, IPs, domains, and user accounts with reputation data",
-      "To gather physical evidence from devices",
-      "To document investigation procedures"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Evidence and Entity investigation allows investigating files, IPs, domains, and user accounts with global reputation, prevalence, and related incident data.",
-    "topic": "respond-incidents",
-    "section": "respond-defender-endpoint"
-  },
-  {
-    "id": 125,
-    "question": "Which table in Advanced Hunting contains email flow records for threat hunting?",
-    "options": [
-      "EmailEvents",
-      "DeviceNetworkEvents",
-      "CloudAppEvents",
-      "IdentityLogonEvents"
-    ],
-    "correctAnswer": 0,
-    "explanation": "EmailEvents contains email flow records including sender, recipient, subject, delivery status, and threat detection results for email-based investigations.",
-    "topic": "threat-hunting",
-    "section": "detect-threats-defender-xdr"
-  },
-  {
-    "id": 126,
-    "question": "What is the purpose of the `project` operator in KQL?",
-    "options": [
-      "To filter rows based on conditions",
-      "To select specific columns to include in results",
-      "To aggregate data",
-      "To sort data"
-    ],
-    "correctAnswer": 1,
-    "explanation": "The `project` operator selects specific columns to include (or exclude) from query results, helping to focus on relevant data fields.",
-    "topic": "threat-hunting",
-    "section": "detect-threats-defender-xdr"
-  },
-  {
-    "id": 127,
-    "question": "Which action can an automation rule take when an incident is created in Microsoft Sentinel?",
-    "options": [
-      "Change data retention policy",
-      "Run a playbook",
-      "Create a new data connector",
-      "Modify user roles"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Automation rules can run playbooks, assign incidents, change severity, and add tags when incidents are created or updated.",
-    "topic": "manage-soc",
-    "section": "configure-automation-defender-xdr-sentinel"
-  },
-  {
-    "id": 128,
-    "question": "Which hunting query type is most appropriate for detecting a known attack pattern in near-real-time?",
-    "options": [
-      "A scheduled query rule running every 24 hours",
-      "An NRT analytics rule running every minute",
-      "A KQL job in Data lake",
-      "A notebook query"
-    ],
-    "correctAnswer": 1,
-    "explanation": "NRT (near-real-time) rules provide the fastest detection with 1-minute frequency, making them ideal for detecting known attack patterns with low latency requirements.",
-    "topic": "manage-soc",
-    "section": "configure-detections"
-  },
-  {
-    "id": 129,
-    "question": "What is the correct KQL operator to use when filtering for events from the last 7 days?",
-    "options": [
-      "summarize",
-      "where Timestamp > ago(7d)",
-      "extend",
-      "project Timestamp"
-    ],
-    "correctAnswer": 1,
-    "explanation": "The `where` operator with `ago()` function filters for events within a specified time window, e.g., `where Timestamp > ago(7d)` for the last 7 days.",
-    "topic": "threat-hunting",
-    "section": "detect-threats-defender-xdr"
-  },
-  {
-    "id": 130,
-    "question": "What type of investigation is best suited for Sentinel notebooks over built-in hunting queries?",
-    "options": [
-      "Simple keyword searches",
-      "Complex multi-step analysis requiring custom algorithms",
-      "Single-table queries",
-      "Real-time alert monitoring"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Notebooks excel at complex multi-step investigations requiring custom Python algorithms, ML models, or advanced visualizations that go beyond built-in hunting capabilities.",
-    "topic": "threat-hunting",
-    "section": "detect-threats-sentinel"
-  },
-  {
-    "id": 131,
-    "question": "What is the purpose of the Microsoft Graph activity logs API?",
-    "options": [
-      "To monitor user sign-in events",
-      "To capture all REST API calls made to Microsoft Graph for security investigation",
-      "To track email delivery status",
-      "To monitor Teams meetings"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Microsoft Graph activity logs capture all REST API calls to Microsoft Graph, providing visibility into application and user API activity for security monitoring.",
-    "topic": "respond-incidents",
-    "section": "investigate-m365-activities"
-  },
-  {
-    "id": 132,
-    "question": "Which of the following is an alert type generated by Defender for Containers?",
-    "options": [
-      "SQL injection alerts",
-      "Privileged container alerts",
-      "Anonymous access alerts",
-      "Spam detection alerts"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Defender for Containers generates alerts for privileged containers, insecure configurations, runtime threats, and other container-specific security issues.",
-    "topic": "respond-incidents",
-    "section": "respond-defender-xdr"
-  },
-  {
-    "id": 133,
-    "question": "What is the role of the Automation Contributor in Microsoft Sentinel?",
-    "options": [
-      "View all Sentinel data",
-      "Manage automation rules and playbooks",
-      "Create analytics rules",
-      "Manage user roles and permissions"
-    ],
-    "correctAnswer": 1,
-    "explanation": "The Automation Contributor role is specifically designed for managing automation rules and playbooks in Microsoft Sentinel.",
-    "topic": "manage-soc",
-    "section": "configure-sentinel-siem-platform"
-  },
-  {
-    "id": 134,
-    "question": "Which KQL statement would you use to define a reusable variable for a time range in a hunting query?",
-    "options": [
-      "extend TimeRange = 7d",
-      "let TimeRange = 7d",
-      "var TimeRange = 7d",
-      "define TimeRange = 7d"
-    ],
-    "correctAnswer": 1,
-    "explanation": "The `let` statement defines reusable variables in KQL. For example: `let TimeRange = 7d;` can then be used throughout the query.",
-    "topic": "threat-hunting",
-    "section": "detect-threats-defender-xdr"
-  },
-  {
-    "id": 135,
-    "question": "What is the purpose of alert suppression in Microsoft Defender XDR?",
-    "options": [
-      "To permanently delete alerts",
-      "To hide specific alerts from view based on configured rules",
-      "To reduce the severity of alerts",
-      "To forward alerts to external systems"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Alert suppression hides specific alerts based on configured rules without changing detection logic, useful for managing expected or low-value alerts.",
-    "topic": "manage-soc",
-    "section": "configure-sentinel-siem-platform"
-  },
-  {
-    "id": 136,
-    "question": "Which Microsoft 365 service would you use to investigate a data exfiltration incident involving SharePoint Online?",
-    "options": [
-      "Microsoft Sentinel only",
-      "Microsoft Purview Content Search and Audit log",
-      "Microsoft Defender for Endpoint",
-      "Microsoft Graph API"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Microsoft Purview provides both Audit log (who did what when) and Content Search (find specific content) for investigating data exfiltration in SharePoint Online.",
-    "topic": "respond-incidents",
-    "section": "investigate-m365-activities"
-  },
-  {
-    "id": 137,
-    "question": "What type of hunting graph analysis reveals the full scope of potentially compromised entities?",
-    "options": [
-      "Entity timeline analysis",
-      "Blast radius analysis",
-      "Threat analytics",
-      "Vulnerability assessment"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Blast radius analysis reveals all entities potentially affected by an attack, showing the full scope of compromise to prioritize containment.",
-    "topic": "threat-hunting",
-    "section": "detect-threats-sentinel"
-  },
-  {
-    "id": 138,
-    "question": "What is the purpose of an investigation package collection in Defender for Endpoint?",
-    "options": [
-      "To deploy software updates",
-      "To collect a comprehensive forensic snapshot for offline analysis",
-      "To backup device configuration",
-      "To enroll devices in management"
-    ],
-    "correctAnswer": 1,
-    "explanation": "An investigation package collects a complete forensic snapshot including registry, processes, network connections, and files for offline forensic analysis.",
-    "topic": "respond-incidents",
-    "section": "respond-defender-endpoint"
-  },
-  {
-    "id": 139,
-    "question": "Which KQL function provides an approximate distinct count of values?",
-    "options": [
-      "count()",
-      "dcount()",
-      "sum()",
-      "avg()"
-    ],
-    "correctAnswer": 1,
-    "explanation": "dcount() returns an approximate distinct count, which performs faster than an exact count on large datasets and is sufficient for most hunting scenarios.",
-    "topic": "threat-hunting",
-    "section": "detect-threats-defender-xdr"
-  },
-  {
-    "id": 140,
-    "question": "What is the first step in the incident response lifecycle according to Microsoft best practices?",
-    "options": [
-      "Eradication",
-      "Triage and initial assessment",
-      "Recovery",
-      "Post-incident review"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Triage and initial assessment is the first step, where analysts prioritize incidents based on severity and impact before proceeding with investigation.",
-    "topic": "respond-incidents",
-    "section": "respond-defender-xdr"
-  },
-  {
-    "id": 141,
-    "question": "Which type of rule in Sentinel uses machine learning without requiring manual configuration?",
-    "options": [
-      "Scheduled query rules",
-      "Anomaly detection rules",
-      "Threat intelligence rules",
-      "NRT rules"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Anomaly detection rules use built-in ML models that are pre-trained and enabled by default, requiring no manual configuration for baseline anomaly detection.",
-    "topic": "manage-soc",
-    "section": "configure-detections"
-  },
-  {
-    "id": 142,
-    "question": "Which data connector type should be used for collecting firewall logs in Common Event Format?",
-    "options": [
-      "Syslog via AMA",
-      "CEF via AMA",
-      "Windows Events via AMA",
-      "REST API"
-    ],
-    "correctAnswer": 1,
-    "explanation": "CEF (Common Event Format) via AMA is the standard connector for collecting logs from security appliances in the CEF format, including firewalls and IDS/IPS systems.",
-    "topic": "manage-soc",
-    "section": "ingest-data-sentinel"
-  },
-  {
-    "id": 143,
-    "question": "What does the MITRE ATT&CK matrix help security teams identify in Microsoft Sentinel?",
-    "options": [
-      "Network vulnerabilities",
-      "Gaps in detection coverage across attack techniques",
-      "User behavior anomalies",
-      "Data ingestion issues"
-    ],
-    "correctAnswer": 1,
-    "explanation": "The MITRE ATT&CK matrix integration shows which attack techniques have detection coverage and identifies gaps where new analytics rules need to be created.",
-    "topic": "manage-soc",
-    "section": "configure-detections"
-  },
-  {
-    "id": 144,
-    "question": "Which Microsoft Defender plan detects SQL injection attempts on Azure SQL databases?",
-    "options": [
-      "Defender for Servers",
-      "Defender for Databases",
-      "Defender for App Service",
-      "Defender for Storage"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Defender for Databases provides threat detection for SQL servers and databases, including SQL injection detection, brute force alerts, and anomalous access patterns.",
-    "topic": "respond-incidents",
-    "section": "respond-defender-xdr"
-  },
-  {
-    "id": 145,
-    "question": "What is the key difference between Advanced Hunting in Defender XDR and KQL jobs in Sentinel Data lake?",
-    "options": [
-      "Advanced Hunting uses a different query language",
-      "KQL jobs query long-term retention data with pay-per-scan pricing; Advanced Hunting queries 30-day interactive data",
-      "Advanced Hunting only works on endpoints",
-      "KQL jobs cannot use KQL syntax"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Advanced Hunting queries the last 30 days of interactive data in Defender XDR, while KQL jobs in Sentinel Data lake query long-term retention data with cost-effective pay-per-scan pricing.",
-    "topic": "threat-hunting",
-    "section": "detect-threats-sentinel"
-  },
-  {
-    "id": 146,
-    "question": "Which table in Advanced Hunting should you query to investigate file creation events?",
-    "options": [
-      "DeviceProcessEvents",
-      "DeviceFileEvents",
-      "DeviceRegistryEvents",
-      "DeviceEvents"
-    ],
-    "correctAnswer": 1,
-    "explanation": "DeviceFileEvents contains file creation, modification, and deletion events across monitored endpoints.",
-    "topic": "threat-hunting",
-    "section": "detect-threats-defender-xdr"
-  },
-  {
-    "id": 147,
-    "question": "What is the purpose of the `order by` clause in KQL?",
-    "options": [
-      "To filter rows",
-      "To sort query results",
-      "To aggregate data",
-      "To join tables"
-    ],
-    "correctAnswer": 1,
-    "explanation": "The `order by` clause sorts query results by specified columns in ascending or descending order, useful for identifying top or bottom values.",
-    "topic": "threat-hunting",
-    "section": "detect-threats-defender-xdr"
-  },
-  {
-    "id": 148,
-    "question": "Which Microsoft security solution provides CASB capabilities including shadow IT discovery?",
-    "options": [
-      "Microsoft Defender for Identity",
-      "Microsoft Defender for Cloud Apps",
-      "Microsoft Purview",
-      "Microsoft Entra ID Protection"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Microsoft Defender for Cloud Apps is a CASB that provides shadow IT discovery, app permissions control, and real-time session monitoring.",
-    "topic": "respond-incidents",
-    "section": "respond-defender-xdr"
-  },
-  {
-    "id": 149,
-    "question": "How are Summary rule tables different from regular analytics rules in Sentinel?",
-    "options": [
-      "Summary rules pre-compute aggregations for faster querying; analytics rules generate alerts",
-      "Summary rules generate higher severity alerts",
-      "Summary rules cannot use KQL",
-      "Summary rules only work with AWS data"
-    ],
-    "correctAnswer": 0,
-    "explanation": "Summary rule tables pre-compute data aggregations on a schedule for faster historical querying, while analytics rules focus on real-time threat detection and alerting.",
-    "topic": "threat-hunting",
-    "section": "detect-threats-sentinel"
-  },
-  {
-    "id": 150,
-    "question": "What is the relationship between Microsoft Sentinel and Microsoft Defender XDR for incident management?",
-    "options": [
-      "They are completely separate systems with no integration",
-      "Sentinel incidents can be viewed and managed within the Microsoft Defender XDR portal for unified SOC",
-      "Defender XDR replaces Sentinel entirely",
-      "Sentinel only works with third-party SIEMs"
-    ],
-    "correctAnswer": 1,
-    "explanation": "Microsoft Sentinel incidents can be integrated with Microsoft Defender XDR, allowing analysts to manage both Sentinel and Defender incidents from a single unified portal.",
-    "topic": "respond-incidents",
-    "section": "respond-defender-xdr"
-  }
-]
+      "question": "In the poem, the child is described as having 'played with the shadows of the world'. This imagery suggests...",
+      "options": [
+        "The child was playing a game of hide and seek",
+        "The child's innocence and separation from the harsh realities of apartheid",
+        "The child was afraid of light",
+        "The child was an imaginary figure"
+      ],
+      "correctAnswer": 1,
+      "explanation": "'Playing with shadows' evokes innocence and childhood imagination, but also suggests that the child existed on the margins of reality, unaware of or untouched by the oppressive political context that ultimately claimed her life.",
+      "topic": "paper-2",
+      "section": "poetry-child-shot"
+    },
+    {
+      "id": 55,
+      "question": "In Dennis Brutus's 'Ata Funeral', the phrase 'they will not let us mourn' refers to...",
+      "options": [
+        "The funeral attendees being too busy to mourn",
+        "The apartheid authorities suppressing the expression of grief as a form of protest",
+        "The deceased not being worthy of mourning",
+        "The family refusing to accept condolences"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Under apartheid, gatherings of Black South Africans were restricted and monitored. Mourning at political funerals was often seen as protest and was brutally suppressed by authorities, denying people the right to grieve openly.",
+      "topic": "paper-2",
+      "section": "poetry-ata-funeral"
+    },
+    {
+      "id": 56,
+      "question": "Brutus's use of enjambment in 'Ata Funeral' creates a sense of...",
+      "options": [
+        "Joy and celebration",
+        "Uncertainty and disrupted rhythm that mirrors the disruption of mourning",
+        "Regular and predictable rhythm like a hymn",
+        "Finality and closure"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Enjambment (continuing a sentence beyond the end of a line without a pause) creates a disrupted, uneasy rhythm that mirrors the disrupted mourning and the oppressive atmosphere of the apartheid context.",
+      "topic": "paper-2",
+      "section": "poetry-ata-funeral"
+    },
+    {
+      "id": 57,
+      "question": "The central theme of Brutus's 'Ata Funeral' is...",
+      "options": [
+        "The beauty of traditional funeral ceremonies",
+        "The dignity of the human spirit in the face of political oppression",
+        "The importance of religious rituals in African culture",
+        "The economic hardships faced by miners"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The poem emphasises the dignity and humanity of the mourners despite the oppressive regime that seeks to deny them the right to grieve. It is a testament to resilience in the face of dehumanisation.",
+      "topic": "paper-2",
+      "section": "poetry-ata-funeral"
+    },
+    {
+      "id": 58,
+      "question": "In 'Ata Funeral', the title itself is significant because 'Ata' refers to...",
+      "options": [
+        "A traditional funeral chant",
+        "A specific person who has died",
+        "The name of the poet's home village",
+        "A type of flower associated with death"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Ata is the name of the deceased individual. By naming the person, Brutus personalises the tragedy and insists on the humanity of the individual in a system that sought to render Black lives anonymous and insignificant.",
+      "topic": "paper-2",
+      "section": "poetry-ata-funeral"
+    },
+    {
+      "id": 59,
+      "question": "In Jofre Rocha's 'Poem of Return', the speaker is best described as...",
+      "options": [
+        "A tourist visiting a foreign country",
+        "An exile returning to his homeland after a long absence",
+        "A child returning from boarding school",
+        "A soldier returning from war"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The poem deals with the experience of exile and return. The speaker is someone who was forced to leave their homeland and is now returning, navigating the complex emotions of homecoming.",
+      "topic": "paper-2",
+      "section": "poetry-poem-of-return"
+    },
+    {
+      "id": 60,
+      "question": "The repetition of 'I return' in 'Poem of Return' serves to emphasise...",
+      "options": [
+        "The speaker's uncertainty about whether to stay",
+        "The speaker's determination and the significance of the homecoming act",
+        "The physical tiredness of the journey",
+        "The boring nature of the journey"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The anaphora (repetition of 'I return') reinforces the speaker's agency and determination. Each repetition underscores the emotional weight and significance of the decision to return to one's homeland after exile.",
+      "topic": "paper-2",
+      "section": "poetry-poem-of-return"
+    },
+    {
+      "id": 61,
+      "question": "In 'Poem of Return', the imagery of 'home' symbolises...",
+      "options": [
+        "A physical building that the speaker owns",
+        "A sense of belonging, identity, and cultural roots",
+        "A prison from which the speaker escaped",
+        "A temporary shelter"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Home in this poem transcends the physical — it represents the speaker's cultural identity, sense of belonging, and connection to their roots, which were severed during exile and must be re-established.",
+      "topic": "paper-2",
+      "section": "poetry-poem-of-return"
+    },
+    {
+      "id": 62,
+      "question": "The tone of 'Poem of Return' can best be described as...",
+      "options": [
+        "Light-hearted and carefree",
+        "Indifferent and detached",
+        "Hopeful yet tinged with the pain of the exile experience",
+        "Angry and vengeful"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The poem balances the joy and hope of returning with the lingering pain and trauma of exile. It is not purely optimistic nor purely bitter, but a complex mixture of both emotions.",
+      "topic": "paper-2",
+      "section": "poetry-poem-of-return"
+    },
+    {
+      "id": 63,
+      "question": "In Sipho Sepamla's 'Talk to the Peach Tree', the speaker addresses the tree directly. This literary device is called...",
+      "options": [
+        "Personification",
+        "Apostrophe",
+        "Metaphor",
+        "Simile"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Apostrophe is a figure of speech in which the speaker addresses an absent person, an abstract concept, or an inanimate object as if it were present and could respond. Here, the peach tree is addressed directly.",
+      "topic": "paper-2",
+      "section": "poetry-talk-to-peach-tree"
+    },
+    {
+      "id": 64,
+      "question": "In 'Talk to the Peach Tree', the peach tree symbolises...",
+      "options": [
+        "The fragility of nature in urban environments",
+        "African resilience, growth, and rootedness in the face of adversity",
+        "The economic value of fruit farming",
+        "A romantic relationship between the speaker and another person"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The peach tree, which continues to grow and bear fruit despite its harsh urban surroundings, symbolises African resilience and the ability to thrive despite the oppressive conditions of apartheid.",
+      "topic": "paper-2",
+      "section": "poetry-talk-to-peach-tree"
+    },
+    {
+      "id": 65,
+      "question": "The tone of 'Talk to the Peach Tree' can be described as...",
+      "options": [
+        "Formal and academic",
+        "Intimate and conversational",
+        "Angry and aggressive",
+        "Sad and hopeless"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The poem has an intimate, conversational tone as the speaker talks directly to the peach tree. The language is accessible and personal, creating a sense of closeness between the speaker, the tree, and the reader.",
+      "topic": "paper-2",
+      "section": "poetry-talk-to-peach-tree"
+    },
+    {
+      "id": 66,
+      "question": "The line 'you stand there solid as a rock' in 'Talk to the Peach Tree' contains an example of...",
+      "options": [
+        "A metaphor",
+        "A simile",
+        "Personification",
+        "Alliteration"
+      ],
+      "correctAnswer": 1,
+      "explanation": "This is a simile because it compares the tree's solidity to a rock using the word 'as'. Similes use 'like' or 'as' to make comparisons.",
+      "topic": "paper-2",
+      "section": "poetry-talk-to-peach-tree"
+    },
+    {
+      "id": 67,
+      "question": "In Leopold Sedar Senghor's 'Prayer to Masks', the masks represent...",
+      "options": [
+        "Objects used in Halloween celebrations",
+        "African ancestors, cultural heritage, and spiritual identity",
+        "Tools used by oppressors to hide their true intentions",
+        "Theatrical props in European drama"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The masks in the poem are African ceremonial masks that connect the living with their ancestors and cultural heritage. They symbolise the spiritual and cultural identity that colonialism sought to erase.",
+      "topic": "paper-2",
+      "section": "poetry-prayer-to-masks"
+    },
+    {
+      "id": 68,
+      "question": "The poem 'Prayer to Masks' is an example of the Negritude literary movement because it...",
+      "options": [
+        "Criticises African traditional beliefs as primitive",
+        "Celebrates African culture and identity in opposition to colonial denigration",
+        "Argues for the adoption of European cultural values",
+        "Describes African masks as works of art in European museums"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Negritude was a literary movement that celebrated Black identity and African cultural heritage in response to colonial racism. Senghor, a founder of the movement, uses this poem to affirm African spiritual and cultural values.",
+      "topic": "paper-2",
+      "section": "poetry-prayer-to-masks"
+    },
+    {
+      "id": 69,
+      "question": "In 'Prayer to Masks', the line 'You whose faces are not painted like the masks of Europe' draws a contrast between African and European cultures. This contrast emphasises...",
+      "options": [
+        "That European masks are artistically superior",
+        "The authenticity and spiritual significance of African masks compared to mere European decoration",
+        "That African masks are only used for entertainment",
+        "That the speaker prefers European art"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Senghor contrasts the deep spiritual and ritual significance of African masks with what he implies are the purely decorative or theatrical masks of Europe, asserting the value and authenticity of African cultural traditions.",
+      "topic": "paper-2",
+      "section": "poetry-prayer-to-masks"
+    },
+    {
+      "id": 70,
+      "question": "The poem's title 'Prayer to Masks' uses the word 'prayer', which suggests that the speaker approaches the masks with...",
+      "options": [
+        "Fear and dread",
+        "Reverence and spiritual devotion",
+        "Sarcasm and mockery",
+        "Scientific curiosity"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The word 'prayer' establishes a tone of reverence and spirituality. The speaker addresses the masks not as objects but as sacred intermediaries between the living and the ancestral spiritual world.",
+      "topic": "paper-2",
+      "section": "poetry-prayer-to-masks"
+    },
+    {
+      "id": 71,
+      "question": "In Karen Press's 'This Winter Coming', the 'winter' serves as an extended metaphor for...",
+      "options": [
+        "The cold weather in Cape Town",
+        "Political oppression, fear, and the dark era of apartheid",
+        "The season of winter in the natural cycle",
+        "The end of a romantic relationship"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Winter is a sustained metaphor throughout the poem for the bleakness, coldness, and brutality of the apartheid regime. The coming winter represents the intensification of political oppression and the atmosphere of fear.",
+      "topic": "paper-2",
+      "section": "poetry-this-winter-coming"
+    },
+    {
+      "id": 72,
+      "question": "The tone of 'This Winter Coming' can best be described as...",
+      "options": [
+        "Optimistic and hopeful",
+        "Anxious and foreboding",
+        "Humorous and light-hearted",
+        "Nostalgic and sentimental"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The poem creates a sense of dread and apprehension about the future. The imagery of approaching cold, darkness, and threat generates an anxious, foreboding tone that reflects the political climate of the time.",
+      "topic": "paper-2",
+      "section": "poetry-this-winter-coming"
+    },
+    {
+      "id": 73,
+      "question": "The imagery of 'cold' and 'darkness' in 'This Winter Coming' is used to suggest...",
+      "options": [
+        "The beauty of the winter landscape",
+        "The emotional coldness and moral darkness of the oppressive regime",
+        "The speaker's preference for winter over summer",
+        "The scientific explanation of seasonal change"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Cold and darkness are not literal weather descriptions but metaphors for the emotional and moral state under oppression. They represent the lack of warmth, humanity, and hope in a society dominated by fear.",
+      "topic": "paper-2",
+      "section": "poetry-this-winter-coming"
+    },
+    {
+      "id": 74,
+      "question": "The poem 'This Winter Coming' is set in the context of...",
+      "options": [
+        "Post-apartheid South Africa",
+        "The apartheid era in South Africa",
+        "Colonial Africa in the 19th century",
+        "Contemporary democratic South Africa"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The poem was written during the apartheid era and reflects the fear, uncertainty, and oppression experienced by those living under the regime. The 'winter' is a metaphor for the intensifying police state.",
+      "topic": "paper-2",
+      "section": "poetry-this-winter-coming"
+    },
+    {
+      "id": 75,
+      "question": "In Ella Wheeler Wilcox's 'Solitude', the central theme is...",
+      "options": [
+        "The joy of being alone in nature",
+        "The contrast between how people share joy and suffer grief alone",
+        "The importance of social media for connecting with others",
+        "The beauty of solitary confinement"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The poem's most famous lines — 'Laugh, and the world laughs with you; / Weep, and you weep alone' — capture the theme that people are eager to share in happiness but reluctant to share in sorrow.",
+      "topic": "paper-2",
+      "section": "poetry-solitude"
+    },
+    {
+      "id": 76,
+      "question": "The rhyme scheme of Wilcox's 'Solitude' is...",
+      "options": [
+        "ABAB CDCD EFEF GG",
+        "AABB CCDD EEFF GG",
+        "ABAB CDCD EEFF GG",
+        "ABBA CDDC EFFE GG"
+    ],
+      "correctAnswer": 0,
+      "explanation": "'Solitude' follows a regular alternating rhyme scheme (ABAB CDCD EFEF GG) in its quatrains, with a final couplet, creating a rhythmic and memorable quality that suits its aphoristic style.",
+      "topic": "paper-2",
+      "section": "poetry-solitude"
+    },
+    {
+      "id": 77,
+      "question": "The line 'Laugh, and the world laughs with you' in Wilcox's poem suggests that...",
+      "options": [
+        "People are naturally empathetic and supportive",
+        "People are drawn to happiness and success but avoid others' pain and suffering",
+        "The world is a joyful place full of laughter",
+        "You should always pretend to be happy"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The line implies that people enjoy sharing in happiness ('laughs with you') but the contrast with 'Weep, and you weep alone' reveals that society tends to avoid those who are suffering.",
+      "topic": "paper-2",
+      "section": "poetry-solitude"
+    },
+    {
+      "id": 78,
+      "question": "Wilcox uses contrast in 'Solitude' primarily to...",
+      "options": [
+        "Show the similarities between joy and sorrow",
+        "Emphasise the different ways people respond to happiness versus grief",
+        "Confuse the reader with contradictory statements",
+        "Argue that solitude is better than company"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The poem consistently contrasts public celebration (shared joy) with private suffering (solitary grief). These contrasts highlight the poem's central insight about the conditional nature of social support.",
+      "topic": "paper-2",
+      "section": "poetry-solitude"
+    },
+    {
+      "id": 79,
+      "question": "In Olive Schreiner's 'The Morning Sun is Shining', the morning sun symbolises...",
+      "options": [
+        "The harsh heat of the African midday",
+        "Hope, renewal, and the beauty of a new day",
+        "The industrialisation of rural South Africa",
+        "The speaker's anger and frustration"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The morning sun represents optimism, new beginnings, and the restorative power of nature. Its light and warmth bring life and energy to the landscape, reflecting a positive and hopeful mood.",
+      "topic": "paper-2",
+      "section": "poetry-morning-sun"
+    },
+    {
+      "id": 80,
+      "question": "In 'The Morning Sun is Shining', the line describing the sun as 'kissing the dew from the grass' is an example of...",
+      "options": [
+        "Simile",
+        "Personification",
+        "Hyperbole",
+        "Onomatopoeia"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Personification is attributing human qualities to non-human things. The sun 'kissing' the dew attributes a gentle, loving human action to a celestial body.",
+      "topic": "paper-2",
+      "section": "poetry-morning-sun"
+    },
+    {
+      "id": 81,
+      "question": "The tone of 'The Morning Sun is Shining' is one of...",
+      "options": [
+        "Melancholy and sadness",
+        "Serenity and joy",
+        "Anger and indignation",
+        "Fear and anxiety"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The poem celebrates the beauty of the morning through vivid, positive imagery. The tone is calm, peaceful, and joyful, reflecting the speaker's appreciation of nature's simple beauties.",
+      "topic": "paper-2",
+      "section": "poetry-morning-sun"
+    },
+    {
+      "id": 82,
+      "question": "The poem 'The Morning Sun is Shining' can be described as a celebration of...",
+      "options": [
+        "The superiority of urban life over rural life",
+        "The natural beauty of the South African landscape",
+        "The achievements of modern agriculture",
+        "The excitement of a thunderstorm"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Schreiner's poem paints a vivid picture of the South African landscape at dawn, celebrating the natural world through rich sensory imagery of light, sound, and life awakening.",
+      "topic": "paper-2",
+      "section": "poetry-morning-sun"
+    },
+    {
+      "id": 83,
+      "question": "In Wordsworth's 'It is a beauteous evening, calm and free', the evening is described as 'beauteous', 'calm', and 'free'. Which of the following best describes the speaker's attitude towards the natural scene?",
+      "options": [
+        "Indifference and boredom",
+        "Reverence and wonder at the sublime beauty of nature",
+        "Fear of the approaching night",
+        "Criticism of the imperfect landscape"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Wordsworth, a Romantic poet, regarded nature with deep reverence. The words 'beauteous', 'calm', and 'free' convey a sense of awe and spiritual appreciation for the natural world's tranquility and majesty.",
+      "topic": "paper-2",
+      "section": "poetry-beauteous-evening"
+    },
+    {
+      "id": 84,
+      "question": "In Wordsworth's sonnet, the line describing the sea as 'a mighty being' and 'ever awake' is an example of...",
+      "options": [
+        "Simile",
+        "Personification",
+        "Alliteration",
+        "Understatement"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The sea is personified as a powerful living entity ('mighty being') that is conscious ('ever awake'). This reflects Wordsworth's Romantic belief in the living, spiritual quality of nature.",
+      "topic": "paper-2",
+      "section": "poetry-beauteous-evening"
+    },
+    {
+      "id": 85,
+      "question": "The poem 'It is a beauteous evening, calm and free' is a Petrarchan sonnet. The volta (turn) occurs where the speaker...",
+      "options": [
+        "Describes the beauty of the sunset",
+        "Shifts from describing nature to addressing the child walking beside him",
+        "Criticises the church for its hypocrisy",
+        "Announces that night has fallen"
+      ],
+      "correctAnswer": 1,
+      "explanation": "In the Petrarchan sonnet, the volta occurs between the octave and the sestet. Here, the poem shifts from describing the tranquil evening scene to addressing the speaker's companion, reflecting on her spiritual connection to nature.",
+      "topic": "paper-2",
+      "section": "poetry-beauteous-evening"
+    },
+    {
+      "id": 86,
+      "question": "The theme of 'It is a beauteous evening, calm and free' connects nature with...",
+      "options": [
+        "Industrial progress and economic growth",
+        "Spirituality and divine presence in the natural world",
+        "The dangers of the wilderness",
+        "The superiority of human creation over nature"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Wordsworth's Romantic philosophy saw nature as a manifestation of the divine. The poem connects the beauty of the evening to a sense of holy, spiritual presence, suggesting that nature itself is a form of worship.",
+      "topic": "paper-2",
+      "section": "poetry-beauteous-evening"
+    },
+    {
+      "id": 87,
+      "question": "In Dylan Thomas's 'Fern Hill', the speaker looks back on his childhood with a sense of...",
+      "options": [
+        "Bitterness and resentment",
+        "Nostalgia and wonder, tempered by awareness of lost innocence",
+        "Boredom and indifference",
+        "Fear and trauma"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The poem vividly celebrates the joy and freedom of childhood on a farm ('happy as the grass was green'), but this nostalgia is tinged with the understanding that such innocence is irretrievably lost to time.",
+      "topic": "paper-2",
+      "section": "poetry-fern-hill"
+    },
+    {
+      "id": 88,
+      "question": "The line 'Time let me hail and climb' in 'Fern Hill' suggests that the child experienced time as...",
+      "options": [
+        "A cruel enemy that rushed past too quickly",
+        "A benevolent force that allowed him the freedom of youth",
+        "An irrelevant concept that had no meaning",
+        "A linear progression towards inevitable death"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The personification of Time as something that 'let' the speaker climb suggests that in childhood, time was generous and permissive, allowing the speaker to enjoy freedom without the weight of mortality.",
+      "topic": "paper-2",
+      "section": "poetry-fern-hill"
+    },
+    {
+      "id": 89,
+      "question": "The alliteration in 'happy as the grass was green' in 'Fern Hill' creates...",
+      "options": [
+        "A harsh, discordant sound",
+        "A musical, joyful rhythm that reinforces the happiness described",
+        "A sense of boredom and monotony",
+        "An ominous and foreboding atmosphere"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The repetition of the 'g' sound ('grass' and 'green') combined with the 'h' sound ('happy') creates a light, musical quality that reinforces the joyful, carefree mood of the childhood memory.",
+      "topic": "paper-2",
+      "section": "poetry-fern-hill"
+    },
+    {
+      "id": 90,
+      "question": "The central metaphor in 'Fern Hill' compares childhood to...",
+      "options": [
+        "A long and difficult journey",
+        "A paradise or Eden from which the speaker has been expelled",
+        "A battle that must be won",
+        "A book that is difficult to read"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Fern Hill is depicted as a kind of Eden — a perfect, innocent world of joy and freedom. The passage of time and the loss of innocence are the Fall from this paradise, a central metaphor in the poem.",
+      "topic": "paper-2",
+      "section": "poetry-fern-hill"
+    },
+    {
+      "id": 91,
+      "question": "In Emily Dickinson's 'The Shipwreck', the shipwreck is a metaphor for...",
+      "options": [
+        "A literal maritime disaster",
+        "The destruction of faith or hope in the face of life's trials",
+        "A failed business venture",
+        "The end of a romantic relationship"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Dickinson frequently used physical disasters as metaphors for spiritual and emotional crises. The shipwreck represents the collapse of faith, hope, or human certainty when confronted with overwhelming suffering or mortality.",
+      "topic": "paper-2",
+      "section": "poetry-shipwreck"
+    },
+    {
+      "id": 92,
+      "question": "Dickinson's use of dashes in her poetry, including in 'The Shipwreck', serves to...",
+      "options": [
+        "Indicate the end of a sentence",
+        "Create pauses, interruptions, and a sense of fragmentation or urgency",
+        "Separate items in a list",
+        "Show that words have been omitted"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Dickinson's characteristic dashes create irregular pauses and interruptions in the rhythm, mirroring the fragmented thoughts, hesitations, and emotional intensity of the speaker's internal struggle.",
+      "topic": "paper-2",
+      "section": "poetry-shipwreck"
+    },
+    {
+      "id": 93,
+      "question": "The paradox in Dickinson's 'The Shipwreck' is evident in the idea that...",
+      "options": [
+        "The ship sails smoothly while sinking",
+        "Salvation or meaning can be found in the midst of destruction",
+        "The captain abandons the sinking ship",
+        "The passengers are rescued by the very storm that sank them"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Dickinson often explored the paradox of faith: how spiritual meaning or salvation can emerge from suffering and destruction. The shipwreck, while devastating, may also represent a spiritual trial that refines or redeems.",
+      "topic": "paper-2",
+      "section": "poetry-shipwreck"
+    },
+    {
+      "id": 94,
+      "question": "The theme of 'The Shipwreck' is most closely related to...",
+      "options": [
+        "The excitement of sea exploration",
+        "Human mortality and the struggle to maintain faith in the face of despair",
+        "The technical details of ship navigation",
+        "The joy of returning home after a long voyage"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Like much of Dickinson's work, 'The Shipwreck' grapples with existential questions of mortality, suffering, and the possibility of faith or meaning in a seemingly indifferent universe.",
+      "topic": "paper-2",
+      "section": "poetry-shipwreck"
+    },
+    {
+      "id": 95,
+      "question": "When analysing an unseen poem for the first time, what is the most appropriate first step?",
+      "options": [
+        "Immediately identify the rhyme scheme and metre",
+        "Read the poem through once to get a general impression of its meaning and mood",
+        "Count the number of stanzas and lines",
+        "Look up unfamiliar words in a dictionary"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The first step in analysing an unseen poem is to read it through to gain an overall sense of its subject, tone, and mood. Detailed analysis of structure and devices comes after understanding the general meaning.",
+      "topic": "paper-2",
+      "section": "unseen-poetry"
+    },
+    {
+      "id": 96,
+      "question": "Alliteration and assonance are types of...",
+      "options": [
+        "Rhyme schemes",
+        "Sound devices",
+        "Structural techniques",
+        "Figurative language"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Both alliteration (repetition of initial consonant sounds) and assonance (repetition of vowel sounds) are sound devices that create musical effects, emphasis, and mood in poetry.",
+      "topic": "paper-2",
+      "section": "unseen-poetry"
+    },
+    {
+      "id": 97,
+      "question": "Which of the following elements is most important in determining the tone of a poem?",
+      "options": [
+        "The number of syllables per line",
+        "The poet's choice of words (diction) and their emotional associations",
+        "The poem's position on the page",
+        "The poet's biographical details"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Tone is conveyed primarily through diction — the poet's choice of words and their connotations. Words with positive, negative, or neutral associations shape the reader's sense of the poet's attitude.",
+      "topic": "paper-2",
+      "section": "unseen-poetry"
+    },
+    {
+      "id": 98,
+      "question": "The arrangement of lines and stanzas in a poem is referred to as its...",
+      "options": [
+        "Rhyme scheme",
+        "Form or structure",
+        "Meter",
+        "Imagery"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Form or structure refers to how the poem is organised — line length, stanza arrangement, and overall layout. Different poetic forms (sonnet, free verse, haiku, etc.) have different structural conventions.",
+      "topic": "paper-2",
+      "section": "unseen-poetry"
+    },
+    {
+      "id": 99,
+      "question": "When commenting on the theme of an unseen poem, you should...",
+      "options": [
+        "State the theme in one word, such as 'love' or 'death'",
+        "Describe the central idea or message of the poem, supported by evidence from the text",
+        "Explain what you would have written about if you were the poet",
+        "Summarise the plot of the poem in a single sentence"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A theme is the central idea or underlying message of a poem. It should be stated as a complete idea (e.g., 'the poem explores the painful contrast between childhood innocence and adult disillusionment') and supported with textual evidence.",
+      "topic": "paper-2",
+      "section": "unseen-poetry"
+    },
+    {
+      "id": 100,
+      "question": "In Yann Martel's 'Life of Pi', the tiger Richard Parker primarily symbolises...",
+      "options": [
+        "The beauty of wildlife",
+        "Pi's instinct for survival and his own primal nature",
+        "The dangers of keeping wild animals as pets",
+        "The Indian government's wildlife protection policies"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Richard Parker represents the wild, instinctual side of Pi's nature that enables him to survive at sea. He is both a literal tiger and a symbolic representation of the primal will to live.",
+      "topic": "paper-2",
+      "section": "novel-life-of-pi"
+    },
+    {
+      "id": 101,
+      "question": "Pi's father teaches him that the tiger is not his friend by feeding a goat to Richard Parker. This lesson is significant because it...",
+      "options": [
+        "Shows that Pi's father is cruel",
+        "Teaches Pi about the dangerous and unpredictable nature of animals, preparing him for survival at sea",
+        "Demonstrates that all animals can be tamed with kindness",
+        "Proves that Richard Parker is untameable and should be put down"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The brutal lesson establishes that animals operate on instinct, not sentiment. This understanding later helps Pi survive by recognising that Richard Parker must be managed with respect and caution, not affection.",
+      "topic": "paper-2",
+      "section": "novel-life-of-pi"
+    },
+    {
+      "id": 102,
+      "question": "The lifeboat in 'Life of Pi' functions as a symbol of...",
+      "options": [
+        "Modern technology and engineering",
+        "A confined space where the struggle between civilisation and primal instinct plays out",
+        "The safety of human invention over nature",
+        "A means of escape from reality"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The lifeboat is a microcosm where Pi must negotiate between the civilised, rational part of himself and the primal, instinctual side (Richard Parker). It is the stage for his physical and spiritual survival.",
+      "topic": "paper-2",
+      "section": "novel-life-of-pi"
+    },
+    {
+      "id": 103,
+      "question": "The mysterious island that Pi discovers in the Pacific Ocean is often interpreted as...",
+      "options": [
+        "A real geographical location that can be found on a map",
+        "An illusion or a representation of the temptations that would prevent Pi from continuing his journey",
+        "A paradise where Pi could have stayed forever",
+        "An alien spacecraft"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The island, with its carnivorous trees and abundant meerkats, is surreal and ambiguous. It represents the temptation of a false paradise — offering rest but ultimately proving deadly, forcing Pi to continue his journey.",
+      "topic": "paper-2",
+      "section": "novel-life-of-pi"
+    },
+    {
+      "id": 104,
+      "question": "In 'Life of Pi', Pi Patel practises three religions: Hinduism, Christianity, and Islam. This is significant because it...",
+      "options": [
+        "Shows that Pi is confused and cannot make up his mind",
+        "Reflects the novel's theme that multiple paths can lead to spiritual truth and that faith transcends organised religion",
+        "Indicates that Pi's family had no religious beliefs",
+        "Proves that all religions are exactly the same"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Pi's embracing of three religions demonstrates his deep spiritual hunger and the novel's message that faith, not rigid doctrine, is what matters. The story itself becomes a test of which story (version of truth) the reader chooses to believe.",
+      "topic": "paper-2",
+      "section": "novel-life-of-pi"
+    },
+    {
+      "id": 105,
+      "question": "The narrative perspective of 'Life of Pi' can be described as...",
+      "options": [
+        "First-person narration by Pi as an adult looking back on his experiences",
+        "Third-person omniscient narration that reveals all characters' thoughts",
+        "Second-person narration that addresses the reader directly",
+        "Third-person limited narration focused on Richard Parker"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The novel is narrated in the first person by an adult Pi Patel, who recounts his childhood and the shipwreck story to a writer. This narrative frame invites the reader to consider the nature of storytelling and truth.",
+      "topic": "paper-2",
+      "section": "novel-life-of-pi"
+    },
+    {
+      "id": 106,
+      "question": "In Oscar Wilde's 'The Picture of Dorian Gray', the portrait serves as a symbol of...",
+      "options": [
+        "The artist's skill and creativity",
+        "Dorian's external beauty versus his internal moral corruption",
+        "The importance of family portraits in Victorian society",
+        "The economic value of art"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The portrait is a Gothic symbol that bears the physical marks of Dorian's sins and aging while he remains young and beautiful. It externalises the internal decay of his soul, representing the divide between appearance and reality.",
+      "topic": "paper-2",
+      "section": "novel-dorian-gray"
+    },
+    {
+      "id": 107,
+      "question": "Lord Henry Wotton's influence on Dorian Gray is primarily through...",
+      "options": [
+        "Physical intimidation and threats",
+        "Witty aphorisms and seductive philosophical arguments that celebrate hedonism and beauty",
+        "Financial control over Dorian's inheritance",
+        "Blackmail using knowledge of Dorian's secret"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Lord Henry corrupts Dorian through his charismatic and intellectually seductive speeches, filled with paradoxical epigrams that champion pleasure, beauty, and self-indulgence above morality and social responsibility.",
+      "topic": "paper-2",
+      "section": "novel-dorian-gray"
+    },
+    {
+      "id": 108,
+      "question": "Basil Hallward's feelings towards Dorian Gray can best be described as...",
+      "options": [
+        "Romantic love that he is afraid to express",
+        "Artistic fascination and genuine affection, but also moral concern",
+        "Jealousy and resentment of Dorian's beauty",
+        "Indifference; he only cared about painting the portrait"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Basil is both artistically enthralled by Dorian's beauty and genuinely cares for his wellbeing. He warns Dorian against Lord Henry's influence and is horrified by the moral decay he witnesses, though he cannot separate himself from Dorian.",
+      "topic": "paper-2",
+      "section": "novel-dorian-gray"
+    },
+    {
+      "id": 109,
+      "question": "The 'yellow book' given to Dorian by Lord Henry is significant because it...",
+      "options": [
+        "Is a rare first edition worth a fortune",
+        "Influences Dorian's descent into hedonism and serves as a blueprint for his corrupt lifestyle",
+        "Contains a detailed account of Dorian's own crimes",
+        "Is a children's book that reminds Dorian of his innocence"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The yellow book (often interpreted as J.K. Huysmans's 'A Rebours') is a decadent French novel that glorifies sensual experience and aestheticism. It becomes Dorian's guidebook for his pursuit of pleasure without regard for morality.",
+      "topic": "paper-2",
+      "section": "novel-dorian-gray"
+    },
+    {
+      "id": 110,
+      "question": "The central theme of 'The Picture of Dorian Gray' is...",
+      "options": [
+        "The importance of maintaining a good social reputation",
+        "The danger of valuing beauty and pleasure above morality and truth",
+        "The superiority of art over life",
+        "The inevitability of aging and death"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The novel is a moral fable about the consequences of aestheticism taken to its extreme — pursuing beauty, pleasure, and sensory experience at the expense of ethical behaviour leads to spiritual destruction.",
+      "topic": "paper-2",
+      "section": "novel-dorian-gray"
+    },
+    {
+      "id": 111,
+      "question": "Dorian Gray dies at the end of the novel when he...",
+      "options": [
+        "Is shot by Basil Hallward's brother in a revenge killing",
+        "Stabs the portrait, and the mysterious connection between portrait and man causes his own death while the portrait reverts to its original beauty",
+        "Drinks poison given to him by Lord Henry",
+        "Falls from the balcony of his London townhouse"
+      ],
+      "correctAnswer": 1,
+      "explanation": "In a final attempt to destroy the evidence of his sins, Dorian stabs the portrait. The reversal of the magical bond means he dies with a knife in his heart, aged and hideous, while the portrait is restored to its original beauty.",
+      "topic": "paper-2",
+      "section": "novel-dorian-gray"
+    },
+    {
+      "id": 112,
+      "question": "In Shakespeare's 'Hamlet', the ghost of Hamlet's father reveals that he was murdered by...",
+      "options": [
+        "Fortinbras, the Prince of Norway",
+        "Claudius, his own brother, who poured poison into his ear while he slept",
+        "Polonius, the Lord Chamberlain",
+        "Gertrude, his wife"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The ghost reveals the truth to Hamlet: Claudius, Hamlet's uncle and the new king, murdered his own brother by pouring poison into his ear while he slept in the orchard.",
+      "topic": "paper-2",
+      "section": "drama-hamlet"
+    },
+    {
+      "id": 113,
+      "question": "The 'To be or not to be' soliloquy in 'Hamlet' explores the theme of...",
+      "options": [
+        "Love and romance",
+        "Existential questioning of life, death, and whether it is nobler to endure suffering or to take action",
+        "The proper way to govern a kingdom",
+        "Hamlet's love for Ophelia"
+      ],
+      "correctAnswer": 1,
+      "explanation": "This famous soliloquy contemplates the fundamental question of existence: whether to endure life's hardships passively or to actively end them through death ('not to be'), and what fears prevent people from choosing death.",
+      "topic": "paper-2",
+      "section": "drama-hamlet"
+    },
+    {
+      "id": 114,
+      "question": "Ophelia's madness in 'Hamlet' is largely a result of...",
+      "options": [
+        "A curse placed on her family",
+        "The combined trauma of her father Polonius's death at Hamlet's hands and Hamlet's rejection of her",
+        "A physical illness that affects her mind",
+        "Her jealousy of Gertrude's position as queen"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Ophelia descends into madness after suffering two devastating losses: Hamlet, the man she loved, rejects and insults her; and then Hamlet kills her father, Polonius. These compounded traumas shatter her sanity.",
+      "topic": "paper-2",
+      "section": "drama-hamlet"
+    },
+    {
+      "id": 115,
+      "question": "Polonius in 'Hamlet' is best characterised as...",
+      "options": [
+        "A wise and trusted advisor who gives excellent counsel",
+        "A pompous, long-winded, and meddling courtier who is also hypocritical",
+        "A silent and observant servant who rarely speaks",
+        "A courageous soldier who fights bravely for the king"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Polonius is portrayed as a verbose and interfering old man who dispenses tedious advice ('Neither a borrower nor a lender be'), spies on others, and is ultimately killed while hiding behind a curtain.",
+      "topic": "paper-2",
+      "section": "drama-hamlet"
+    },
+    {
+      "id": 116,
+      "question": "The play-within-a-play, 'The Mousetrap', is used by Hamlet to...",
+      "options": [
+        "Entertain the royal court during a festive occasion",
+        "Test Claudius's guilt by watching his reaction to a scene depicting a king being murdered by poison",
+        "Propose marriage to Ophelia in a creative way",
+        "Mock Polonius for his long-winded speeches"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Hamlet arranges for the travelling actors to perform a play that mirrors the murder of his father. He watches Claudius's reaction to confirm the ghost's accusation — when Claudius storms out, Hamlet has his proof.",
+      "topic": "paper-2",
+      "section": "drama-hamlet"
+    },
+    {
+      "id": 117,
+      "question": "The theme of revenge in 'Hamlet' is complicated by Hamlet's...",
+      "options": [
+        "Lack of evidence that Claudius committed the murder",
+        "Procrastination, philosophical nature, and moral uncertainty about the act of killing",
+        "Fear of the ghost being a demon sent to deceive him",
+        "Love for Claudius as an uncle figure"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Unlike a straightforward revenge hero, Hamlet is an intellectual who overthinks and delays. His philosophical reflections on mortality, morality, and the consequences of action prevent him from taking swift revenge.",
+      "topic": "paper-2",
+      "section": "drama-hamlet"
+    },
+    {
+      "id": 118,
+      "question": "The graveyard scene (Act V, Scene 1) in 'Hamlet' serves to...",
+      "options": [
+        "Provide comic relief through the gravedigger's dark humour while meditating on mortality",
+        "Introduce a new character who will help Hamlet defeat Claudius",
+        "Show Hamlet's fear of death for the first time",
+        "Explain the cause of Ophelia's death in detail"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The scene combines dark comedy (the gravedigger's witty banter) with profound philosophical reflection on death and equality (all return to dust, regardless of social status). It prepares Hamlet for his own death.",
+      "topic": "paper-2",
+      "section": "drama-hamlet"
+    },
+    {
+      "id": 119,
+      "question": "In Shakespeare's 'Othello', Iago's stated motivation for destroying Othello includes...",
+      "options": [
+        "Othello's mistreatment of Desdemona",
+        "Iago's belief that Othello has slept with his wife Emilia, and his resentment at being passed over for promotion",
+        "Othello's plan to return to Venice without Iago",
+        "Iago's love for Desdemona and jealousy of Othello"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Iago lists two grievances: he suspects Othello of adultery with Emilia ('twixt my sheets he has done my office'), and he is furious that Cassio was promoted to lieutenant instead of him. These fuel his murderous revenge.",
+      "topic": "paper-2",
+      "section": "drama-othello"
+    },
+    {
+      "id": 120,
+      "question": "The handkerchief in 'Othello' symbolises...",
+      "options": [
+        "Othello's military command and authority",
+        "The love and fidelity between Othello and Desdemona — its loss represents the destruction of trust",
+        "Desdemona's wealth and social status",
+        "Iago's power over the other characters"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The handkerchief, Othello's first gift to Desdemona, is a powerful symbol of their love and marital fidelity. When Othello believes she has given it to Cassio, it becomes 'proof' of her infidelity, destroying their relationship.",
+      "topic": "paper-2",
+      "section": "drama-othello"
+    },
+    {
+      "id": 121,
+      "question": "Othello's tragic flaw (hamartia) is generally considered to be...",
+      "options": [
+        "Excessive pride in his military achievements",
+        "His jealousy and susceptibility to manipulation due to his insecurity as an outsider in Venetian society",
+        "His lack of intelligence and poor judgement in battle",
+        "His excessive generosity towards his friends"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Othello's tragic flaw is his jealousy, which Iago exploits. Othello's insecurity as a Moor in a white Venetian society makes him vulnerable to Iago's insinuations that Desdemona would naturally be unfaithful to him.",
+      "topic": "paper-2",
+      "section": "drama-othello"
+    },
+    {
+      "id": 122,
+      "question": "Dramatic irony in 'Othello' is evident when...",
+      "options": [
+        "Othello calls Iago 'honest Iago' while the audience knows that Iago is plotting his destruction",
+        "Desdemona sings the 'Willow Song' before her death",
+        "Cassio is appointed lieutenant in Act I",
+        "Othello smothers Desdemona with a pillow"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Dramatic irony occurs when the audience knows something the characters do not. Othello repeatedly refers to Iago as 'honest Iago', unaware of his treachery, while the audience knows the truth.",
+      "topic": "paper-2",
+      "section": "drama-othello"
+    },
+    {
+      "id": 123,
+      "question": "The theme of racism in 'Othello' is most clearly seen in...",
+      "options": [
+        "Othello's eloquent speeches about his military career",
+        "The racist language used by Iago and Roderigo, who refer to Othello as 'the Moor', 'an old black ram', and 'the devil'",
+        "The Duke of Venice's respect for Othello's military skills",
+        "Desdemona's father's blessing of their marriage"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Iago and Roderigo consistently use animalistic and demonic imagery to describe Othello ('an old black ram', 'the devil'), revealing the racial prejudice that makes Othello vulnerable to Iago's manipulation.",
+      "topic": "paper-2",
+      "section": "drama-othello"
+    },
+    {
+      "id": 124,
+      "question": "Desdemona's character is best described as...",
+      "options": [
+        "Deceitful and manipulative, secretly in love with Cassio",
+        "Loyal, virtuous, and courageously defiant of her father to be with Othello, but ultimately powerless against his jealousy",
+        "Passive and indifferent, with no opinion about her own fate",
+        "Ambitious and scheming, seeking to become queen of Cyprus"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Desdemona is portrayed as faithful and loving. She defies her father and Venetian social conventions to marry Othello, demonstrating courage. However, her innocence and loyalty cannot overcome Othello's manipulated jealousy.",
+      "topic": "paper-2",
+      "section": "drama-othello"
+    },
+    {
+      "id": 125,
+      "question": "In Arthur Miller's 'The Crucible', the Salem witch trials serve as an allegory for...",
+      "options": [
+        "The persecution of witches in medieval Europe",
+        "The anti-communist witch hunts led by Senator Joseph McCarthy in 1950s America",
+        "The American Revolutionary War",
+        "The Salem religious revival of the 18th century"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Miller wrote 'The Crucible' as an allegorical criticism of McCarthyism, where unfounded accusations of communism destroyed innocent people's reputations and lives, just as accusations of witchcraft destroyed lives in Salem.",
+      "topic": "paper-2",
+      "section": "drama-crucible"
+    },
+    {
+      "id": 126,
+      "question": "John Proctor's tragic flaw in 'The Crucible' is...",
+      "options": [
+        "His excessive pride and unwillingness to publicly confess his sin of adultery",
+        "His lack of intelligence and inability to see through Abigail's lies",
+        "His excessive religious devotion",
+        "His greed and desire for power"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Proctor's pride and sense of integrity prevent him from confessing his affair with Abigail to the court early on, when it could have stopped the hysteria. His reluctance to expose his 'good name' to shame contributes to the tragedy.",
+      "topic": "paper-2",
+      "section": "drama-crucible"
+    },
+    {
+      "id": 127,
+      "question": "Abigail Williams in 'The Crucible' is motivated primarily by...",
+      "options": [
+        "Religious faith and a desire to purify Salem of evil",
+        "Her obsessive love for John Proctor and her desire to eliminate Elizabeth Proctor so she can have John",
+        "Fear of being exposed as a witch herself",
+        "A genuine belief that she can communicate with the devil"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Abigail's motivations are rooted in her affair with John Proctor and her desire to replace Elizabeth as his wife. She masterminds the witch accusations to eliminate Elizabeth and consolidate her power in Salem.",
+      "topic": "paper-2",
+      "section": "drama-crucible"
+    },
+    {
+      "id": 128,
+      "question": "Elizabeth Proctor's character is best described as...",
+      "options": [
+        "Cold, vindictive, and unloving towards John",
+        "Moral, upright, and dignified, but initially cold due to the pain of her husband's betrayal",
+        "Gullible and easily manipulated by Abigail",
+        "Comedic relief through her witty one-liners"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Elizabeth is a morally upright woman who struggles with her husband's infidelity. Her initial coldness toward John is understandable, but she ultimately shows growth by lying to protect him and forgiving him before his death.",
+      "topic": "paper-2",
+      "section": "drama-crucible"
+    },
+    {
+      "id": 129,
+      "question": "The title 'The Crucible' is a metaphor for...",
+      "options": [
+        "The intense heat of the Salem summer",
+        "The severe test or trial that the characters undergo, which reveals their true character",
+        "A cooking pot used during the witch trials",
+        "The church building where the trials were held"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A crucible is a container used for heating substances to high temperatures in order to purify them. Metaphorically, the witch trials are a 'crucible' that tests the characters' integrity, revealing who is truly virtuous and who is corrupt.",
+      "topic": "paper-2",
+      "section": "drama-crucible"
+    },
+    {
+      "id": 130,
+      "question": "The theme of reputation in 'The Crucible' is most clearly seen in...",
+      "options": [
+        "Abigail's desire to become wealthy",
+        "John Proctor's agonising decision between confessing to witchcraft (and saving his life but losing his name) or dying with integrity",
+        "Reverend Hale's search for witches in the forest",
+        "The Putnam family's land disputes"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Proctor's central conflict is whether to falsely confess (preserving his life but destroying his reputation and integrity) or to refuse and be hanged. His final choice — 'I have given you my soul; leave me my name!' — affirms the value of personal integrity.",
+      "topic": "paper-2",
+      "section": "drama-crucible"
+    },
+    {
+      "id": 131,
+      "question": "At the end of 'The Crucible', John Proctor chooses to hang rather than sign a false confession because...",
+      "options": [
+        "He believes he will go to heaven if he dies as a martyr",
+        "He refuses to allow his name to be used to justify the corrupt court's proceedings and to set a false example for others",
+        "He is too proud to admit to something he did not do",
+        "He wants to spite Abigail one last time"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Proctor realises that if he signs the false confession, his name will be posted on the church door, legitimising the corrupt court. He chooses to die with integrity rather than compromise his name and enable further injustice.",
+      "topic": "paper-2",
+      "section": "drama-crucible"
+    },
+    {
+      "id": 132,
+      "question": "Which of the following is the correct structure for a standard essay?",
+      "options": [
+        "Body, conclusion, introduction",
+        "Introduction (with thesis statement), body paragraphs (each with a topic sentence and supporting evidence), and conclusion",
+        "Conclusion, introduction, body",
+        "Body only, with no introduction or conclusion"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A well-structured essay follows a clear pattern: an introduction that presents the thesis, body paragraphs that develop the argument (each with a topic sentence and evidence), and a conclusion that synthesises the main points.",
+      "topic": "paper-3",
+      "section": "essay-writing"
+    },
+    {
+      "id": 133,
+      "question": "A descriptive essay primarily relies on...",
+      "options": [
+        "Statistical data and research findings",
+        "Vivid sensory details (sight, sound, smell, touch, taste) to create a vivid picture for the reader",
+        "Logical arguments and counterarguments",
+        "Chronological narration of events"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Descriptive writing aims to create a vivid impression through sensory language. It paints a picture in the reader's mind by appealing to the five senses, rather than through argument or narrative.",
+      "topic": "paper-3",
+      "section": "essay-writing"
+    },
+    {
+      "id": 134,
+      "question": "In a discursive essay, the writer should...",
+      "options": [
+        "Present only one side of the argument passionately",
+        "Explore multiple perspectives on an issue before reaching a balanced conclusion",
+        "Tell a personal story from beginning to end",
+        "Describe a scene in vivid detail without analysis"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A discursive essay examines a topic from various viewpoints, presenting different arguments fairly before arriving at a reasoned, balanced conclusion. It is exploratory and balanced, not argumentative.",
+      "topic": "paper-3",
+      "section": "essay-writing"
+    },
+    {
+      "id": 135,
+      "question": "The thesis statement in an essay...",
+      "options": [
+        "Is optional and can be omitted if the essay is short",
+        "Should appear in the introduction and clearly state the main argument or purpose of the essay",
+        "Should be placed in the conclusion to surprise the reader",
+        "Is the same as the topic sentence in each body paragraph"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The thesis statement is a concise statement of the essay's main argument or purpose. It typically appears at the end of the introduction and guides the entire essay by telling the reader what to expect.",
+      "topic": "paper-3",
+      "section": "essay-writing"
+    },
+    {
+      "id": 136,
+      "question": "A narrative essay is characterised by...",
+      "options": [
+        "A logical argument supported by evidence and counterarguments",
+        "A story with a clear plot, characters, setting, and a point or reflection",
+        "A detailed comparison of two or more subjects",
+        "An analysis of a literary text"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A narrative essay tells a story. It includes elements such as plot, character, setting, and conflict, and often has a reflective element where the writer explains the significance of the experience.",
+      "topic": "paper-3",
+      "section": "essay-writing"
+    },
+    {
+      "id": 137,
+      "question": "The register of a formal essay should be...",
+      "options": [
+        "Colloquial and conversational, using slang and contractions",
+        "Objective and formal, avoiding contractions, slang, and overly personal language",
+        "Poetic and metaphorical, using extensive figurative language",
+        "Technical and jargon-filled to impress the reader"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Formal essays require an objective, impersonal register. Avoid contractions (don't, can't), slang, and overly emotional language. The tone should be serious and academic while remaining clear and accessible.",
+      "topic": "paper-3",
+      "section": "essay-writing"
+    },
+    {
+      "id": 138,
+      "question": "Paragraph development in an essay should follow which of the following patterns?",
+      "options": [
+        "Each paragraph should cover as many ideas as possible to reduce length",
+        "Each paragraph should focus on one main idea, introduced by a topic sentence and supported by evidence or examples",
+        "Paragraphs should be randomly ordered to keep the reader guessing",
+        "The main idea should be placed at the end of the paragraph without a topic sentence"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Effective paragraph development follows the 'one idea per paragraph' principle. The topic sentence introduces the main point, and subsequent sentences develop it through explanation, evidence, and examples.",
+      "topic": "paper-3",
+      "section": "essay-writing"
+    },
+    {
+      "id": 139,
+      "question": "An argumentative essay requires the writer to...",
+      "options": [
+        "Present a balanced view of all perspectives without taking a position",
+        "Take a clear position on an issue and support it with reasoning and evidence, while also addressing counterarguments",
+        "Describe a personal experience in vivid detail",
+        "Summarise someone else's argument without adding any original analysis"
+      ],
+      "correctAnswer": 1,
+      "explanation": "An argumentative essay takes a stance and defends it using logical reasoning and evidence. It should also anticipate and refute counterarguments, demonstrating why the writer's position is stronger.",
+      "topic": "paper-3",
+      "section": "essay-writing"
+    },
+    {
+      "id": 140,
+      "question": "A formal letter should include which of the following elements?",
+      "options": [
+        "The sender's address, date, recipient's address, salutation, subject line, body, closing, and signature",
+        "Only the sender's name and the message in one paragraph",
+        "A greeting like 'Hey guys' and the message in point form",
+        "A drawing or illustration related to the subject"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Formal letters follow strict conventions: sender's address (top right), date, recipient's address (left), formal salutation ('Dear Sir/Madam' or 'Dear Mr/Ms Surname'), subject line, body paragraphs, formal closing ('Yours sincerely/faithfully'), and signature.",
+      "topic": "paper-3",
+      "section": "longer-transactional"
+    },
+    {
+      "id": 141,
+      "question": "When writing a speech, it is important to...",
+      "options": [
+        "Use complex academic language to sound intelligent",
+        "Address the audience directly, use rhetorical devices, and structure the speech with a clear introduction, body, and conclusion",
+        "Write in point form only, as the speaker will improvise",
+        "Avoid any emotional language or appeals"
+      ],
+      "correctAnswer": 1,
+      "explanation": "An effective speech engages the audience through direct address ('Ladies and gentlemen'), rhetorical questions, repetition, and emotional appeals. It must be structured clearly since the audience cannot reread spoken words.",
+      "topic": "paper-3",
+      "section": "longer-transactional"
+    },
+    {
+      "id": 142,
+      "question": "A newspaper article typically begins with...",
+      "options": [
+        "A concluding statement that summarises the article",
+        "A headline and a lead paragraph that answers the questions who, what, where, when, why, and how",
+        "A rhetorical question addressed to the reader",
+        "A detailed description of the journalist's personal feelings about the story"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Newspaper articles follow the inverted pyramid structure. The lead (first paragraph) answers the key questions (5 Ws and H) to give readers the essential information immediately, with details following in decreasing importance.",
+      "topic": "paper-3",
+      "section": "longer-transactional"
+    },
+    {
+      "id": 143,
+      "question": "A Curriculum Vitae (CV) should include which of the following sections?",
+      "options": [
+        "Personal details, education, work experience, skills, and references",
+        "Only the applicant's name and the job they are applying for",
+        "A list of all the books the applicant has read",
+        "The applicant's life story in narrative form"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A standard CV includes personal details (name, contact information), educational qualifications (with dates and institutions), work experience (in reverse chronological order), relevant skills, and references.",
+      "topic": "paper-3",
+      "section": "longer-transactional"
+    },
+    {
+      "id": 144,
+      "question": "A magazine feature article differs from a hard news report in that it...",
+      "options": [
+        "Is shorter and contains only the basic facts",
+        "Is longer, more in-depth, and often includes descriptive language, interviews, and a distinctive angle or voice",
+        "Must be written in a formal, impersonal tone with no opinion",
+        "Is published daily rather than weekly or monthly"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Feature articles explore a topic in greater depth and often employ creative, descriptive language. They may include personal narratives, interviews, and the writer's distinctive voice, unlike straight news reporting which prioritises facts.",
+      "topic": "paper-3",
+      "section": "longer-transactional"
+    },
+    {
+      "id": 145,
+      "question": "When writing an interview transcript as a transactional text, you should...",
+      "options": [
+        "Write it as a continuous paragraph summarising what was said",
+        "Use the question-and-answer format (Q: and A:) with the interviewer's questions and the interviewee's responses",
+        "Write only the interviewee's responses, omitting the questions",
+        "Present it as a third-person narrative describing the interview"
+      ],
+      "correctAnswer": 1,
+      "explanation": "An interview transcript uses a Q&A format to present the exchange. Each question (labelled with the interviewer's name or 'Q:') is followed by the response (labelled with the interviewee's name or 'A:').",
+      "topic": "paper-3",
+      "section": "longer-transactional"
+    },
+    {
+      "id": 146,
+      "question": "A report should be written in a style that is...",
+      "options": [
+        "Highly emotional and persuasive to convince the reader",
+        "Factual, objective, and formal, with clear sections and headings",
+        "Informal and conversational, as if speaking to a friend",
+        "Poetic and metaphorical, using extensive imagery"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Report writing requires a formal, objective tone. The information should be presented factually with clear headings and sections (introduction, findings, conclusion, recommendations) for easy reading and reference.",
+      "topic": "paper-3",
+      "section": "longer-transactional"
+    },
+    {
+      "id": 147,
+      "question": "A diary entry is typically written in...",
+      "options": [
+        "The third person, past tense, formal register",
+        "The first person, informal register, and often includes reflections on events and emotions",
+        "The second person, addressing the reader directly",
+        "Point form with no complete sentences"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Diary entries are personal and reflective. They are written in the first person ('I'), use an informal, conversational register, and include the writer's thoughts, feelings, and reactions to events.",
+      "topic": "paper-3",
+      "section": "shorter-transactional"
+    },
+    {
+      "id": 148,
+      "question": "An email should include a subject line that...",
+      "options": [
+        "Is left blank to save space",
+        "Clearly indicates the topic of the email so the recipient knows what it is about",
+        "Contains only the recipient's name",
+        "Is written in all capital letters to attract attention"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The subject line of an email should be concise and informative, giving the recipient a clear idea of the email's content. A blank or vague subject line may cause the email to be ignored or treated as spam.",
+      "topic": "paper-3",
+      "section": "shorter-transactional"
+    },
+    {
+      "id": 149,
+      "question": "A postcard is usually written in...",
+      "options": [
+        "Formal language with full postal addresses and detailed descriptions",
+        "Brief, informal language, often describing a holiday experience or sending greetings, due to limited space",
+        "Legal jargon to ensure it meets postal regulations",
+        "Third-person narrative style"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Postcards have limited writing space, so the message is typically brief and informal. They often contain short descriptions of a location, expressions of enjoyment, and greetings to the recipient.",
+      "topic": "paper-3",
+      "section": "shorter-transactional"
+    },
+    {
+      "id": 150,
+      "question": "When writing a dialogue, you should...",
+      "options": [
+        "Write it as one continuous paragraph without indicating who is speaking",
+        "Start a new paragraph each time the speaker changes and use speech marks to indicate spoken words",
+        "Avoid using speech marks and rely on descriptive words instead",
+        "Write only the words spoken without any stage directions or descriptions"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Correct dialogue format uses a new paragraph each time a different character speaks, with speech marks (quotation marks) around the spoken words, and often includes brief stage directions or descriptions.",
+      "topic": "paper-3",
+      "section": "shorter-transactional"
+    },
+    {
+      "id": 151,
+      "question": "A written advertisement should...",
+      "options": [
+        "Include as much text as possible to inform the consumer thoroughly",
+        "Be brief, eye-catching, and persuasive, with a clear call to action",
+        "Use academic language to establish credibility",
+        "Avoid any visual elements or formatting techniques"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Effective advertisements are concise and attention-grabbing. They use persuasive language, visual layout techniques (font size, bold text, spacing), and a clear call to action ('Buy now', 'Visit us today') to encourage a response.",
+      "topic": "paper-3",
+      "section": "shorter-transactional"
+    },
+    {
+      "id": 152,
+      "question": "In an obituary notice (a type of shorter transactional text), which of the following would be appropriate to include?",
+      "options": [
+        "A detailed account of the funeral expenses",
+        "The full name of the deceased, dates of birth and death, surviving family members, and funeral arrangements",
+        "A humorous story about the deceased",
+        "A political opinion about the cause of death"
+      ],
+      "correctAnswer": 1,
+      "explanation": "An obituary notice provides factual information respectfully: the deceased's name, dates, surviving relatives, and funeral service details. It is a formal notice, not a place for humour, opinion, or financial details.",
+      "topic": "paper-3",
+      "section": "shorter-transactional"
+    },
+    {
+      "id": 153,
+      "question": "Which of the following sentence structures uses correct concord (subject-verb agreement)?",
+      "options": [
+        "Neither the teacher nor the students was aware of the change",
+        "Neither the teacher nor the students were aware of the change",
+        "Neither the teacher nor the students are being aware of the change",
+        "Neither the teacher nor the students is aware of the change"
+      ],
+      "correctAnswer": 1,
+      "explanation": "With 'neither...nor', the verb agrees with the noun closest to it. Since 'students' is plural, the verb should be 'were'. This is the proximity rule in concord.",
+      "topic": "paper-1",
+      "section": "language-structures"
+    }
+  ]
