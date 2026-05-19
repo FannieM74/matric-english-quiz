@@ -1,0 +1,112 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id             String   @id @default(cuid())
+  email          String   @unique
+  name           String?
+  hashedPassword String
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+}
+
+model Bookmark {
+  id         String   @id @default(cuid())
+  userId     String
+  questionId Int
+  createdAt  DateTime @default(now())
+
+  @@unique([userId, questionId])
+  @@index([userId])
+}
+
+model Flagged {
+  id         String   @id @default(cuid())
+  userId     String
+  questionId Int
+  createdAt  DateTime @default(now())
+
+  @@unique([userId, questionId])
+  @@index([userId])
+}
+
+model QuizRecord {
+  id       String   @id @default(cuid())
+  userId   String
+  date     String
+  score    Int
+  total    Int
+  topic    String?
+  answers  String
+
+  @@index([userId])
+}
+
+model QuestionAttempt {
+  id          String @id @default(cuid())
+  userId      String
+  questionId  Int
+  correct     Int    @default(0)
+  incorrect   Int    @default(0)
+
+  @@unique([userId, questionId])
+  @@index([userId])
+}
+
+model MissedQuestion {
+  id         String   @id @default(cuid())
+  userId     String
+  questionId Int
+  createdAt  DateTime @default(now())
+
+  @@unique([userId, questionId])
+  @@index([userId])
+}
+
+model StudySectionProgress {
+  id        String   @id @default(cuid())
+  userId    String
+  topicSlug String
+  sectionId String
+  viewedAt  DateTime @default(now())
+
+  @@unique([userId, sectionId])
+  @@index([userId])
+}
+
+model StudyBookmark {
+  id        String   @id @default(cuid())
+  userId    String
+  sectionId String
+  createdAt DateTime @default(now())
+
+  @@unique([userId, sectionId])
+  @@index([userId])
+}
+
+model StudyPlan {
+  id         String   @id @default(cuid())
+  userId     String   @unique
+  startDate  String
+  targetDate String
+  days       Int
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
+model StudyPlanProgress {
+  id        String @id @default(cuid())
+  userId    String
+  date      String
+  count     Int
+  createdAt DateTime @default(now())
+
+  @@unique([userId, date])
+  @@index([userId])
+}
