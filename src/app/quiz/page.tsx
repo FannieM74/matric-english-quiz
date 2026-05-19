@@ -58,6 +58,24 @@ function isMcq(q: Question): boolean {
   return Array.isArray(q.options) && q.options.length > 0 && q.correctAnswer !== null;
 }
 
+function isMcqLike(q: { options: string[]; correctAnswer: number | null }): boolean {
+  return Array.isArray(q.options) && q.options.length > 0 && q.correctAnswer !== null;
+}
+
+function pickQuestions<T extends { options: string[]; correctAnswer: number | null }>(
+  items: T[], count: number, seed: number
+): T[] {
+  const mcq = [] as T[];
+  const open = [] as T[];
+  for (const q of items) {
+    (isMcqLike(q) ? mcq : open).push(q);
+  }
+  const shuffleMcq = shuffleArray(mcq, seed);
+  const shuffleOpen = shuffleArray(open, seed + 1);
+  const needed = Math.min(count, items.length);
+  return [...shuffleMcq.slice(0, needed), ...shuffleOpen.slice(0, Math.max(0, needed - shuffleMcq.length))];
+}
+
 function QuizContent() {
   const searchParams = useSearchParams();
   const topic = searchParams.get("topic") || "";
@@ -102,13 +120,11 @@ function QuizContent() {
           let all = qs;
           if (topic) all = all.filter((q) => q.topic === topic);
           if (section) all = all.filter((q) => q.section === section);
-          const shuffled = shuffleArray(all, seed);
-          const fallback = shuffled.slice(0, Math.min(count, shuffled.length)).map(shuffleOptions);
-          setQuestions(fallback);
+          const selected = pickQuestions(all, count, seed).map(shuffleOptions);
+          setQuestions(selected);
         } else {
           const flat = data.passages.flatMap((p) => p.questions);
-          const shuffled = shuffleArray(flat as unknown as Question[], seed);
-          const selected = shuffled.slice(0, Math.min(count, shuffled.length)).map(shuffleOptions);
+          const selected = pickQuestions(flat, count, seed).map(shuffleOptions);
           setQuestions(selected);
         }
       } catch {
@@ -116,8 +132,8 @@ function QuizContent() {
         let all = qs;
         if (topic) all = all.filter((q) => q.topic === topic);
         if (section) all = all.filter((q) => q.section === section);
-        const shuffled = shuffleArray(all, seed);
-        setQuestions(shuffled.slice(0, Math.min(count, shuffled.length)).map(shuffleOptions));
+        const selected = pickQuestions(all, count, seed).map(shuffleOptions);
+        setQuestions(selected);
       } finally {
         setLoading(false);
       }
