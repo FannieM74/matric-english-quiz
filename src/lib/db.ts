@@ -6,7 +6,9 @@ function createPrisma() {
   if (!process.env.DATABASE_URL) {
     return undefined;
   }
-  return new PrismaClient();
+  return new PrismaClient({
+    datasourceUrl: process.env.DATABASE_URL,
+  });
 }
 
 export const prisma = globalForPrisma.prisma ?? createPrisma();
