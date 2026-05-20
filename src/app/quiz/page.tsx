@@ -124,7 +124,7 @@ function QuizContent() {
           setQuestions(selected);
         } else {
           const flat = data.passages.flatMap((p) => p.questions);
-          const selected = pickQuestions(flat, count, seed).map(shuffleOptions);
+          const selected = (pickQuestions(flat, count, seed) as unknown as Question[]).map(shuffleOptions);
           setQuestions(selected);
         }
       } catch {
